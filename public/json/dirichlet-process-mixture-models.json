@@ -1,0 +1,112 @@
+{
+    "$$data_type": "org-document",
+    "properties": {
+        "title": [
+            "Dirichlet Process Mixture Models"
+        ],
+        "filetags": [
+            "machine-learning",
+            "statistics"
+        ],
+        "author": [],
+        "creator": "Emacs 27.1 (Org mode 9.3)",
+        "date": [
+            "2017-09-17"
+        ],
+        "description": [],
+        "email": "colobas@gauss",
+        "language": "en"
+    },
+    "contents": [
+        {
+            "$$data_type": "org-node",
+            "type": "section",
+            "ref": "org2bcca77",
+            "properties": {
+                "post-blank": 1,
+                "post-affiliated": 1
+            },
+            "contents": [
+                {
+                    "$$data_type": "org-node",
+                    "type": "keyword",
+                    "ref": "orgac4018e",
+                    "properties": {
+                        "key": "TITLE",
+                        "value": "Dirichlet Process Mixture Models",
+                        "post-blank": 0,
+                        "post-affiliated": 1
+                    },
+                    "contents": []
+                },
+                {
+                    "$$data_type": "org-node",
+                    "type": "keyword",
+                    "ref": "org436e69d",
+                    "properties": {
+                        "key": "DATE",
+                        "value": "2017-09-17",
+                        "post-blank": 0,
+                        "post-affiliated": 43
+                    },
+                    "contents": []
+                },
+                {
+                    "$$data_type": "org-node",
+                    "type": "keyword",
+                    "ref": "org138c4f6",
+                    "properties": {
+                        "key": "FILETAGS",
+                        "value": ":machine-learning:statistics:",
+                        "post-blank": 1,
+                        "post-affiliated": 62
+                    },
+                    "contents": []
+                },
+                {
+                    "$$data_type": "org-node",
+                    "type": "paragraph",
+                    "ref": "orge933277",
+                    "properties": {
+                        "post-blank": 1,
+                        "post-affiliated": 105
+                    },
+                    "contents": [
+                        "This is a small assignment I did for a Statistical Learning course.\n"
+                    ]
+                },
+                {
+                    "$$data_type": "org-node",
+                    "type": "paragraph",
+                    "ref": "org7ef45a4",
+                    "properties": {
+                        "post-blank": 0,
+                        "post-affiliated": 174
+                    },
+                    "contents": [
+                        "<iframe width=\"700\" height=\"880\" src=\"",
+                        {
+                            "$$data_type": "org-node",
+                            "type": "link",
+                            "ref": "orge851979",
+                            "properties": {
+                                "type": "https",
+                                "path": "//docs.google.com/viewer?url=https://cdn.rawgit.com/colobas/dirichlet-process-mixture-models/0f66867f/tex/dpmm.pdf&amp;embedded=true",
+                                "format": "plain",
+                                "raw-link": "https://docs.google.com/viewer?url=https://cdn.rawgit.com/colobas/dirichlet-process-mixture-models/0f66867f/tex/dpmm.pdf&amp;embedded=true",
+                                "application": null,
+                                "search-option": null,
+                                "post-blank": 0,
+                                "is-internal": false,
+                                "target-ref": null,
+                                "is-inline-image": false
+                            },
+                            "contents": []
+                        },
+                        "\">\n"
+                    ]
+                }
+            ]
+        }
+    ]
+}

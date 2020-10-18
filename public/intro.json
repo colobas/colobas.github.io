@@ -1,0 +1,1829 @@
+{
+"$$data_type": "org-document",
+"properties": {
+"title": [
+"gpir.es"
+],
+"filetags": [],
+"author": [],
+"creator": "Emacs 27.1 (Org mode 9.3)",
+"date": [],
+"description": [],
+"email": "colobas@gauss",
+"language": "en"
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "section",
+"ref": "org958cb35",
+"properties": {
+"post-blank": 1,
+"post-affiliated": 2
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "keyword",
+"ref": "orgafd63c6",
+"properties": {
+"key": "TITLE",
+"value": "gpir.es",
+"post-blank": 0,
+"post-affiliated": 2
+},
+"contents": []
+}
+]
+},
+{
+"$$data_type": "org-node",
+"type": "headline",
+"ref": "org608b7b8",
+"drawer": {
+
+},
+"properties": {
+"tags-all": [],
+"raw-value": "This is my personal website",
+"pre-blank": 0,
+"level": 1,
+"priority": null,
+"tags": [],
+"todo-keyword": null,
+"todo-type": null,
+"post-blank": 0,
+"footnote-section-p": false,
+"archivedp": false,
+"commentedp": false,
+"post-affiliated": 20,
+"title": [
+"This is my personal website"
+]
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "headline",
+"ref": "orgeabe037",
+"drawer": {
+
+},
+"properties": {
+"tags-all": [],
+"raw-value": "Some posts on it will be written as a tree of cards",
+"pre-blank": 0,
+"level": 2,
+"priority": null,
+"tags": [],
+"todo-keyword": null,
+"todo-type": null,
+"post-blank": 0,
+"footnote-section-p": false,
+"archivedp": false,
+"commentedp": false,
+"post-affiliated": 50,
+"title": [
+"Some posts on it will be written as a tree of cards"
+]
+},
+"contents": []
+},
+{
+"$$data_type": "org-node",
+"type": "headline",
+"ref": "orge3d3d1e",
+"drawer": {
+
+},
+"properties": {
+"tags-all": [],
+"raw-value": "Some other posts will be normal text",
+"pre-blank": 0,
+"level": 2,
+"priority": null,
+"tags": [],
+"todo-keyword": null,
+"todo-type": null,
+"post-blank": 0,
+"footnote-section-p": false,
+"archivedp": false,
+"commentedp": false,
+"post-affiliated": 105,
+"title": [
+"Some other posts will be normal text"
+]
+},
+"contents": []
+}
+]
+},
+{
+"$$data_type": "org-node",
+"type": "headline",
+"ref": "org5a94dcf",
+"drawer": {
+
+},
+"properties": {
+"tags-all": [],
+"raw-value": "Use the keyboard to navigate",
+"pre-blank": 0,
+"level": 1,
+"priority": null,
+"tags": [],
+"todo-keyword": null,
+"todo-type": null,
+"post-blank": 1,
+"footnote-section-p": false,
+"archivedp": false,
+"commentedp": false,
+"post-affiliated": 145,
+"title": [
+"Use the keyboard to navigate"
+]
+},
+"contents": []
+},
+{
+"$$data_type": "org-node",
+"type": "headline",
+"ref": "org7439153",
+"drawer": {
+
+},
+"properties": {
+"tags-all": [],
+"raw-value": "Entries per tag",
+"pre-blank": 0,
+"level": 1,
+"priority": null,
+"tags": [],
+"todo-keyword": null,
+"todo-type": null,
+"post-blank": 0,
+"footnote-section-p": false,
+"archivedp": false,
+"commentedp": false,
+"post-affiliated": 177,
+"title": [
+"Entries per tag"
+]
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "headline",
+"ref": "org9283afc",
+"drawer": {
+
+},
+"properties": {
+"tags-all": [],
+"raw-value": "#math",
+"pre-blank": 0,
+"level": 2,
+"priority": null,
+"tags": [],
+"todo-keyword": null,
+"todo-type": null,
+"post-blank": 0,
+"footnote-section-p": false,
+"archivedp": false,
+"commentedp": false,
+"post-affiliated": 195,
+"title": [
+"#math"
+]
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "headline",
+"ref": "orgebe258d",
+"drawer": {
+
+},
+"properties": {
+"tags-all": [],
+"raw-value": "[[/post/tree/svd-and-pca][SVD and PCA]]",
+"pre-blank": 0,
+"level": 3,
+"priority": null,
+"tags": [],
+"todo-keyword": null,
+"todo-type": null,
+"post-blank": 0,
+"footnote-section-p": false,
+"archivedp": false,
+"commentedp": false,
+"post-affiliated": 204,
+"title": [
+{
+"$$data_type": "org-node",
+"type": "link",
+"ref": "org2af0393",
+"properties": {
+"type": "file",
+"path": "/post/tree/svd-and-pca",
+"format": "bracket",
+"raw-link": "/post/tree/svd-and-pca",
+"application": null,
+"search-option": null,
+"post-blank": 0,
+"is-internal": false,
+"target-ref": null,
+"is-inline-image": false
+},
+"contents": [
+"SVD and PCA"
+]
+}
+]
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "section",
+"ref": "org30dd290",
+"properties": {
+"post-blank": 0,
+"post-affiliated": 248
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "paragraph",
+"ref": "org24a33bb",
+"properties": {
+"post-blank": 0,
+"post-affiliated": 248
+},
+"contents": [
+"Tags: #algebra #math #decomposition\nDate: None\n"
+]
+}
+]
+}
+]
+}
+]
+},
+{
+"$$data_type": "org-node",
+"type": "headline",
+"ref": "org66b38bf",
+"drawer": {
+
+},
+"properties": {
+"tags-all": [],
+"raw-value": "#ml",
+"pre-blank": 0,
+"level": 2,
+"priority": null,
+"tags": [],
+"todo-keyword": null,
+"todo-type": null,
+"post-blank": 0,
+"footnote-section-p": false,
+"archivedp": false,
+"commentedp": false,
+"post-affiliated": 297,
+"title": [
+"#ml"
+]
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "headline",
+"ref": "orgfc91cf1",
+"drawer": {
+
+},
+"properties": {
+"tags-all": [],
+"raw-value": "[[/post/tree/koopman-theory][Notes on Koopman theory]]",
+"pre-blank": 0,
+"level": 3,
+"priority": null,
+"tags": [],
+"todo-keyword": null,
+"todo-type": null,
+"post-blank": 0,
+"footnote-section-p": false,
+"archivedp": false,
+"commentedp": false,
+"post-affiliated": 304,
+"title": [
+{
+"$$data_type": "org-node",
+"type": "link",
+"ref": "orgcec17cf",
+"properties": {
+"type": "file",
+"path": "/post/tree/koopman-theory",
+"format": "bracket",
+"raw-link": "/post/tree/koopman-theory",
+"application": null,
+"search-option": null,
+"post-blank": 0,
+"is-internal": false,
+"target-ref": null,
+"is-inline-image": false
+},
+"contents": [
+"Notes on Koopman theory"
+]
+}
+]
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "section",
+"ref": "orgdb48aa8",
+"properties": {
+"post-blank": 0,
+"post-affiliated": 363
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "paragraph",
+"ref": "orgacdfb78",
+"properties": {
+"post-blank": 0,
+"post-affiliated": 363
+},
+"contents": [
+"Tags: #dynamical-systems #ml\nDate: 2020-10-18\n"
+]
+}
+]
+}
+]
+}
+]
+},
+{
+"$$data_type": "org-node",
+"type": "headline",
+"ref": "org6526f36",
+"drawer": {
+
+},
+"properties": {
+"tags-all": [],
+"raw-value": "#decomposition",
+"pre-blank": 0,
+"level": 2,
+"priority": null,
+"tags": [],
+"todo-keyword": null,
+"todo-type": null,
+"post-blank": 0,
+"footnote-section-p": false,
+"archivedp": false,
+"commentedp": false,
+"post-affiliated": 411,
+"title": [
+"#decomposition"
+]
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "headline",
+"ref": "org81f4805",
+"drawer": {
+
+},
+"properties": {
+"tags-all": [],
+"raw-value": "[[/post/tree/svd-and-pca][SVD and PCA]]",
+"pre-blank": 0,
+"level": 3,
+"priority": null,
+"tags": [],
+"todo-keyword": null,
+"todo-type": null,
+"post-blank": 0,
+"footnote-section-p": false,
+"archivedp": false,
+"commentedp": false,
+"post-affiliated": 429,
+"title": [
+{
+"$$data_type": "org-node",
+"type": "link",
+"ref": "org9d39485",
+"properties": {
+"type": "file",
+"path": "/post/tree/svd-and-pca",
+"format": "bracket",
+"raw-link": "/post/tree/svd-and-pca",
+"application": null,
+"search-option": null,
+"post-blank": 0,
+"is-internal": false,
+"target-ref": null,
+"is-inline-image": false
+},
+"contents": [
+"SVD and PCA"
+]
+}
+]
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "section",
+"ref": "orgf76d36f",
+"properties": {
+"post-blank": 0,
+"post-affiliated": 473
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "paragraph",
+"ref": "org7051748",
+"properties": {
+"post-blank": 0,
+"post-affiliated": 473
+},
+"contents": [
+"Tags: #algebra #math #decomposition\nDate: None\n"
+]
+}
+]
+}
+]
+},
+{
+"$$data_type": "org-node",
+"type": "headline",
+"ref": "org5073db2",
+"drawer": {
+
+},
+"properties": {
+"tags-all": [],
+"raw-value": "[[/post/tree/multiresolution-dmd][Multiresolution DMD]]",
+"pre-blank": 0,
+"level": 3,
+"priority": null,
+"tags": [],
+"todo-keyword": null,
+"todo-type": null,
+"post-blank": 0,
+"footnote-section-p": false,
+"archivedp": false,
+"commentedp": false,
+"post-affiliated": 522,
+"title": [
+{
+"$$data_type": "org-node",
+"type": "link",
+"ref": "org3983222",
+"properties": {
+"type": "file",
+"path": "/post/tree/multiresolution-dmd",
+"format": "bracket",
+"raw-link": "/post/tree/multiresolution-dmd",
+"application": null,
+"search-option": null,
+"post-blank": 0,
+"is-internal": false,
+"target-ref": null,
+"is-inline-image": false
+},
+"contents": [
+"Multiresolution DMD"
+]
+}
+]
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "section",
+"ref": "org1f1b4d3",
+"properties": {
+"post-blank": 0,
+"post-affiliated": 582
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "paragraph",
+"ref": "org7d35acf",
+"properties": {
+"post-blank": 0,
+"post-affiliated": 582
+},
+"contents": [
+"Tags: #dmd #decomposition #dynamical-systems\nDate: None\n"
+]
+}
+]
+}
+]
+}
+]
+},
+{
+"$$data_type": "org-node",
+"type": "headline",
+"ref": "org3211382",
+"drawer": {
+
+},
+"properties": {
+"tags-all": [],
+"raw-value": "#algebra",
+"pre-blank": 0,
+"level": 2,
+"priority": null,
+"tags": [],
+"todo-keyword": null,
+"todo-type": null,
+"post-blank": 0,
+"footnote-section-p": false,
+"archivedp": false,
+"commentedp": false,
+"post-affiliated": 640,
+"title": [
+"#algebra"
+]
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "headline",
+"ref": "org2426d04",
+"drawer": {
+
+},
+"properties": {
+"tags-all": [],
+"raw-value": "[[/post/tree/svd-and-pca][SVD and PCA]]",
+"pre-blank": 0,
+"level": 3,
+"priority": null,
+"tags": [],
+"todo-keyword": null,
+"todo-type": null,
+"post-blank": 0,
+"footnote-section-p": false,
+"archivedp": false,
+"commentedp": false,
+"post-affiliated": 652,
+"title": [
+{
+"$$data_type": "org-node",
+"type": "link",
+"ref": "org5842562",
+"properties": {
+"type": "file",
+"path": "/post/tree/svd-and-pca",
+"format": "bracket",
+"raw-link": "/post/tree/svd-and-pca",
+"application": null,
+"search-option": null,
+"post-blank": 0,
+"is-internal": false,
+"target-ref": null,
+"is-inline-image": false
+},
+"contents": [
+"SVD and PCA"
+]
+}
+]
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "section",
+"ref": "orge80557b",
+"properties": {
+"post-blank": 0,
+"post-affiliated": 696
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "paragraph",
+"ref": "org2073fe9",
+"properties": {
+"post-blank": 0,
+"post-affiliated": 696
+},
+"contents": [
+"Tags: #algebra #math #decomposition\nDate: None\n"
+]
+}
+]
+}
+]
+}
+]
+},
+{
+"$$data_type": "org-node",
+"type": "headline",
+"ref": "orged9d7c0",
+"drawer": {
+
+},
+"properties": {
+"tags-all": [],
+"raw-value": "#dynamical-systems",
+"pre-blank": 0,
+"level": 2,
+"priority": null,
+"tags": [],
+"todo-keyword": null,
+"todo-type": null,
+"post-blank": 0,
+"footnote-section-p": false,
+"archivedp": false,
+"commentedp": false,
+"post-affiliated": 745,
+"title": [
+"#dynamical-systems"
+]
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "headline",
+"ref": "orgfc7c70e",
+"drawer": {
+
+},
+"properties": {
+"tags-all": [],
+"raw-value": "[[/post/tree/multiresolution-dmd][Multiresolution DMD]]",
+"pre-blank": 0,
+"level": 3,
+"priority": null,
+"tags": [],
+"todo-keyword": null,
+"todo-type": null,
+"post-blank": 0,
+"footnote-section-p": false,
+"archivedp": false,
+"commentedp": false,
+"post-affiliated": 767,
+"title": [
+{
+"$$data_type": "org-node",
+"type": "link",
+"ref": "orgfdca69a",
+"properties": {
+"type": "file",
+"path": "/post/tree/multiresolution-dmd",
+"format": "bracket",
+"raw-link": "/post/tree/multiresolution-dmd",
+"application": null,
+"search-option": null,
+"post-blank": 0,
+"is-internal": false,
+"target-ref": null,
+"is-inline-image": false
+},
+"contents": [
+"Multiresolution DMD"
+]
+}
+]
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "section",
+"ref": "org9cd3faf",
+"properties": {
+"post-blank": 0,
+"post-affiliated": 827
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "paragraph",
+"ref": "orgb2e59e5",
+"properties": {
+"post-blank": 0,
+"post-affiliated": 827
+},
+"contents": [
+"Tags: #dmd #decomposition #dynamical-systems\nDate: None\n"
+]
+}
+]
+}
+]
+},
+{
+"$$data_type": "org-node",
+"type": "headline",
+"ref": "org6fc27cb",
+"drawer": {
+
+},
+"properties": {
+"tags-all": [],
+"raw-value": "[[/post/tree/koopman-theory][Notes on Koopman theory]]",
+"pre-blank": 0,
+"level": 3,
+"priority": null,
+"tags": [],
+"todo-keyword": null,
+"todo-type": null,
+"post-blank": 0,
+"footnote-section-p": false,
+"archivedp": false,
+"commentedp": false,
+"post-affiliated": 885,
+"title": [
+{
+"$$data_type": "org-node",
+"type": "link",
+"ref": "orgf7829c1",
+"properties": {
+"type": "file",
+"path": "/post/tree/koopman-theory",
+"format": "bracket",
+"raw-link": "/post/tree/koopman-theory",
+"application": null,
+"search-option": null,
+"post-blank": 0,
+"is-internal": false,
+"target-ref": null,
+"is-inline-image": false
+},
+"contents": [
+"Notes on Koopman theory"
+]
+}
+]
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "section",
+"ref": "orge1f5af5",
+"properties": {
+"post-blank": 0,
+"post-affiliated": 944
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "paragraph",
+"ref": "org8fda44f",
+"properties": {
+"post-blank": 0,
+"post-affiliated": 944
+},
+"contents": [
+"Tags: #dynamical-systems #ml\nDate: 2020-10-18\n"
+]
+}
+]
+}
+]
+}
+]
+},
+{
+"$$data_type": "org-node",
+"type": "headline",
+"ref": "org061c2bc",
+"drawer": {
+
+},
+"properties": {
+"tags-all": [],
+"raw-value": "#dmd",
+"pre-blank": 0,
+"level": 2,
+"priority": null,
+"tags": [],
+"todo-keyword": null,
+"todo-type": null,
+"post-blank": 0,
+"footnote-section-p": false,
+"archivedp": false,
+"commentedp": false,
+"post-affiliated": 992,
+"title": [
+"#dmd"
+]
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "headline",
+"ref": "org47acb88",
+"drawer": {
+
+},
+"properties": {
+"tags-all": [],
+"raw-value": "[[/post/tree/multiresolution-dmd][Multiresolution DMD]]",
+"pre-blank": 0,
+"level": 3,
+"priority": null,
+"tags": [],
+"todo-keyword": null,
+"todo-type": null,
+"post-blank": 0,
+"footnote-section-p": false,
+"archivedp": false,
+"commentedp": false,
+"post-affiliated": 1000,
+"title": [
+{
+"$$data_type": "org-node",
+"type": "link",
+"ref": "org836f08b",
+"properties": {
+"type": "file",
+"path": "/post/tree/multiresolution-dmd",
+"format": "bracket",
+"raw-link": "/post/tree/multiresolution-dmd",
+"application": null,
+"search-option": null,
+"post-blank": 0,
+"is-internal": false,
+"target-ref": null,
+"is-inline-image": false
+},
+"contents": [
+"Multiresolution DMD"
+]
+}
+]
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "section",
+"ref": "orga4c6ce8",
+"properties": {
+"post-blank": 0,
+"post-affiliated": 1060
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "paragraph",
+"ref": "orga878e12",
+"properties": {
+"post-blank": 0,
+"post-affiliated": 1060
+},
+"contents": [
+"Tags: #dmd #decomposition #dynamical-systems\nDate: None\n"
+]
+}
+]
+}
+]
+}
+]
+},
+{
+"$$data_type": "org-node",
+"type": "headline",
+"ref": "orga584946",
+"drawer": {
+
+},
+"properties": {
+"tags-all": [],
+"raw-value": "#philosophy",
+"pre-blank": 0,
+"level": 2,
+"priority": null,
+"tags": [],
+"todo-keyword": null,
+"todo-type": null,
+"post-blank": 0,
+"footnote-section-p": false,
+"archivedp": false,
+"commentedp": false,
+"post-affiliated": 1118,
+"title": [
+"#philosophy"
+]
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "headline",
+"ref": "orga803b0a",
+"drawer": {
+
+},
+"properties": {
+"tags-all": [],
+"raw-value": "[[/post/tree/frankfurt-school][Braindump on the Frankfurt School & other random stuff]]",
+"pre-blank": 0,
+"level": 3,
+"priority": null,
+"tags": [],
+"todo-keyword": null,
+"todo-type": null,
+"post-blank": 0,
+"footnote-section-p": false,
+"archivedp": false,
+"commentedp": false,
+"post-affiliated": 1133,
+"title": [
+{
+"$$data_type": "org-node",
+"type": "link",
+"ref": "org45dab1f",
+"properties": {
+"type": "file",
+"path": "/post/tree/frankfurt-school",
+"format": "bracket",
+"raw-link": "/post/tree/frankfurt-school",
+"application": null,
+"search-option": null,
+"post-blank": 0,
+"is-internal": false,
+"target-ref": null,
+"is-inline-image": false
+},
+"contents": [
+"Braindump on the Frankfurt School & other random stuff"
+]
+}
+]
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "section",
+"ref": "org584f177",
+"properties": {
+"post-blank": 0,
+"post-affiliated": 1225
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "paragraph",
+"ref": "org2c79709",
+"properties": {
+"post-blank": 0,
+"post-affiliated": 1225
+},
+"contents": [
+"Tags: #philosophy\nDate: 2019-03-10 18:16:41 UTC\n"
+]
+}
+]
+}
+]
+}
+]
+},
+{
+"$$data_type": "org-node",
+"type": "headline",
+"ref": "orgf37edf2",
+"drawer": {
+
+},
+"properties": {
+"tags-all": [],
+"raw-value": "#machine-learning",
+"pre-blank": 0,
+"level": 2,
+"priority": null,
+"tags": [],
+"todo-keyword": null,
+"todo-type": null,
+"post-blank": 0,
+"footnote-section-p": false,
+"archivedp": false,
+"commentedp": false,
+"post-affiliated": 1275,
+"title": [
+"#machine-learning"
+]
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "headline",
+"ref": "org069855a",
+"drawer": {
+
+},
+"properties": {
+"tags-all": [],
+"raw-value": "[[/post/tree/dirichlet-process-mixture-models][Dirichlet Process Mixture Models]]",
+"pre-blank": 0,
+"level": 3,
+"priority": null,
+"tags": [],
+"todo-keyword": null,
+"todo-type": null,
+"post-blank": 0,
+"footnote-section-p": false,
+"archivedp": false,
+"commentedp": false,
+"post-affiliated": 1296,
+"title": [
+{
+"$$data_type": "org-node",
+"type": "link",
+"ref": "org871c628",
+"properties": {
+"type": "file",
+"path": "/post/tree/dirichlet-process-mixture-models",
+"format": "bracket",
+"raw-link": "/post/tree/dirichlet-process-mixture-models",
+"application": null,
+"search-option": null,
+"post-blank": 0,
+"is-internal": false,
+"target-ref": null,
+"is-inline-image": false
+},
+"contents": [
+"Dirichlet Process Mixture Models"
+]
+}
+]
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "section",
+"ref": "orgb0e0b16",
+"properties": {
+"post-blank": 0,
+"post-affiliated": 1382
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "paragraph",
+"ref": "org5a2c582",
+"properties": {
+"post-blank": 0,
+"post-affiliated": 1382
+},
+"contents": [
+"Tags: #machine-learning #statistics\nDate: 2017-09-17\n"
+]
+}
+]
+}
+]
+}
+]
+},
+{
+"$$data_type": "org-node",
+"type": "headline",
+"ref": "org7301535",
+"drawer": {
+
+},
+"properties": {
+"tags-all": [],
+"raw-value": "#statistics",
+"pre-blank": 0,
+"level": 2,
+"priority": null,
+"tags": [],
+"todo-keyword": null,
+"todo-type": null,
+"post-blank": 0,
+"footnote-section-p": false,
+"archivedp": false,
+"commentedp": false,
+"post-affiliated": 1437,
+"title": [
+"#statistics"
+]
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "headline",
+"ref": "org754a4aa",
+"drawer": {
+
+},
+"properties": {
+"tags-all": [],
+"raw-value": "[[/post/tree/dirichlet-process-mixture-models][Dirichlet Process Mixture Models]]",
+"pre-blank": 0,
+"level": 3,
+"priority": null,
+"tags": [],
+"todo-keyword": null,
+"todo-type": null,
+"post-blank": 0,
+"footnote-section-p": false,
+"archivedp": false,
+"commentedp": false,
+"post-affiliated": 1452,
+"title": [
+{
+"$$data_type": "org-node",
+"type": "link",
+"ref": "org82ecb38",
+"properties": {
+"type": "file",
+"path": "/post/tree/dirichlet-process-mixture-models",
+"format": "bracket",
+"raw-link": "/post/tree/dirichlet-process-mixture-models",
+"application": null,
+"search-option": null,
+"post-blank": 0,
+"is-internal": false,
+"target-ref": null,
+"is-inline-image": false
+},
+"contents": [
+"Dirichlet Process Mixture Models"
+]
+}
+]
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "section",
+"ref": "org468b080",
+"properties": {
+"post-blank": 0,
+"post-affiliated": 1538
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "paragraph",
+"ref": "org1648853",
+"properties": {
+"post-blank": 0,
+"post-affiliated": 1538
+},
+"contents": [
+"Tags: #machine-learning #statistics\nDate: 2017-09-17\n"
+]
+}
+]
+}
+]
+}
+]
+}
+]
+},
+{
+"$$data_type": "org-node",
+"type": "headline",
+"ref": "org4746c92",
+"drawer": {
+
+},
+"properties": {
+"tags-all": [],
+"raw-value": "Entries per date",
+"pre-blank": 0,
+"level": 1,
+"priority": null,
+"tags": [],
+"todo-keyword": null,
+"todo-type": null,
+"post-blank": 0,
+"footnote-section-p": false,
+"archivedp": false,
+"commentedp": false,
+"post-affiliated": 1593,
+"title": [
+"Entries per date"
+]
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "headline",
+"ref": "org591a88f",
+"drawer": {
+
+},
+"properties": {
+"tags-all": [],
+"raw-value": "2017-09",
+"pre-blank": 0,
+"level": 2,
+"priority": null,
+"tags": [],
+"todo-keyword": null,
+"todo-type": null,
+"post-blank": 0,
+"footnote-section-p": false,
+"archivedp": false,
+"commentedp": false,
+"post-affiliated": 1612,
+"title": [
+"2017-09"
+]
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "headline",
+"ref": "org487e7c8",
+"drawer": {
+
+},
+"properties": {
+"tags-all": [],
+"raw-value": "[[/post/tree/dirichlet-process-mixture-models][Dirichlet Process Mixture Models]]",
+"pre-blank": 0,
+"level": 3,
+"priority": null,
+"tags": [],
+"todo-keyword": null,
+"todo-type": null,
+"post-blank": 0,
+"footnote-section-p": false,
+"archivedp": false,
+"commentedp": false,
+"post-affiliated": 1623,
+"title": [
+{
+"$$data_type": "org-node",
+"type": "link",
+"ref": "org47345f4",
+"properties": {
+"type": "file",
+"path": "/post/tree/dirichlet-process-mixture-models",
+"format": "bracket",
+"raw-link": "/post/tree/dirichlet-process-mixture-models",
+"application": null,
+"search-option": null,
+"post-blank": 0,
+"is-internal": false,
+"target-ref": null,
+"is-inline-image": false
+},
+"contents": [
+"Dirichlet Process Mixture Models"
+]
+}
+]
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "section",
+"ref": "org3315398",
+"properties": {
+"post-blank": 0,
+"post-affiliated": 1709
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "paragraph",
+"ref": "orgfdc175c",
+"properties": {
+"post-blank": 0,
+"post-affiliated": 1709
+},
+"contents": [
+"Tags: #machine-learning #statistics\nDate: 2017-09-17\n"
+]
+}
+]
+}
+]
+}
+]
+},
+{
+"$$data_type": "org-node",
+"type": "headline",
+"ref": "orgc7e9a09",
+"drawer": {
+
+},
+"properties": {
+"tags-all": [],
+"raw-value": "2019-07",
+"pre-blank": 0,
+"level": 2,
+"priority": null,
+"tags": [],
+"todo-keyword": null,
+"todo-type": null,
+"post-blank": 0,
+"footnote-section-p": false,
+"archivedp": false,
+"commentedp": false,
+"post-affiliated": 1764,
+"title": [
+"2019-07"
+]
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "headline",
+"ref": "org903712b",
+"drawer": {
+
+},
+"properties": {
+"tags-all": [],
+"raw-value": "[[/post/tree/belkin-generalization][Paper summary: Reconciling modern machine-learning with the bias-variance trade-off]]",
+"pre-blank": 0,
+"level": 3,
+"priority": null,
+"tags": [],
+"todo-keyword": null,
+"todo-type": null,
+"post-blank": 0,
+"footnote-section-p": false,
+"archivedp": false,
+"commentedp": false,
+"post-affiliated": 1775,
+"title": [
+{
+"$$data_type": "org-node",
+"type": "link",
+"ref": "org2cf8f77",
+"properties": {
+"type": "file",
+"path": "/post/tree/belkin-generalization",
+"format": "bracket",
+"raw-link": "/post/tree/belkin-generalization",
+"application": null,
+"search-option": null,
+"post-blank": 0,
+"is-internal": false,
+"target-ref": null,
+"is-inline-image": false
+},
+"contents": [
+"Paper summary: Reconciling modern machine-learning with the bias-variance trade-off"
+]
+}
+]
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "section",
+"ref": "org8bec8a3",
+"properties": {
+"post-blank": 0,
+"post-affiliated": 1901
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "paragraph",
+"ref": "org9b6d862",
+"properties": {
+"post-blank": 0,
+"post-affiliated": 1901
+},
+"contents": [
+"Tags: \nDate: 2019-07-06\n"
+]
+}
+]
+}
+]
+}
+]
+},
+{
+"$$data_type": "org-node",
+"type": "headline",
+"ref": "org99563f9",
+"drawer": {
+
+},
+"properties": {
+"tags-all": [],
+"raw-value": "2020-10",
+"pre-blank": 0,
+"level": 2,
+"priority": null,
+"tags": [],
+"todo-keyword": null,
+"todo-type": null,
+"post-blank": 0,
+"footnote-section-p": false,
+"archivedp": false,
+"commentedp": false,
+"post-affiliated": 1927,
+"title": [
+"2020-10"
+]
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "headline",
+"ref": "org64a210d",
+"drawer": {
+
+},
+"properties": {
+"tags-all": [],
+"raw-value": "[[/post/tree/koopman-theory][Notes on Koopman theory]]",
+"pre-blank": 0,
+"level": 3,
+"priority": null,
+"tags": [],
+"todo-keyword": null,
+"todo-type": null,
+"post-blank": 0,
+"footnote-section-p": false,
+"archivedp": false,
+"commentedp": false,
+"post-affiliated": 1938,
+"title": [
+{
+"$$data_type": "org-node",
+"type": "link",
+"ref": "orgd775e81",
+"properties": {
+"type": "file",
+"path": "/post/tree/koopman-theory",
+"format": "bracket",
+"raw-link": "/post/tree/koopman-theory",
+"application": null,
+"search-option": null,
+"post-blank": 0,
+"is-internal": false,
+"target-ref": null,
+"is-inline-image": false
+},
+"contents": [
+"Notes on Koopman theory"
+]
+}
+]
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "section",
+"ref": "org3067558",
+"properties": {
+"post-blank": 0,
+"post-affiliated": 1997
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "paragraph",
+"ref": "org624a422",
+"properties": {
+"post-blank": 0,
+"post-affiliated": 1997
+},
+"contents": [
+"Tags: #dynamical-systems #ml\nDate: 2020-10-18\n"
+]
+}
+]
+}
+]
+}
+]
+},
+{
+"$$data_type": "org-node",
+"type": "headline",
+"ref": "org580d837",
+"drawer": {
+
+},
+"properties": {
+"tags-all": [],
+"raw-value": "no-date",
+"pre-blank": 0,
+"level": 2,
+"priority": null,
+"tags": [],
+"todo-keyword": null,
+"todo-type": null,
+"post-blank": 0,
+"footnote-section-p": false,
+"archivedp": false,
+"commentedp": false,
+"post-affiliated": 2045,
+"title": [
+"no-date"
+]
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "headline",
+"ref": "orgd1d96ba",
+"drawer": {
+
+},
+"properties": {
+"tags-all": [],
+"raw-value": "[[/post/tree/svd-and-pca][SVD and PCA]]",
+"pre-blank": 0,
+"level": 3,
+"priority": null,
+"tags": [],
+"todo-keyword": null,
+"todo-type": null,
+"post-blank": 0,
+"footnote-section-p": false,
+"archivedp": false,
+"commentedp": false,
+"post-affiliated": 2056,
+"title": [
+{
+"$$data_type": "org-node",
+"type": "link",
+"ref": "org1f0df04",
+"properties": {
+"type": "file",
+"path": "/post/tree/svd-and-pca",
+"format": "bracket",
+"raw-link": "/post/tree/svd-and-pca",
+"application": null,
+"search-option": null,
+"post-blank": 0,
+"is-internal": false,
+"target-ref": null,
+"is-inline-image": false
+},
+"contents": [
+"SVD and PCA"
+]
+}
+]
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "section",
+"ref": "org2457009",
+"properties": {
+"post-blank": 0,
+"post-affiliated": 2100
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "paragraph",
+"ref": "org43edd60",
+"properties": {
+"post-blank": 0,
+"post-affiliated": 2100
+},
+"contents": [
+"Tags: #algebra #math #decomposition\nDate: None\n"
+]
+}
+]
+}
+]
+},
+{
+"$$data_type": "org-node",
+"type": "headline",
+"ref": "org9d6fbc7",
+"drawer": {
+
+},
+"properties": {
+"tags-all": [],
+"raw-value": "[[/post/tree/multiresolution-dmd][Multiresolution DMD]]",
+"pre-blank": 0,
+"level": 3,
+"priority": null,
+"tags": [],
+"todo-keyword": null,
+"todo-type": null,
+"post-blank": 0,
+"footnote-section-p": false,
+"archivedp": false,
+"commentedp": false,
+"post-affiliated": 2149,
+"title": [
+{
+"$$data_type": "org-node",
+"type": "link",
+"ref": "orgd3b40b2",
+"properties": {
+"type": "file",
+"path": "/post/tree/multiresolution-dmd",
+"format": "bracket",
+"raw-link": "/post/tree/multiresolution-dmd",
+"application": null,
+"search-option": null,
+"post-blank": 0,
+"is-internal": false,
+"target-ref": null,
+"is-inline-image": false
+},
+"contents": [
+"Multiresolution DMD"
+]
+}
+]
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "section",
+"ref": "orgd6bd574",
+"properties": {
+"post-blank": 0,
+"post-affiliated": 2209
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "paragraph",
+"ref": "org0eec2a2",
+"properties": {
+"post-blank": 0,
+"post-affiliated": 2209
+},
+"contents": [
+"Tags: #dmd #decomposition #dynamical-systems\nDate: None\n"
+]
+}
+]
+}
+]
+},
+{
+"$$data_type": "org-node",
+"type": "headline",
+"ref": "org1e446cd",
+"drawer": {
+
+},
+"properties": {
+"tags-all": [],
+"raw-value": "[[/post/tree/notes-on-dynamic-mode-decomposition][Notes on Dynamic Mode Decomposition]]",
+"pre-blank": 0,
+"level": 3,
+"priority": null,
+"tags": [],
+"todo-keyword": null,
+"todo-type": null,
+"post-blank": 0,
+"footnote-section-p": false,
+"archivedp": false,
+"commentedp": false,
+"post-affiliated": 2267,
+"title": [
+{
+"$$data_type": "org-node",
+"type": "link",
+"ref": "org8340fe4",
+"properties": {
+"type": "file",
+"path": "/post/tree/notes-on-dynamic-mode-decomposition",
+"format": "bracket",
+"raw-link": "/post/tree/notes-on-dynamic-mode-decomposition",
+"application": null,
+"search-option": null,
+"post-blank": 0,
+"is-internal": false,
+"target-ref": null,
+"is-inline-image": false
+},
+"contents": [
+"Notes on Dynamic Mode Decomposition"
+]
+}
+]
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "section",
+"ref": "orgca18986",
+"properties": {
+"post-blank": 0,
+"post-affiliated": 2359
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "paragraph",
+"ref": "orga7fc16c",
+"properties": {
+"post-blank": 0,
+"post-affiliated": 2359
+},
+"contents": [
+"Tags: \nDate: None\n"
+]
+}
+]
+}
+]
+},
+{
+"$$data_type": "org-node",
+"type": "headline",
+"ref": "org53fca0f",
+"drawer": {
+
+},
+"properties": {
+"tags-all": [],
+"raw-value": "[[/post/tree/frankfurt-school][Braindump on the Frankfurt School & other random stuff]]",
+"pre-blank": 0,
+"level": 3,
+"priority": null,
+"tags": [],
+"todo-keyword": null,
+"todo-type": null,
+"post-blank": 0,
+"footnote-section-p": false,
+"archivedp": false,
+"commentedp": false,
+"post-affiliated": 2379,
+"title": [
+{
+"$$data_type": "org-node",
+"type": "link",
+"ref": "orgb3af5fa",
+"properties": {
+"type": "file",
+"path": "/post/tree/frankfurt-school",
+"format": "bracket",
+"raw-link": "/post/tree/frankfurt-school",
+"application": null,
+"search-option": null,
+"post-blank": 0,
+"is-internal": false,
+"target-ref": null,
+"is-inline-image": false
+},
+"contents": [
+"Braindump on the Frankfurt School & other random stuff"
+]
+}
+]
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "section",
+"ref": "org973089e",
+"properties": {
+"post-blank": 0,
+"post-affiliated": 2471
+},
+"contents": [
+{
+"$$data_type": "org-node",
+"type": "paragraph",
+"ref": "org8400d7f",
+"properties": {
+"post-blank": 0,
+"post-affiliated": 2471
+},
+"contents": [
+"Tags: #philosophy\nDate: 2019-03-10 18:16:41 UTC\n"
+]
+}
+]
+}
+]
+}
+]
+}
+]
+}
+]
+}

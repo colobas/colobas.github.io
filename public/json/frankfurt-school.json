@@ -1,0 +1,1279 @@
+{
+    "$$data_type": "org-document",
+    "properties": {
+        "title": [
+            "Braindump on the Frankfurt School & other random stuff"
+        ],
+        "filetags": [
+            "philosophy"
+        ],
+        "author": [],
+        "creator": "Emacs 27.1 (Org mode 9.3)",
+        "date": [
+            "2019-03-10 18:16:41 UTC"
+        ],
+        "description": [],
+        "email": "colobas@gauss",
+        "language": "en"
+    },
+    "contents": [
+        {
+            "$$data_type": "org-node",
+            "type": "section",
+            "ref": "orgebacd11",
+            "properties": {
+                "post-blank": 1,
+                "post-affiliated": 1
+            },
+            "contents": [
+                {
+                    "$$data_type": "org-node",
+                    "type": "keyword",
+                    "ref": "orgc03888c",
+                    "properties": {
+                        "key": "TITLE",
+                        "value": "Braindump on the Frankfurt School & other random stuff",
+                        "post-blank": 0,
+                        "post-affiliated": 1
+                    },
+                    "contents": []
+                },
+                {
+                    "$$data_type": "org-node",
+                    "type": "keyword",
+                    "ref": "org7e1074e",
+                    "properties": {
+                        "key": "DATE",
+                        "value": "2019-03-10 18:16:41 UTC",
+                        "post-blank": 0,
+                        "post-affiliated": 65
+                    },
+                    "contents": []
+                },
+                {
+                    "$$data_type": "org-node",
+                    "type": "keyword",
+                    "ref": "org5b107f8",
+                    "properties": {
+                        "key": "FILETAGS",
+                        "value": ":philosophy:",
+                        "post-blank": 0,
+                        "post-affiliated": 97
+                    },
+                    "contents": []
+                }
+            ]
+        },
+        {
+            "$$data_type": "org-node",
+            "type": "headline",
+            "ref": "org225b47d",
+            "drawer": {},
+            "properties": {
+                "tags-all": [],
+                "raw-value": "",
+                "pre-blank": 0,
+                "level": 1,
+                "priority": null,
+                "tags": [],
+                "todo-keyword": null,
+                "todo-type": null,
+                "post-blank": 1,
+                "footnote-section-p": false,
+                "archivedp": false,
+                "commentedp": false,
+                "post-affiliated": 123,
+                "title": [
+                    ""
+                ]
+            },
+            "contents": [
+                {
+                    "$$data_type": "org-node",
+                    "type": "section",
+                    "ref": "org309483a",
+                    "properties": {
+                        "post-blank": 1,
+                        "post-affiliated": 126
+                    },
+                    "contents": [
+                        {
+                            "$$data_type": "org-node",
+                            "type": "paragraph",
+                            "ref": "orgeef7d1b",
+                            "properties": {
+                                "post-blank": 0,
+                                "post-affiliated": 126
+                            },
+                            "contents": [
+                                "This is a braindump I made while listening to Philosophize This,\nspecifically the episodes on the Frankfurt School. If you don't know\nPhilosophize This, you should really check it out.\n"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "$$data_type": "org-node",
+            "type": "headline",
+            "ref": "org6e02f77",
+            "drawer": {},
+            "properties": {
+                "tags-all": [],
+                "raw-value": "Nietzsche: \"God is dead\"",
+                "pre-blank": 0,
+                "level": 1,
+                "priority": null,
+                "tags": [],
+                "todo-keyword": null,
+                "todo-type": null,
+                "post-blank": 1,
+                "footnote-section-p": false,
+                "archivedp": false,
+                "commentedp": false,
+                "post-affiliated": 312,
+                "title": [
+                    "Nietzsche: \"God is dead\""
+                ]
+            },
+            "contents": [
+                {
+                    "$$data_type": "org-node",
+                    "type": "headline",
+                    "ref": "org64d2e46",
+                    "drawer": {},
+                    "properties": {
+                        "tags-all": [],
+                        "raw-value": "Where does meaning come from now?",
+                        "pre-blank": 0,
+                        "level": 2,
+                        "priority": null,
+                        "tags": [],
+                        "todo-keyword": null,
+                        "todo-type": null,
+                        "post-blank": 0,
+                        "footnote-section-p": false,
+                        "archivedp": false,
+                        "commentedp": false,
+                        "post-affiliated": 339,
+                        "title": [
+                            "Where does meaning come from now?"
+                        ]
+                    },
+                    "contents": [
+                        {
+                            "$$data_type": "org-node",
+                            "type": "headline",
+                            "ref": "orgee1e545",
+                            "drawer": {},
+                            "properties": {
+                                "tags-all": [],
+                                "raw-value": "",
+                                "pre-blank": 0,
+                                "level": 3,
+                                "priority": null,
+                                "tags": [],
+                                "todo-keyword": null,
+                                "todo-type": null,
+                                "post-blank": 0,
+                                "footnote-section-p": false,
+                                "archivedp": false,
+                                "commentedp": false,
+                                "post-affiliated": 376,
+                                "title": [
+                                    ""
+                                ]
+                            },
+                            "contents": [
+                                {
+                                    "$$data_type": "org-node",
+                                    "type": "section",
+                                    "ref": "org5cfb30c",
+                                    "properties": {
+                                        "post-blank": 0,
+                                        "post-affiliated": 381
+                                    },
+                                    "contents": [
+                                        {
+                                            "$$data_type": "org-node",
+                                            "type": "paragraph",
+                                            "ref": "org4e60986",
+                                            "properties": {
+                                                "post-blank": 0,
+                                                "post-affiliated": 381
+                                            },
+                                            "contents": [
+                                                "Most people won't spend their time philosophizing and figuring this\nout for themselves. They'll most probably \"inherit\" whatever answer\nis most culturally accepted in their social context.\n"
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "$$data_type": "org-node",
+                    "type": "headline",
+                    "ref": "org65e582b",
+                    "drawer": {},
+                    "properties": {
+                        "tags-all": [],
+                        "raw-value": "Ideology is replacing religion today",
+                        "pre-blank": 0,
+                        "level": 2,
+                        "priority": null,
+                        "tags": [],
+                        "todo-keyword": null,
+                        "todo-type": null,
+                        "post-blank": 0,
+                        "footnote-section-p": false,
+                        "archivedp": false,
+                        "commentedp": false,
+                        "post-affiliated": 570,
+                        "title": [
+                            "Ideology is replacing religion today"
+                        ]
+                    },
+                    "contents": []
+                }
+            ]
+        },
+        {
+            "$$data_type": "org-node",
+            "type": "headline",
+            "ref": "org0f123a5",
+            "drawer": {},
+            "properties": {
+                "tags-all": [],
+                "raw-value": "Why didn't Marx's dialectical prophecies become true?",
+                "pre-blank": 0,
+                "level": 1,
+                "priority": null,
+                "tags": [],
+                "todo-keyword": null,
+                "todo-type": null,
+                "post-blank": 0,
+                "footnote-section-p": false,
+                "archivedp": false,
+                "commentedp": false,
+                "post-affiliated": 611,
+                "title": [
+                    "Why didn't Marx's dialectical prophecies become true?"
+                ]
+            },
+            "contents": [
+                {
+                    "$$data_type": "org-node",
+                    "type": "headline",
+                    "ref": "org2d6c490",
+                    "drawer": {},
+                    "properties": {
+                        "tags-all": [],
+                        "raw-value": "",
+                        "pre-blank": 0,
+                        "level": 2,
+                        "priority": null,
+                        "tags": [],
+                        "todo-keyword": null,
+                        "todo-type": null,
+                        "post-blank": 0,
+                        "footnote-section-p": false,
+                        "archivedp": false,
+                        "commentedp": false,
+                        "post-affiliated": 667,
+                        "title": [
+                            ""
+                        ]
+                    },
+                    "contents": [
+                        {
+                            "$$data_type": "org-node",
+                            "type": "section",
+                            "ref": "org249417a",
+                            "properties": {
+                                "post-blank": 0,
+                                "post-affiliated": 671
+                            },
+                            "contents": [
+                                {
+                                    "$$data_type": "org-node",
+                                    "type": "paragraph",
+                                    "ref": "org74474cc",
+                                    "properties": {
+                                        "post-blank": 0,
+                                        "post-affiliated": 671
+                                    },
+                                    "contents": [
+                                        "The exploited class didn't overthrow the exploiting class.\n"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "$$data_type": "org-node",
+                    "type": "headline",
+                    "ref": "org1c8bc5c",
+                    "drawer": {},
+                    "properties": {
+                        "tags-all": [],
+                        "raw-value": "",
+                        "pre-blank": 0,
+                        "level": 2,
+                        "priority": null,
+                        "tags": [],
+                        "todo-keyword": null,
+                        "todo-type": null,
+                        "post-blank": 0,
+                        "footnote-section-p": false,
+                        "archivedp": false,
+                        "commentedp": false,
+                        "post-affiliated": 730,
+                        "title": [
+                            ""
+                        ]
+                    },
+                    "contents": [
+                        {
+                            "$$data_type": "org-node",
+                            "type": "section",
+                            "ref": "org10dde2f",
+                            "properties": {
+                                "post-blank": 0,
+                                "post-affiliated": 734
+                            },
+                            "contents": [
+                                {
+                                    "$$data_type": "org-node",
+                                    "type": "paragraph",
+                                    "ref": "org6c6b91f",
+                                    "properties": {
+                                        "post-blank": 0,
+                                        "post-affiliated": 734
+                                    },
+                                    "contents": [
+                                        "Soviet Republic became authoritarian.\n"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "$$data_type": "org-node",
+                    "type": "headline",
+                    "ref": "orge844722",
+                    "drawer": {},
+                    "properties": {
+                        "tags-all": [],
+                        "raw-value": "Some thinkers (including the Frankfurt School) answer:",
+                        "pre-blank": 0,
+                        "level": 2,
+                        "priority": null,
+                        "tags": [],
+                        "todo-keyword": null,
+                        "todo-type": null,
+                        "post-blank": 0,
+                        "footnote-section-p": false,
+                        "archivedp": false,
+                        "commentedp": false,
+                        "post-affiliated": 772,
+                        "title": [
+                            "Some thinkers (including the Frankfurt School) answer:"
+                        ]
+                    },
+                    "contents": [
+                        {
+                            "$$data_type": "org-node",
+                            "type": "section",
+                            "ref": "org4b0b607",
+                            "properties": {
+                                "post-blank": 0,
+                                "post-affiliated": 830
+                            },
+                            "contents": [
+                                {
+                                    "$$data_type": "org-node",
+                                    "type": "paragraph",
+                                    "ref": "org225e81b",
+                                    "properties": {
+                                        "post-blank": 0,
+                                        "post-affiliated": 830
+                                    },
+                                    "contents": [
+                                        "Marx's theory doesn't talk enough about the concept of personal liberty, and\ndoesn't spend enough time considering the individual\n"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "$$data_type": "org-node",
+            "type": "headline",
+            "ref": "org314cf6a",
+            "drawer": {},
+            "properties": {
+                "tags-all": [],
+                "raw-value": "Frankfurt school",
+                "pre-blank": 0,
+                "level": 1,
+                "priority": null,
+                "tags": [],
+                "todo-keyword": null,
+                "todo-type": null,
+                "post-blank": 1,
+                "footnote-section-p": false,
+                "archivedp": false,
+                "commentedp": false,
+                "post-affiliated": 960,
+                "title": [
+                    "Frankfurt school"
+                ]
+            },
+            "contents": [
+                {
+                    "$$data_type": "org-node",
+                    "type": "section",
+                    "ref": "org6e59d1b",
+                    "properties": {
+                        "post-blank": 0,
+                        "post-affiliated": 979
+                    },
+                    "contents": [
+                        {
+                            "$$data_type": "org-node",
+                            "type": "paragraph",
+                            "ref": "org0523df4",
+                            "properties": {
+                                "post-blank": 0,
+                                "post-affiliated": 979
+                            },
+                            "contents": [
+                                "How was it possible for the world to undergo such a technological progress\nand still develop the conditions that lead to WW2?\n"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "$$data_type": "org-node",
+                    "type": "headline",
+                    "ref": "org144ed5d",
+                    "drawer": {},
+                    "properties": {
+                        "tags-all": [],
+                        "raw-value": "Critiques of capitalism",
+                        "pre-blank": 0,
+                        "level": 2,
+                        "priority": null,
+                        "tags": [],
+                        "todo-keyword": null,
+                        "todo-type": null,
+                        "post-blank": 0,
+                        "footnote-section-p": false,
+                        "archivedp": false,
+                        "commentedp": false,
+                        "post-affiliated": 1105,
+                        "title": [
+                            "Critiques of capitalism"
+                        ]
+                    },
+                    "contents": []
+                },
+                {
+                    "$$data_type": "org-node",
+                    "type": "headline",
+                    "ref": "org6f541fe",
+                    "drawer": {},
+                    "properties": {
+                        "tags-all": [],
+                        "raw-value": "Economics not enough to explain history. Individual psychology is needed",
+                        "pre-blank": 0,
+                        "level": 2,
+                        "priority": null,
+                        "tags": [],
+                        "todo-keyword": null,
+                        "todo-type": null,
+                        "post-blank": 0,
+                        "footnote-section-p": false,
+                        "archivedp": false,
+                        "commentedp": false,
+                        "post-affiliated": 1132,
+                        "title": [
+                            "Economics not enough to explain history. Individual psychology is needed"
+                        ]
+                    },
+                    "contents": []
+                },
+                {
+                    "$$data_type": "org-node",
+                    "type": "headline",
+                    "ref": "orgb950a73",
+                    "drawer": {},
+                    "properties": {
+                        "tags-all": [],
+                        "raw-value": "What if the exploited class doesn't feel exploited?",
+                        "pre-blank": 0,
+                        "level": 2,
+                        "priority": null,
+                        "tags": [],
+                        "todo-keyword": null,
+                        "todo-type": null,
+                        "post-blank": 0,
+                        "footnote-section-p": false,
+                        "archivedp": false,
+                        "commentedp": false,
+                        "post-affiliated": 1208,
+                        "title": [
+                            "What if the exploited class doesn't feel exploited?"
+                        ]
+                    },
+                    "contents": [
+                        {
+                            "$$data_type": "org-node",
+                            "type": "headline",
+                            "ref": "orga2d9f0b",
+                            "drawer": {},
+                            "properties": {
+                                "tags-all": [],
+                                "raw-value": "Class consciousness",
+                                "pre-blank": 0,
+                                "level": 3,
+                                "priority": null,
+                                "tags": [],
+                                "todo-keyword": null,
+                                "todo-type": null,
+                                "post-blank": 0,
+                                "footnote-section-p": false,
+                                "archivedp": false,
+                                "commentedp": false,
+                                "post-affiliated": 1263,
+                                "title": [
+                                    "Class consciousness"
+                                ]
+                            },
+                            "contents": []
+                        }
+                    ]
+                },
+                {
+                    "$$data_type": "org-node",
+                    "type": "headline",
+                    "ref": "org1605a01",
+                    "drawer": {},
+                    "properties": {
+                        "tags-all": [],
+                        "raw-value": "Critique of Enlightenment-style thinking:",
+                        "pre-blank": 0,
+                        "level": 2,
+                        "priority": null,
+                        "tags": [],
+                        "todo-keyword": null,
+                        "todo-type": null,
+                        "post-blank": 0,
+                        "footnote-section-p": false,
+                        "archivedp": false,
+                        "commentedp": false,
+                        "post-affiliated": 1287,
+                        "title": [
+                            "Critique of Enlightenment-style thinking:"
+                        ]
+                    },
+                    "contents": [
+                        {
+                            "$$data_type": "org-node",
+                            "type": "headline",
+                            "ref": "org0093302",
+                            "drawer": {},
+                            "properties": {
+                                "tags-all": [],
+                                "raw-value": "",
+                                "pre-blank": 0,
+                                "level": 3,
+                                "priority": null,
+                                "tags": [],
+                                "todo-keyword": null,
+                                "todo-type": null,
+                                "post-blank": 0,
+                                "footnote-section-p": false,
+                                "archivedp": false,
+                                "commentedp": false,
+                                "post-affiliated": 1332,
+                                "title": [
+                                    ""
+                                ]
+                            },
+                            "contents": [
+                                {
+                                    "$$data_type": "org-node",
+                                    "type": "section",
+                                    "ref": "org3153e34",
+                                    "properties": {
+                                        "post-blank": 0,
+                                        "post-affiliated": 1337
+                                    },
+                                    "contents": [
+                                        {
+                                            "$$data_type": "org-node",
+                                            "type": "paragraph",
+                                            "ref": "org28f680f",
+                                            "properties": {
+                                                "post-blank": 0,
+                                                "post-affiliated": 1337
+                                            },
+                                            "contents": [
+                                                "We use reason to arrive at knowledge, it's anthropocentric - we\nwant knowledge that is useful to us (even if we don't notice or\nacknowledge it)\n"
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "$$data_type": "org-node",
+                                    "type": "headline",
+                                    "ref": "org00310c5",
+                                    "drawer": {},
+                                    "properties": {
+                                        "tags-all": [],
+                                        "raw-value": "This has a big impact on the type of questions we ask",
+                                        "pre-blank": 0,
+                                        "level": 4,
+                                        "priority": null,
+                                        "tags": [],
+                                        "todo-keyword": null,
+                                        "todo-type": null,
+                                        "post-blank": 0,
+                                        "footnote-section-p": false,
+                                        "archivedp": false,
+                                        "commentedp": false,
+                                        "post-affiliated": 1481,
+                                        "title": [
+                                            "This has a big impact on the type of questions we ask"
+                                        ]
+                                    },
+                                    "contents": []
+                                },
+                                {
+                                    "$$data_type": "org-node",
+                                    "type": "headline",
+                                    "ref": "orga445ab8",
+                                    "drawer": {},
+                                    "properties": {
+                                        "tags-all": [],
+                                        "raw-value": "When we reason about human behaviour, we do it so that we can act upon it, control it.",
+                                        "pre-blank": 0,
+                                        "level": 4,
+                                        "priority": null,
+                                        "tags": [],
+                                        "todo-keyword": null,
+                                        "todo-type": null,
+                                        "post-blank": 0,
+                                        "footnote-section-p": false,
+                                        "archivedp": false,
+                                        "commentedp": false,
+                                        "post-affiliated": 1540,
+                                        "title": [
+                                            "When we reason about human behaviour, we do it so that we can act upon it, control it."
+                                        ]
+                                    },
+                                    "contents": []
+                                }
+                            ]
+                        },
+                        {
+                            "$$data_type": "org-node",
+                            "type": "headline",
+                            "ref": "org5e96762",
+                            "drawer": {},
+                            "properties": {
+                                "tags-all": [],
+                                "raw-value": "",
+                                "pre-blank": 0,
+                                "level": 3,
+                                "priority": null,
+                                "tags": [],
+                                "todo-keyword": null,
+                                "todo-type": null,
+                                "post-blank": 0,
+                                "footnote-section-p": false,
+                                "archivedp": false,
+                                "commentedp": false,
+                                "post-affiliated": 1632,
+                                "title": [
+                                    ""
+                                ]
+                            },
+                            "contents": [
+                                {
+                                    "$$data_type": "org-node",
+                                    "type": "section",
+                                    "ref": "org1626917",
+                                    "properties": {
+                                        "post-blank": 0,
+                                        "post-affiliated": 1637
+                                    },
+                                    "contents": [
+                                        {
+                                            "$$data_type": "org-node",
+                                            "type": "paragraph",
+                                            "ref": "org4a23a3d",
+                                            "properties": {
+                                                "post-blank": 0,
+                                                "post-affiliated": 1637
+                                            },
+                                            "contents": [
+                                                "The type of reason human beings are able to carry out is always\ngoing to be corrupted with the purpose of controlling whatever it\nis we're reasoning about. So there's huge cognitive bias that goes\ninto that - we make questions in which terms we know how to think\nabout, and that limits the scope of our theories. It's ridden with\nconfirmation bias - we fit the object to a theory that describes\nthe object in a way that enables us to control the object.\n"
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "$$data_type": "org-node",
+                    "type": "headline",
+                    "ref": "org579933f",
+                    "drawer": {},
+                    "properties": {
+                        "tags-all": [],
+                        "raw-value": "",
+                        "pre-blank": 0,
+                        "level": 2,
+                        "priority": null,
+                        "tags": [],
+                        "todo-keyword": null,
+                        "todo-type": null,
+                        "post-blank": 0,
+                        "footnote-section-p": false,
+                        "archivedp": false,
+                        "commentedp": false,
+                        "post-affiliated": 2091,
+                        "title": [
+                            ""
+                        ]
+                    },
+                    "contents": [
+                        {
+                            "$$data_type": "org-node",
+                            "type": "section",
+                            "ref": "orge019374",
+                            "properties": {
+                                "post-blank": 0,
+                                "post-affiliated": 2095
+                            },
+                            "contents": [
+                                {
+                                    "$$data_type": "org-node",
+                                    "type": "paragraph",
+                                    "ref": "org041a5d3",
+                                    "properties": {
+                                        "post-blank": 0,
+                                        "post-affiliated": 2095
+                                    },
+                                    "contents": [
+                                        "Marcuse says this is what western society has become: you're born\nas a worker-consumer. your work becomes your identity. You are\nwhat you do and what you consume in your free time. You have to\nwant to consume enough that you feel the need to go to work for\nwhat you consume the following day.\n"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "$$data_type": "org-node",
+                            "type": "headline",
+                            "ref": "orgd204f60",
+                            "drawer": {},
+                            "properties": {
+                                "tags-all": [],
+                                "raw-value": "Life is not an end in itself",
+                                "pre-blank": 0,
+                                "level": 3,
+                                "priority": null,
+                                "tags": [],
+                                "todo-keyword": null,
+                                "todo-type": null,
+                                "post-blank": 0,
+                                "footnote-section-p": false,
+                                "archivedp": false,
+                                "commentedp": false,
+                                "post-affiliated": 2388,
+                                "title": [
+                                    "Life is not an end in itself"
+                                ]
+                            },
+                            "contents": [
+                                {
+                                    "$$data_type": "org-node",
+                                    "type": "section",
+                                    "ref": "org757d03e",
+                                    "properties": {
+                                        "post-blank": 0,
+                                        "post-affiliated": 2421
+                                    },
+                                    "contents": [
+                                        {
+                                            "$$data_type": "org-node",
+                                            "type": "paragraph",
+                                            "ref": "orgaaec5f4",
+                                            "properties": {
+                                                "post-blank": 0,
+                                                "post-affiliated": 2421
+                                            },
+                                            "contents": [
+                                                "Forced altruism - you have to go do stuff that other people need, else you starve to death.\n"
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "$$data_type": "org-node",
+                                    "type": "headline",
+                                    "ref": "org456832b",
+                                    "drawer": {},
+                                    "properties": {
+                                        "tags-all": [],
+                                        "raw-value": "",
+                                        "pre-blank": 0,
+                                        "level": 4,
+                                        "priority": null,
+                                        "tags": [],
+                                        "todo-keyword": null,
+                                        "todo-type": null,
+                                        "post-blank": 0,
+                                        "footnote-section-p": false,
+                                        "archivedp": false,
+                                        "commentedp": false,
+                                        "post-affiliated": 2513,
+                                        "title": [
+                                            ""
+                                        ]
+                                    },
+                                    "contents": [
+                                        {
+                                            "$$data_type": "org-node",
+                                            "type": "section",
+                                            "ref": "orgc3ad964",
+                                            "properties": {
+                                                "post-blank": 0,
+                                                "post-affiliated": 2519
+                                            },
+                                            "contents": [
+                                                {
+                                                    "$$data_type": "org-node",
+                                                    "type": "paragraph",
+                                                    "ref": "org6d511ef",
+                                                    "properties": {
+                                                        "post-blank": 0,
+                                                        "post-affiliated": 2519
+                                                    },
+                                                    "contents": [
+                                                        "Because almost no-one wants to be an outcast, you end up\nconforming and perpetuating the system\n"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "$$data_type": "org-node",
+                            "type": "headline",
+                            "ref": "orgd7d2437",
+                            "drawer": {},
+                            "properties": {
+                                "tags-all": [],
+                                "raw-value": "",
+                                "pre-blank": 0,
+                                "level": 3,
+                                "priority": null,
+                                "tags": [],
+                                "todo-keyword": null,
+                                "todo-type": null,
+                                "post-blank": 0,
+                                "footnote-section-p": false,
+                                "archivedp": false,
+                                "commentedp": false,
+                                "post-affiliated": 2615,
+                                "title": [
+                                    ""
+                                ]
+                            },
+                            "contents": [
+                                {
+                                    "$$data_type": "org-node",
+                                    "type": "section",
+                                    "ref": "org41a39db",
+                                    "properties": {
+                                        "post-blank": 0,
+                                        "post-affiliated": 2620
+                                    },
+                                    "contents": [
+                                        {
+                                            "$$data_type": "org-node",
+                                            "type": "paragraph",
+                                            "ref": "org0491b88",
+                                            "properties": {
+                                                "post-blank": 0,
+                                                "post-affiliated": 2620
+                                            },
+                                            "contents": [
+                                                "Marcuse concedes: Society is in fact advancing technologically.\nBut is it advancing as a species? Is the next iPhone 12 more\nimportant than the lives of the people working on the factories\nthat produce it, that throw themselves off the roof? The system\nworks if its end is said technological advancement. But in\nexchange for what?\n"
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "$$data_type": "org-node",
+                                    "type": "headline",
+                                    "ref": "org61dbbf2",
+                                    "drawer": {},
+                                    "properties": {
+                                        "tags-all": [],
+                                        "raw-value": "",
+                                        "pre-blank": 0,
+                                        "level": 4,
+                                        "priority": null,
+                                        "tags": [],
+                                        "todo-keyword": null,
+                                        "todo-type": null,
+                                        "post-blank": 0,
+                                        "footnote-section-p": false,
+                                        "archivedp": false,
+                                        "commentedp": false,
+                                        "post-affiliated": 2951,
+                                        "title": [
+                                            ""
+                                        ]
+                                    },
+                                    "contents": [
+                                        {
+                                            "$$data_type": "org-node",
+                                            "type": "section",
+                                            "ref": "org7892e1d",
+                                            "properties": {
+                                                "post-blank": 0,
+                                                "post-affiliated": 2957
+                                            },
+                                            "contents": [
+                                                {
+                                                    "$$data_type": "org-node",
+                                                    "type": "paragraph",
+                                                    "ref": "orga1962b0",
+                                                    "properties": {
+                                                        "post-blank": 0,
+                                                        "post-affiliated": 2957
+                                                    },
+                                                    "contents": [
+                                                        "Cold turkey change is impossible. People have to be made aware of\nthe downsides of the system they have been conditioned to conform\nto and perpetuate. Made aware of their chains. Made aware of the\nsuffering of the people that make this system possible\n"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "$$data_type": "org-node",
+                    "type": "headline",
+                    "ref": "org2ced91c",
+                    "drawer": {},
+                    "properties": {
+                        "tags-all": [],
+                        "raw-value": "",
+                        "pre-blank": 0,
+                        "level": 2,
+                        "priority": null,
+                        "tags": [],
+                        "todo-keyword": null,
+                        "todo-type": null,
+                        "post-blank": 0,
+                        "footnote-section-p": false,
+                        "archivedp": false,
+                        "commentedp": false,
+                        "post-affiliated": 3209,
+                        "title": [
+                            ""
+                        ]
+                    },
+                    "contents": [
+                        {
+                            "$$data_type": "org-node",
+                            "type": "section",
+                            "ref": "orgfcb3d00",
+                            "properties": {
+                                "post-blank": 0,
+                                "post-affiliated": 3213
+                            },
+                            "contents": [
+                                {
+                                    "$$data_type": "org-node",
+                                    "type": "paragraph",
+                                    "ref": "orgd0f162c",
+                                    "properties": {
+                                        "post-blank": 0,
+                                        "post-affiliated": 3213
+                                    },
+                                    "contents": [
+                                        "Why is the worker of the 20th century so alienated, given all this\nnew technological progress? Everything is a product, and aids in\nthis alienation\n"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "$$data_type": "org-node",
+                            "type": "headline",
+                            "ref": "org160ceea",
+                            "drawer": {},
+                            "properties": {
+                                "tags-all": [],
+                                "raw-value": "",
+                                "pre-blank": 0,
+                                "level": 3,
+                                "priority": null,
+                                "tags": [],
+                                "todo-keyword": null,
+                                "todo-type": null,
+                                "post-blank": 0,
+                                "footnote-section-p": false,
+                                "archivedp": false,
+                                "commentedp": false,
+                                "post-affiliated": 3361,
+                                "title": [
+                                    ""
+                                ]
+                            },
+                            "contents": [
+                                {
+                                    "$$data_type": "org-node",
+                                    "type": "section",
+                                    "ref": "org85abd70",
+                                    "properties": {
+                                        "post-blank": 0,
+                                        "post-affiliated": 3366
+                                    },
+                                    "contents": [
+                                        {
+                                            "$$data_type": "org-node",
+                                            "type": "paragraph",
+                                            "ref": "org3b925d9",
+                                            "properties": {
+                                                "post-blank": 0,
+                                                "post-affiliated": 3366
+                                            },
+                                            "contents": [
+                                                "The competition and hyper-efficiency nature of capitalism is the\nengine of this alienation\n"
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "$$data_type": "org-node",
+                            "type": "headline",
+                            "ref": "org7828f4c",
+                            "drawer": {},
+                            "properties": {
+                                "tags-all": [],
+                                "raw-value": "",
+                                "pre-blank": 0,
+                                "level": 3,
+                                "priority": null,
+                                "tags": [],
+                                "todo-keyword": null,
+                                "todo-type": null,
+                                "post-blank": 0,
+                                "footnote-section-p": false,
+                                "archivedp": false,
+                                "commentedp": false,
+                                "post-affiliated": 3457,
+                                "title": [
+                                    ""
+                                ]
+                            },
+                            "contents": [
+                                {
+                                    "$$data_type": "org-node",
+                                    "type": "section",
+                                    "ref": "orgda5bcd9",
+                                    "properties": {
+                                        "post-blank": 0,
+                                        "post-affiliated": 3462
+                                    },
+                                    "contents": [
+                                        {
+                                            "$$data_type": "org-node",
+                                            "type": "paragraph",
+                                            "ref": "org51d7a0f",
+                                            "properties": {
+                                                "post-blank": 0,
+                                                "post-affiliated": 3462
+                                            },
+                                            "contents": [
+                                                "The work-consume loop that western life has become, imposes huge\nconstraints on what people can become. We're not 100% free to\nchoose whatever we want to consume: we can only consume from that\nwhich is available - limited freedom. And since in this society\nour identity is tightly coupled to what we consume, we have very\nlimited freedom with respect to what we can become.\n"
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "$$data_type": "org-node",
+                                    "type": "headline",
+                                    "ref": "org0320667",
+                                    "drawer": {},
+                                    "properties": {
+                                        "tags-all": [],
+                                        "raw-value": "",
+                                        "pre-blank": 0,
+                                        "level": 4,
+                                        "priority": null,
+                                        "tags": [],
+                                        "todo-keyword": null,
+                                        "todo-type": null,
+                                        "post-blank": 0,
+                                        "footnote-section-p": false,
+                                        "archivedp": false,
+                                        "commentedp": false,
+                                        "post-affiliated": 3836,
+                                        "title": [
+                                            ""
+                                        ]
+                                    },
+                                    "contents": [
+                                        {
+                                            "$$data_type": "org-node",
+                                            "type": "section",
+                                            "ref": "org59ac2c3",
+                                            "properties": {
+                                                "post-blank": 0,
+                                                "post-affiliated": 3842
+                                            },
+                                            "contents": [
+                                                {
+                                                    "$$data_type": "org-node",
+                                                    "type": "paragraph",
+                                                    "ref": "org86f296f",
+                                                    "properties": {
+                                                        "post-blank": 0,
+                                                        "post-affiliated": 3842
+                                                    },
+                                                    "contents": [
+                                                        "Workers in the west aren't using their leisure time to become more\naware of their condition. They're using it to relax and rest from\nwork. They want to be entertained. This creates a demand for\nentertainment-as-a-product.\n"
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "$$data_type": "org-node",
+                                            "type": "headline",
+                                            "ref": "orgc87fc1d",
+                                            "drawer": {},
+                                            "properties": {
+                                                "tags-all": [],
+                                                "raw-value": "",
+                                                "pre-blank": 0,
+                                                "level": 5,
+                                                "priority": null,
+                                                "tags": [],
+                                                "todo-keyword": null,
+                                                "todo-type": null,
+                                                "post-blank": 0,
+                                                "footnote-section-p": false,
+                                                "archivedp": false,
+                                                "commentedp": false,
+                                                "post-affiliated": 4064,
+                                                "title": [
+                                                    ""
+                                                ]
+                                            },
+                                            "contents": [
+                                                {
+                                                    "$$data_type": "org-node",
+                                                    "type": "section",
+                                                    "ref": "org7b9789d",
+                                                    "properties": {
+                                                        "post-blank": 0,
+                                                        "post-affiliated": 4071
+                                                    },
+                                                    "contents": [
+                                                        {
+                                                            "$$data_type": "org-node",
+                                                            "type": "paragraph",
+                                                            "ref": "org0ae2d3e",
+                                                            "properties": {
+                                                                "post-blank": 0,
+                                                                "post-affiliated": 4071
+                                                            },
+                                                            "contents": [
+                                                                "What happens when art becomes a product? When art is made to meet\na demand. Then it stops fulfilling its purpose of making people\nthink, and starts being another mechanism for the perpetuation of\nthe system. Note that there isn't necessarily an intention here -\nit's the nature of the system itself that is self-perpetuating.\n"
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "$$data_type": "org-node",
+                                    "type": "headline",
+                                    "ref": "org62c7c5f",
+                                    "drawer": {},
+                                    "properties": {
+                                        "tags-all": [],
+                                        "raw-value": "",
+                                        "pre-blank": 0,
+                                        "level": 4,
+                                        "priority": null,
+                                        "tags": [],
+                                        "todo-keyword": null,
+                                        "todo-type": null,
+                                        "post-blank": 0,
+                                        "footnote-section-p": false,
+                                        "archivedp": false,
+                                        "commentedp": false,
+                                        "post-affiliated": 4397,
+                                        "title": [
+                                            ""
+                                        ]
+                                    },
+                                    "contents": [
+                                        {
+                                            "$$data_type": "org-node",
+                                            "type": "section",
+                                            "ref": "orgef4da78",
+                                            "properties": {
+                                                "post-blank": 1,
+                                                "post-affiliated": 4403
+                                            },
+                                            "contents": [
+                                                {
+                                                    "$$data_type": "org-node",
+                                                    "type": "paragraph",
+                                                    "ref": "orgd370f4f",
+                                                    "properties": {
+                                                        "post-blank": 0,
+                                                        "post-affiliated": 4403
+                                                    },
+                                                    "contents": [
+                                                        "In this society you're made to believe that every problem can be\nsolved by buying the right product. Advertisement industry\nrealizes this. And they know one problem of contemporary human\nexistence is the one of craving human interaction, so they'll\ncreate products that can be perceived as the solution for that\nproblem.\n"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

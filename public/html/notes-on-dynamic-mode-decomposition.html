@@ -1,0 +1,72 @@
+<h2 id="section"></h2>
+<p>These are notes I made to sum up my learnings from watching these two videos about Dynamic Mode Decomposition, by Prof. J. Nathan Kutz:</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=bYfGVQ1Sg98">Part I</a></li>
+<li><a href="https://www.youtube.com/watch?v=KAau5TBU0Sc">Part II</a></li>
+</ul>
+<p>I highly recommend watching them!</p>
+<h2 id="important-concepts">Important concepts</h2>
+<p>There are some key concepts you should be familiar with to understand DMD. I was a bit rusty on these, so I'm taking the chance to refresh the most important parts here too</p>
+<p>If you feel comfortable on those two topics, feel free to skip</p>
+<h3 id="linear-dynamical-systems">Linear Dynamical Systems</h3>
+<ol>
+<li><p>Let <span class="math inline"><em>x</em>(<em>t</em>)</span> represent an observation at time <span class="math inline"><em>t</em></span> of a system that evolves in continuous time, and <span class="math inline"><em>x</em><sub><em>t</em></sub></span> represent an observation at time <span class="math inline"><em>t</em></span> of a system that evolves in discrete time.</p></li>
+<li><p>Then, a Linear Dynamical System is one where the following applies (respectively for continous and discrete time):</p>
+<p><span class="math display">$$ \frac{d\vec{x(t)}}{dt} = A\vec{x(t)} $$</span></p>
+<p>or</p>
+<p><span class="math display">$$ \vec{x_{t+1}} = A\vec{x_t} $$</span></p>
+<p>It can be shown that, the general solution to this differential equation is:</p>
+<p><span class="math display">$$ \vec{x_t} = e^{tA}\vec{x_0} $$</span></p></li>
+<li><p>Check <a href="http://ee263.stanford.edu/lectures/expm.pdf">this link</a> from one of Prof. Stephen Boyd's courses, for a good explanation of this.</p></li>
+</ol>
+<h3 id="singular-value-decomposition">Singular Value Decomposition</h3>
+<p>SVD is a way to factorize any (m x n) matrix into 3 matrices:</p>
+<p><span class="math display"><em>A</em> = <em>U</em><em>Σ</em><em>V</em><sup><em>T</em></sup></span></p>
+<ol>
+<li><p>The matrices have the following shapes</p>
+<ul>
+<li><span class="math inline"><em>A</em></span> is (m x n)</li>
+<li><span class="math inline"><em>U</em></span> is (m x m) and orthonormal</li>
+<li><span class="math inline"><em>Σ</em></span> is (m x n) and diagonal</li>
+<li><span class="math inline"><em>V</em><sup><em>T</em></sup></span> is (n x n) and orthonormal</li>
+</ul></li>
+<li><p>Here's a good reference from the <a href="https://en.wikipedia.org/wiki/Singular_value_decomposition">SVD Wikipedia page</a> :</p>
+<p><strong>**</strong> SVD lends itself to useful interpretations. Say A is a matrix of gene expressions for people, where each column represents the gene expression values for one person.</p>
+<ol>
+<li><p>Then the matrix U will contain the "eigenpeople": the main directions of variation in the "people"-space.</p></li>
+</ol></li>
+<li><p><a href="https://www.youtube.com/watch?v=mBcLRGuAFUk">Prof. Gilbert Strang's video</a> is another great resource to understand SVD.</p></li>
+<li><p>Also, for a quick hint on the relationship between SVD and PCA, check <a href="https://math.stackexchange.com/a/3871">this Math StackExchange answer</a></p></li>
+</ol>
+<h2 id="dynamic-mode-decomposition">Dynamic Mode Decomposition</h2>
+<p>DMD's goal:</p>
+<p>Given observations of a dynamical system, obtain the matrix A that best describes it.</p>
+<h3 id="section-9"></h3>
+<p>Let <span class="math inline"><em>X</em></span> be a (n x m) matrix, of m observations with n dimensions, from time t=1 to time t=m-1. Let <span class="math inline"><em>X</em>′</span> be a (n x m) matrix, of m observations with n dimensions, from time t=2 to time t=m.</p>
+<h3 id="section-10"></h3>
+<p>We're trying to find A such that <span class="math inline"><em>X</em>′ = <em>A</em><em>X</em></span></p>
+<ol>
+<li><p>Problem: X is possibly very high-dimensional. Solution (assumption): X and A have low-rank structure.</p>
+<p><strong>***</strong> Taking this, we do <span class="math inline"><em>U</em><em>Σ</em><em>V</em><sup><em>T</em></sup> = <em>S</em><em>V</em><em>D</em>(<em>X</em>)</span></p>
+<p><strong>***</strong> With the low-rank assumption, we can approximate: <span class="math inline"><em>X</em> = <em>U</em><sub><em>r</em></sub><em>Σ</em><sub><em>r</em></sub><em>V</em><sub><em>r</em></sub><sup><em>T</em></sup></span>, where the subscript <span class="math inline"><em>r</em></span> means we're using only the <span class="math inline"><em>r</em></span> most important components. (The assumption's corollary is that these are enough to represent the whole <span class="math inline"><em>X</em></span>). To choose this <span class="math inline"><em>r</em></span>, we look at the singular values in <span class="math inline"><em>Σ</em></span> and decide based on their magnitudes - for instance, if the first 3 singular values are orders of magnitude bigger than the remaining ones, we would do <span class="math inline"><em>r</em> = 3</span>.</p>
+<ol>
+<li><p><span class="math inline"><em>A</em> = <em>X</em>′<em>X</em><sup>+</sup></span> which implies <span class="math inline"><em>A</em> = <em>X</em>′<em>V</em><sub><em>r</em></sub><em>Σ</em><sub><em>r</em></sub><sup> − 1</sup><em>U</em><sub><em>r</em></sub><sup><em>T</em></sup></span> (where <span class="math inline"><em>X</em><sup>+</sup></span> is the pseudo-inverse of <span class="math inline"><em>X</em></span>)</p></li>
+<li><p>Now, rather than working with a big matrix A, we're interested in working with smaller matrices. For that we use a similarity transform. (Recall that similar matrices have the same eigenvalues):</p>
+<ul>
+<li><span class="math inline"><em>Ã</em> = <em>U</em><sup>+</sup><em>A</em><em>U</em></span></li>
+<li><span class="math inline"><em>Ã</em> = <em>U</em><sup>+</sup><em>X</em>′<em>V</em><em>Σ</em><sup> − 1</sup><em>U</em><sup><em>T</em></sup><em>U</em> = <em>U</em><sup>+</sup><em>X</em>′<em>V</em><em>Σ</em><sup> − 1</sup></span></li>
+</ul></li>
+<li><p>We then find the eigenvalues and eigenvectors of <span class="math inline"><em>Ã</em></span>:</p>
+<p><span class="math inline"><em>Ã</em><em>W</em> = <em>W</em><em>Λ</em></span>, where <span class="math inline"><em>W</em></span> has the eigenvectors of <span class="math inline"><em>Ã</em></span> on its columns, and <span class="math inline"><em>Λ</em></span> is diagonal with the eigenvalues of <span class="math inline"><em>Ã</em></span> as its diagonal</p></li>
+<li><p>Finally, we want to bring the eigenvectors and eigenvalues of <span class="math inline"><em>Ã</em></span> back into the original coordinate system:</p>
+<ol>
+<li><p><span class="math inline"><em>Φ</em> = <em>X</em>′<em>V</em><em>Σ</em><sup> − 1</sup><em>W</em></span></p></li>
+<li><p>This allows us to rewrite our dynamical system:</p>
+<ol>
+<li><p><span class="math inline">$\vec{x_t} = \sum_{k=1}^r \vec{\phi_k} e^{\omega_k t} b_k$</span></p></li>
+<li><p>This formulation allows us to think of the dynamical system in terms of the DMD modes (the <span class="math inline"><em>ϕ</em><sub><em>k</em></sub></span>) which I like to regard as "eigenslices", and their respective oscillatory profiles (the <span class="math inline"><em>e</em><sup><em>ω</em><sub><em>k</em></sub><em>t</em></sup></span> terms), which explain the time dynamics of each DMD mode.</p></li>
+<li><p>Important remark: in a true linear dynamical system, the <span class="math inline"><em>ω</em><sub><em>k</em></sub></span> would have no real part, just imaginary, i.e. they would be pure oscillators. However, since in general we're approximating a non-linear system with a linear one, the <span class="math inline"><em>ω</em><sub><em>k</em></sub></span> we obtain will almost always have a real part, although a really small one, depending on the data. This means that we can't use DMD to describe the system in the long-term, since the real part of the <span class="math inline"><em>ω</em><sub><em>k</em></sub></span> will cause the approximated system to either dampen out (if the real part is negative) or blow up (if the real part is positive).</p></li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol>

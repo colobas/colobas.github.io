@@ -1,0 +1,2298 @@
+{
+    "$$data_type": "org-document",
+    "properties": {
+        "title": [
+            "Notes on Dynamic Mode Decomposition"
+        ],
+        "filetags": [],
+        "author": [],
+        "creator": "Emacs 27.1 (Org mode 9.3)",
+        "date": [],
+        "description": [],
+        "email": "colobas@gauss",
+        "language": "en"
+    },
+    "contents": [
+        {
+            "$$data_type": "org-node",
+            "type": "section",
+            "ref": "orgdf6c06d",
+            "properties": {
+                "post-blank": 1,
+                "post-affiliated": 1
+            },
+            "contents": [
+                {
+                    "$$data_type": "org-node",
+                    "type": "keyword",
+                    "ref": "org14c0a97",
+                    "properties": {
+                        "key": "TITLE",
+                        "value": "Notes on Dynamic Mode Decomposition",
+                        "post-blank": 0,
+                        "post-affiliated": 1
+                    },
+                    "contents": []
+                },
+                {
+                    "$$data_type": "org-node",
+                    "type": "paragraph",
+                    "ref": "org80d1d71",
+                    "properties": {
+                        "post-blank": 0,
+                        "post-affiliated": 46
+                    },
+                    "contents": [
+                        "#+ DATE: 2019-05-25\n#+ FILETAGS: :decomposition:algebra:dynamical-systems:control:\n"
+                    ]
+                }
+            ]
+        },
+        {
+            "$$data_type": "org-node",
+            "type": "headline",
+            "ref": "orgcae7922",
+            "drawer": {},
+            "properties": {
+                "tags-all": [],
+                "raw-value": "",
+                "pre-blank": 0,
+                "level": 2,
+                "priority": null,
+                "tags": [],
+                "todo-keyword": null,
+                "todo-type": null,
+                "post-blank": 1,
+                "footnote-section-p": false,
+                "archivedp": false,
+                "commentedp": false,
+                "post-affiliated": 130,
+                "title": [
+                    ""
+                ]
+            },
+            "contents": [
+                {
+                    "$$data_type": "org-node",
+                    "type": "section",
+                    "ref": "orgbd7ec6d",
+                    "properties": {
+                        "post-blank": 1,
+                        "post-affiliated": 134
+                    },
+                    "contents": [
+                        {
+                            "$$data_type": "org-node",
+                            "type": "paragraph",
+                            "ref": "orgd3408ba",
+                            "properties": {
+                                "post-blank": 1,
+                                "post-affiliated": 134
+                            },
+                            "contents": [
+                                "These are notes I made to sum up my learnings from watching these two\nvideos about Dynamic Mode Decomposition, by Prof.\u00a0J. Nathan Kutz:\n"
+                            ]
+                        },
+                        {
+                            "$$data_type": "org-node",
+                            "type": "plain-list",
+                            "ref": "orga041233",
+                            "properties": {
+                                "type": "unordered",
+                                "structure": [
+                                    [
+                                        271,
+                                        0,
+                                        "- ",
+                                        null,
+                                        null,
+                                        null,
+                                        329
+                                    ],
+                                    [
+                                        329,
+                                        0,
+                                        "- ",
+                                        null,
+                                        null,
+                                        null,
+                                        388
+                                    ]
+                                ],
+                                "post-blank": 1,
+                                "post-affiliated": 271
+                            },
+                            "contents": [
+                                {
+                                    "$$data_type": "org-node",
+                                    "type": "item",
+                                    "ref": "org8e5558e",
+                                    "properties": {
+                                        "bullet": "- ",
+                                        "checkbox": null,
+                                        "counter": null,
+                                        "pre-blank": 0,
+                                        "post-blank": 0,
+                                        "post-affiliated": 271,
+                                        "tag": []
+                                    },
+                                    "contents": [
+                                        {
+                                            "$$data_type": "org-node",
+                                            "type": "paragraph",
+                                            "ref": "org50d79e4",
+                                            "properties": {
+                                                "post-blank": 0,
+                                                "post-affiliated": 273
+                                            },
+                                            "contents": [
+                                                {
+                                                    "$$data_type": "org-node",
+                                                    "type": "link",
+                                                    "ref": "org9b04e49",
+                                                    "properties": {
+                                                        "type": "https",
+                                                        "path": "//www.youtube.com/watch?v=bYfGVQ1Sg98",
+                                                        "format": "bracket",
+                                                        "raw-link": "https://www.youtube.com/watch?v=bYfGVQ1Sg98",
+                                                        "application": null,
+                                                        "search-option": null,
+                                                        "post-blank": 0,
+                                                        "is-internal": false,
+                                                        "target-ref": null,
+                                                        "is-inline-image": false
+                                                    },
+                                                    "contents": [
+                                                        "Part I"
+                                                    ]
+                                                },
+                                                "\n"
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "$$data_type": "org-node",
+                                    "type": "item",
+                                    "ref": "orgc7705de",
+                                    "properties": {
+                                        "bullet": "- ",
+                                        "checkbox": null,
+                                        "counter": null,
+                                        "pre-blank": 0,
+                                        "post-blank": 0,
+                                        "post-affiliated": 329,
+                                        "tag": []
+                                    },
+                                    "contents": [
+                                        {
+                                            "$$data_type": "org-node",
+                                            "type": "paragraph",
+                                            "ref": "orge5b16ca",
+                                            "properties": {
+                                                "post-blank": 0,
+                                                "post-affiliated": 331
+                                            },
+                                            "contents": [
+                                                {
+                                                    "$$data_type": "org-node",
+                                                    "type": "link",
+                                                    "ref": "org572e84a",
+                                                    "properties": {
+                                                        "type": "https",
+                                                        "path": "//www.youtube.com/watch?v=KAau5TBU0Sc",
+                                                        "format": "bracket",
+                                                        "raw-link": "https://www.youtube.com/watch?v=KAau5TBU0Sc",
+                                                        "application": null,
+                                                        "search-option": null,
+                                                        "post-blank": 0,
+                                                        "is-internal": false,
+                                                        "target-ref": null,
+                                                        "is-inline-image": false
+                                                    },
+                                                    "contents": [
+                                                        "Part II"
+                                                    ]
+                                                },
+                                                "\n"
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "$$data_type": "org-node",
+                            "type": "paragraph",
+                            "ref": "org73cc1bc",
+                            "properties": {
+                                "post-blank": 0,
+                                "post-affiliated": 389
+                            },
+                            "contents": [
+                                "I highly recommend watching them!\n"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "$$data_type": "org-node",
+            "type": "headline",
+            "ref": "orgc1844ed",
+            "drawer": {},
+            "properties": {
+                "tags-all": [],
+                "raw-value": "Important concepts",
+                "pre-blank": 1,
+                "level": 2,
+                "priority": null,
+                "tags": [],
+                "todo-keyword": null,
+                "todo-type": null,
+                "post-blank": 1,
+                "footnote-section-p": false,
+                "archivedp": false,
+                "commentedp": false,
+                "post-affiliated": 424,
+                "title": [
+                    "Important concepts"
+                ]
+            },
+            "contents": [
+                {
+                    "$$data_type": "org-node",
+                    "type": "section",
+                    "ref": "orgf7e1e75",
+                    "properties": {
+                        "post-blank": 1,
+                        "post-affiliated": 447
+                    },
+                    "contents": [
+                        {
+                            "$$data_type": "org-node",
+                            "type": "paragraph",
+                            "ref": "orgb6471d9",
+                            "properties": {
+                                "post-blank": 1,
+                                "post-affiliated": 447
+                            },
+                            "contents": [
+                                "There are some key concepts you should be familiar with to understand\nDMD. I was a bit rusty on these, so I'm taking the chance to refresh the\nmost important parts here too\n"
+                            ]
+                        },
+                        {
+                            "$$data_type": "org-node",
+                            "type": "paragraph",
+                            "ref": "org5f04b5b",
+                            "properties": {
+                                "post-blank": 0,
+                                "post-affiliated": 621
+                            },
+                            "contents": [
+                                "If you feel comfortable on those two topics, feel free to skip\n"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "$$data_type": "org-node",
+                    "type": "headline",
+                    "ref": "orgc9ccebf",
+                    "drawer": {},
+                    "properties": {
+                        "tags-all": [],
+                        "raw-value": "Linear Dynamical Systems",
+                        "pre-blank": 1,
+                        "level": 3,
+                        "priority": null,
+                        "tags": [],
+                        "todo-keyword": null,
+                        "todo-type": null,
+                        "post-blank": 1,
+                        "footnote-section-p": false,
+                        "archivedp": false,
+                        "commentedp": false,
+                        "post-affiliated": 685,
+                        "title": [
+                            "Linear Dynamical Systems"
+                        ]
+                    },
+                    "contents": [
+                        {
+                            "$$data_type": "org-node",
+                            "type": "headline",
+                            "ref": "org3376c6c",
+                            "drawer": {},
+                            "properties": {
+                                "tags-all": [],
+                                "raw-value": "",
+                                "pre-blank": 0,
+                                "level": 4,
+                                "priority": null,
+                                "tags": [],
+                                "todo-keyword": null,
+                                "todo-type": null,
+                                "post-blank": 1,
+                                "footnote-section-p": false,
+                                "archivedp": false,
+                                "commentedp": false,
+                                "post-affiliated": 715,
+                                "title": [
+                                    ""
+                                ]
+                            },
+                            "contents": [
+                                {
+                                    "$$data_type": "org-node",
+                                    "type": "section",
+                                    "ref": "org4138403",
+                                    "properties": {
+                                        "post-blank": 1,
+                                        "post-affiliated": 721
+                                    },
+                                    "contents": [
+                                        {
+                                            "$$data_type": "org-node",
+                                            "type": "paragraph",
+                                            "ref": "org893c9a4",
+                                            "properties": {
+                                                "post-blank": 0,
+                                                "post-affiliated": 721
+                                            },
+                                            "contents": [
+                                                "Let ",
+                                                {
+                                                    "$$data_type": "org-node",
+                                                    "type": "latex-fragment",
+                                                    "ref": "org6cf3676",
+                                                    "properties": {
+                                                        "value": "$x(t)$",
+                                                        "post-blank": 1
+                                                    },
+                                                    "contents": []
+                                                },
+                                                "represent an observation at time ",
+                                                {
+                                                    "$$data_type": "org-node",
+                                                    "type": "latex-fragment",
+                                                    "ref": "org8e8727c",
+                                                    "properties": {
+                                                        "value": "$t$",
+                                                        "post-blank": 1
+                                                    },
+                                                    "contents": []
+                                                },
+                                                "of a system that evolves\nin continuous time, and ",
+                                                {
+                                                    "$$data_type": "org-node",
+                                                    "type": "latex-fragment",
+                                                    "ref": "orgeb2303f",
+                                                    "properties": {
+                                                        "value": "$x_t$",
+                                                        "post-blank": 1
+                                                    },
+                                                    "contents": []
+                                                },
+                                                "represent an observation at time ",
+                                                {
+                                                    "$$data_type": "org-node",
+                                                    "type": "latex-fragment",
+                                                    "ref": "org3edc457",
+                                                    "properties": {
+                                                        "value": "$t$",
+                                                        "post-blank": 1
+                                                    },
+                                                    "contents": []
+                                                },
+                                                "of a\nsystem that evolves in discrete time.\n"
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "$$data_type": "org-node",
+                            "type": "headline",
+                            "ref": "org2594025",
+                            "drawer": {},
+                            "properties": {
+                                "tags-all": [],
+                                "raw-value": "",
+                                "pre-blank": 0,
+                                "level": 4,
+                                "priority": null,
+                                "tags": [],
+                                "todo-keyword": null,
+                                "todo-type": null,
+                                "post-blank": 1,
+                                "footnote-section-p": false,
+                                "archivedp": false,
+                                "commentedp": false,
+                                "post-affiliated": 905,
+                                "title": [
+                                    ""
+                                ]
+                            },
+                            "contents": [
+                                {
+                                    "$$data_type": "org-node",
+                                    "type": "section",
+                                    "ref": "org5889ca6",
+                                    "properties": {
+                                        "post-blank": 1,
+                                        "post-affiliated": 911
+                                    },
+                                    "contents": [
+                                        {
+                                            "$$data_type": "org-node",
+                                            "type": "paragraph",
+                                            "ref": "orga3315be",
+                                            "properties": {
+                                                "post-blank": 1,
+                                                "post-affiliated": 911
+                                            },
+                                            "contents": [
+                                                "Then, a Linear Dynamical System is one where the following applies\n(respectively for continous and discrete time):\n"
+                                            ]
+                                        },
+                                        {
+                                            "$$data_type": "org-node",
+                                            "type": "paragraph",
+                                            "ref": "org601ebde",
+                                            "properties": {
+                                                "post-blank": 1,
+                                                "post-affiliated": 1027
+                                            },
+                                            "contents": [
+                                                {
+                                                    "$$data_type": "org-node",
+                                                    "type": "latex-fragment",
+                                                    "ref": "org1baf8bc",
+                                                    "properties": {
+                                                        "value": "$$ \\frac{d\\vec{x(t)}}{dt} = A\\vec{x(t)} $$",
+                                                        "post-blank": 0
+                                                    },
+                                                    "contents": []
+                                                },
+                                                "\n"
+                                            ]
+                                        },
+                                        {
+                                            "$$data_type": "org-node",
+                                            "type": "paragraph",
+                                            "ref": "org89425e5",
+                                            "properties": {
+                                                "post-blank": 1,
+                                                "post-affiliated": 1071
+                                            },
+                                            "contents": [
+                                                "or\n"
+                                            ]
+                                        },
+                                        {
+                                            "$$data_type": "org-node",
+                                            "type": "paragraph",
+                                            "ref": "org1a02536",
+                                            "properties": {
+                                                "post-blank": 1,
+                                                "post-affiliated": 1075
+                                            },
+                                            "contents": [
+                                                {
+                                                    "$$data_type": "org-node",
+                                                    "type": "latex-fragment",
+                                                    "ref": "orgf4dcfdf",
+                                                    "properties": {
+                                                        "value": "$$ \\vec{x_{t+1}} = A\\vec{x_t} $$",
+                                                        "post-blank": 0
+                                                    },
+                                                    "contents": []
+                                                },
+                                                "\n"
+                                            ]
+                                        },
+                                        {
+                                            "$$data_type": "org-node",
+                                            "type": "paragraph",
+                                            "ref": "org4b12f51",
+                                            "properties": {
+                                                "post-blank": 1,
+                                                "post-affiliated": 1109
+                                            },
+                                            "contents": [
+                                                "It can be shown that, the general solution to this differential equation\nis:\n"
+                                            ]
+                                        },
+                                        {
+                                            "$$data_type": "org-node",
+                                            "type": "paragraph",
+                                            "ref": "org1cdaef3",
+                                            "properties": {
+                                                "post-blank": 0,
+                                                "post-affiliated": 1187
+                                            },
+                                            "contents": [
+                                                {
+                                                    "$$data_type": "org-node",
+                                                    "type": "latex-fragment",
+                                                    "ref": "org5c92cf3",
+                                                    "properties": {
+                                                        "value": "$$ \\vec{x_t} = e^{tA}\\vec{x_0} $$",
+                                                        "post-blank": 0
+                                                    },
+                                                    "contents": []
+                                                },
+                                                "\n"
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "$$data_type": "org-node",
+                            "type": "headline",
+                            "ref": "org4d43710",
+                            "drawer": {},
+                            "properties": {
+                                "tags-all": [],
+                                "raw-value": "",
+                                "pre-blank": 0,
+                                "level": 4,
+                                "priority": null,
+                                "tags": [],
+                                "todo-keyword": null,
+                                "todo-type": null,
+                                "post-blank": 0,
+                                "footnote-section-p": false,
+                                "archivedp": false,
+                                "commentedp": false,
+                                "post-affiliated": 1222,
+                                "title": [
+                                    ""
+                                ]
+                            },
+                            "contents": [
+                                {
+                                    "$$data_type": "org-node",
+                                    "type": "section",
+                                    "ref": "org2648701",
+                                    "properties": {
+                                        "post-blank": 1,
+                                        "post-affiliated": 1228
+                                    },
+                                    "contents": [
+                                        {
+                                            "$$data_type": "org-node",
+                                            "type": "paragraph",
+                                            "ref": "org660c4d2",
+                                            "properties": {
+                                                "post-blank": 0,
+                                                "post-affiliated": 1228
+                                            },
+                                            "contents": [
+                                                "Check ",
+                                                {
+                                                    "$$data_type": "org-node",
+                                                    "type": "link",
+                                                    "ref": "org9cfc195",
+                                                    "properties": {
+                                                        "type": "http",
+                                                        "path": "//ee263.stanford.edu/lectures/expm.pdf",
+                                                        "format": "bracket",
+                                                        "raw-link": "http://ee263.stanford.edu/lectures/expm.pdf",
+                                                        "application": null,
+                                                        "search-option": null,
+                                                        "post-blank": 1,
+                                                        "is-internal": false,
+                                                        "target-ref": null,
+                                                        "is-inline-image": false
+                                                    },
+                                                    "contents": [
+                                                        "this link"
+                                                    ]
+                                                },
+                                                "from\none of Prof.\u00a0Stephen Boyd's courses, for a good explanation of this.\n"
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "$$data_type": "org-node",
+                    "type": "headline",
+                    "ref": "org3848f8f",
+                    "drawer": {},
+                    "properties": {
+                        "tags-all": [],
+                        "raw-value": "Singular Value Decomposition",
+                        "pre-blank": 1,
+                        "level": 3,
+                        "priority": null,
+                        "tags": [],
+                        "todo-keyword": null,
+                        "todo-type": null,
+                        "post-blank": 0,
+                        "footnote-section-p": false,
+                        "archivedp": false,
+                        "commentedp": false,
+                        "post-affiliated": 1368,
+                        "title": [
+                            "Singular Value Decomposition"
+                        ]
+                    },
+                    "contents": [
+                        {
+                            "$$data_type": "org-node",
+                            "type": "section",
+                            "ref": "orge0aea91",
+                            "properties": {
+                                "post-blank": 1,
+                                "post-affiliated": 1402
+                            },
+                            "contents": [
+                                {
+                                    "$$data_type": "org-node",
+                                    "type": "paragraph",
+                                    "ref": "org86f311a",
+                                    "properties": {
+                                        "post-blank": 1,
+                                        "post-affiliated": 1402
+                                    },
+                                    "contents": [
+                                        "SVD is a way to factorize any (m x n) matrix into 3 matrices:\n"
+                                    ]
+                                },
+                                {
+                                    "$$data_type": "org-node",
+                                    "type": "paragraph",
+                                    "ref": "orgc15f47a",
+                                    "properties": {
+                                        "post-blank": 0,
+                                        "post-affiliated": 1465
+                                    },
+                                    "contents": [
+                                        {
+                                            "$$data_type": "org-node",
+                                            "type": "latex-fragment",
+                                            "ref": "org33667cc",
+                                            "properties": {
+                                                "value": "$$ A = U\\Sigma V^T $$",
+                                                "post-blank": 0
+                                            },
+                                            "contents": []
+                                        },
+                                        "\n"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "$$data_type": "org-node",
+                            "type": "headline",
+                            "ref": "orged73551",
+                            "drawer": {},
+                            "properties": {
+                                "tags-all": [],
+                                "raw-value": "",
+                                "pre-blank": 0,
+                                "level": 4,
+                                "priority": null,
+                                "tags": [],
+                                "todo-keyword": null,
+                                "todo-type": null,
+                                "post-blank": 1,
+                                "footnote-section-p": false,
+                                "archivedp": false,
+                                "commentedp": false,
+                                "post-affiliated": 1488,
+                                "title": [
+                                    ""
+                                ]
+                            },
+                            "contents": [
+                                {
+                                    "$$data_type": "org-node",
+                                    "type": "section",
+                                    "ref": "orgfeb2604",
+                                    "properties": {
+                                        "post-blank": 1,
+                                        "post-affiliated": 1494
+                                    },
+                                    "contents": [
+                                        {
+                                            "$$data_type": "org-node",
+                                            "type": "paragraph",
+                                            "ref": "orge4040d2",
+                                            "properties": {
+                                                "post-blank": 0,
+                                                "post-affiliated": 1494
+                                            },
+                                            "contents": [
+                                                "The matrices have the following shapes\n"
+                                            ]
+                                        },
+                                        {
+                                            "$$data_type": "org-node",
+                                            "type": "plain-list",
+                                            "ref": "org7f6b297",
+                                            "properties": {
+                                                "type": "unordered",
+                                                "structure": [
+                                                    [
+                                                        1533,
+                                                        0,
+                                                        "- ",
+                                                        null,
+                                                        null,
+                                                        null,
+                                                        1550
+                                                    ],
+                                                    [
+                                                        1550,
+                                                        0,
+                                                        "- ",
+                                                        null,
+                                                        null,
+                                                        null,
+                                                        1583
+                                                    ],
+                                                    [
+                                                        1583,
+                                                        0,
+                                                        "- ",
+                                                        null,
+                                                        null,
+                                                        null,
+                                                        1618
+                                                    ],
+                                                    [
+                                                        1618,
+                                                        0,
+                                                        "- ",
+                                                        null,
+                                                        null,
+                                                        null,
+                                                        1653
+                                                    ]
+                                                ],
+                                                "post-blank": 0,
+                                                "post-affiliated": 1533
+                                            },
+                                            "contents": [
+                                                {
+                                                    "$$data_type": "org-node",
+                                                    "type": "item",
+                                                    "ref": "orge9c00a4",
+                                                    "properties": {
+                                                        "bullet": "- ",
+                                                        "checkbox": null,
+                                                        "counter": null,
+                                                        "pre-blank": 0,
+                                                        "post-blank": 0,
+                                                        "post-affiliated": 1533,
+                                                        "tag": []
+                                                    },
+                                                    "contents": [
+                                                        {
+                                                            "$$data_type": "org-node",
+                                                            "type": "paragraph",
+                                                            "ref": "orgdfaebfe",
+                                                            "properties": {
+                                                                "post-blank": 0,
+                                                                "post-affiliated": 1535
+                                                            },
+                                                            "contents": [
+                                                                {
+                                                                    "$$data_type": "org-node",
+                                                                    "type": "latex-fragment",
+                                                                    "ref": "org8a9c9aa",
+                                                                    "properties": {
+                                                                        "value": "$A$",
+                                                                        "post-blank": 1
+                                                                    },
+                                                                    "contents": []
+                                                                },
+                                                                "is (m x n)\n"
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "$$data_type": "org-node",
+                                                    "type": "item",
+                                                    "ref": "orgb3d292a",
+                                                    "properties": {
+                                                        "bullet": "- ",
+                                                        "checkbox": null,
+                                                        "counter": null,
+                                                        "pre-blank": 0,
+                                                        "post-blank": 0,
+                                                        "post-affiliated": 1550,
+                                                        "tag": []
+                                                    },
+                                                    "contents": [
+                                                        {
+                                                            "$$data_type": "org-node",
+                                                            "type": "paragraph",
+                                                            "ref": "org2bf3441",
+                                                            "properties": {
+                                                                "post-blank": 0,
+                                                                "post-affiliated": 1552
+                                                            },
+                                                            "contents": [
+                                                                {
+                                                                    "$$data_type": "org-node",
+                                                                    "type": "latex-fragment",
+                                                                    "ref": "orgbbed9b6",
+                                                                    "properties": {
+                                                                        "value": "$U$",
+                                                                        "post-blank": 1
+                                                                    },
+                                                                    "contents": []
+                                                                },
+                                                                "is (m x m) and orthonormal\n"
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "$$data_type": "org-node",
+                                                    "type": "item",
+                                                    "ref": "org74a128e",
+                                                    "properties": {
+                                                        "bullet": "- ",
+                                                        "checkbox": null,
+                                                        "counter": null,
+                                                        "pre-blank": 0,
+                                                        "post-blank": 0,
+                                                        "post-affiliated": 1583,
+                                                        "tag": []
+                                                    },
+                                                    "contents": [
+                                                        {
+                                                            "$$data_type": "org-node",
+                                                            "type": "paragraph",
+                                                            "ref": "org8ac7841",
+                                                            "properties": {
+                                                                "post-blank": 0,
+                                                                "post-affiliated": 1585
+                                                            },
+                                                            "contents": [
+                                                                {
+                                                                    "$$data_type": "org-node",
+                                                                    "type": "latex-fragment",
+                                                                    "ref": "orgcef2640",
+                                                                    "properties": {
+                                                                        "value": "$\\Sigma$",
+                                                                        "post-blank": 1
+                                                                    },
+                                                                    "contents": []
+                                                                },
+                                                                "is (m x n) and diagonal\n"
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "$$data_type": "org-node",
+                                                    "type": "item",
+                                                    "ref": "org78d0dcf",
+                                                    "properties": {
+                                                        "bullet": "- ",
+                                                        "checkbox": null,
+                                                        "counter": null,
+                                                        "pre-blank": 0,
+                                                        "post-blank": 0,
+                                                        "post-affiliated": 1618,
+                                                        "tag": []
+                                                    },
+                                                    "contents": [
+                                                        {
+                                                            "$$data_type": "org-node",
+                                                            "type": "paragraph",
+                                                            "ref": "orgbe90078",
+                                                            "properties": {
+                                                                "post-blank": 0,
+                                                                "post-affiliated": 1620
+                                                            },
+                                                            "contents": [
+                                                                {
+                                                                    "$$data_type": "org-node",
+                                                                    "type": "latex-fragment",
+                                                                    "ref": "orgb19342b",
+                                                                    "properties": {
+                                                                        "value": "$V^T$",
+                                                                        "post-blank": 1
+                                                                    },
+                                                                    "contents": []
+                                                                },
+                                                                "is (n x n) and orthonormal\n"
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "$$data_type": "org-node",
+                            "type": "headline",
+                            "ref": "org313e37e",
+                            "drawer": {},
+                            "properties": {
+                                "tags-all": [],
+                                "raw-value": "",
+                                "pre-blank": 0,
+                                "level": 4,
+                                "priority": null,
+                                "tags": [],
+                                "todo-keyword": null,
+                                "todo-type": null,
+                                "post-blank": 1,
+                                "footnote-section-p": false,
+                                "archivedp": false,
+                                "commentedp": false,
+                                "post-affiliated": 1654,
+                                "title": [
+                                    ""
+                                ]
+                            },
+                            "contents": [
+                                {
+                                    "$$data_type": "org-node",
+                                    "type": "section",
+                                    "ref": "orgde95d29",
+                                    "properties": {
+                                        "post-blank": 1,
+                                        "post-affiliated": 1660
+                                    },
+                                    "contents": [
+                                        {
+                                            "$$data_type": "org-node",
+                                            "type": "paragraph",
+                                            "ref": "org418d05b",
+                                            "properties": {
+                                                "post-blank": 1,
+                                                "post-affiliated": 1660
+                                            },
+                                            "contents": [
+                                                "Here's a good reference from the\n",
+                                                {
+                                                    "$$data_type": "org-node",
+                                                    "type": "link",
+                                                    "ref": "orgb0202fa",
+                                                    "properties": {
+                                                        "type": "https",
+                                                        "path": "//en.wikipedia.org/wiki/Singular_value_decomposition",
+                                                        "format": "bracket",
+                                                        "raw-link": "https://en.wikipedia.org/wiki/Singular_value_decomposition",
+                                                        "application": null,
+                                                        "search-option": null,
+                                                        "post-blank": 1,
+                                                        "is-internal": false,
+                                                        "target-ref": null,
+                                                        "is-inline-image": false
+                                                    },
+                                                    "contents": [
+                                                        "SVD\nWikipedia page"
+                                                    ]
+                                                },
+                                                ":\n"
+                                            ]
+                                        },
+                                        {
+                                            "$$data_type": "org-node",
+                                            "type": "paragraph",
+                                            "ref": "org0d91bfb",
+                                            "properties": {
+                                                "post-blank": 0,
+                                                "post-affiliated": 1779
+                                            },
+                                            "contents": [
+                                                {
+                                                    "$$data_type": "org-node",
+                                                    "type": "bold",
+                                                    "ref": "org73341ae",
+                                                    "properties": {
+                                                        "post-blank": 0
+                                                    },
+                                                    "contents": [
+                                                        "**"
+                                                    ]
+                                                },
+                                                "\nSVD lends itself to useful interpretations. Say A is a matrix of gene\nexpressions for people, where each column represents the gene expression\nvalues for one person.\n"
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "$$data_type": "org-node",
+                                    "type": "headline",
+                                    "ref": "orgdd7445b",
+                                    "drawer": {},
+                                    "properties": {
+                                        "tags-all": [],
+                                        "raw-value": "",
+                                        "pre-blank": 0,
+                                        "level": 5,
+                                        "priority": null,
+                                        "tags": [],
+                                        "todo-keyword": null,
+                                        "todo-type": null,
+                                        "post-blank": 0,
+                                        "footnote-section-p": false,
+                                        "archivedp": false,
+                                        "commentedp": false,
+                                        "post-affiliated": 1951,
+                                        "title": [
+                                            ""
+                                        ]
+                                    },
+                                    "contents": [
+                                        {
+                                            "$$data_type": "org-node",
+                                            "type": "section",
+                                            "ref": "org72930b9",
+                                            "properties": {
+                                                "post-blank": 1,
+                                                "post-affiliated": 1958
+                                            },
+                                            "contents": [
+                                                {
+                                                    "$$data_type": "org-node",
+                                                    "type": "paragraph",
+                                                    "ref": "org26af6fe",
+                                                    "properties": {
+                                                        "post-blank": 0,
+                                                        "post-affiliated": 1958
+                                                    },
+                                                    "contents": [
+                                                        "Then the matrix U will contain the \"eigenpeople\": the main directions of\nvariation in the \"people\"-space.\n"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "$$data_type": "org-node",
+                            "type": "headline",
+                            "ref": "org6592939",
+                            "drawer": {},
+                            "properties": {
+                                "tags-all": [],
+                                "raw-value": "",
+                                "pre-blank": 0,
+                                "level": 4,
+                                "priority": null,
+                                "tags": [],
+                                "todo-keyword": null,
+                                "todo-type": null,
+                                "post-blank": 1,
+                                "footnote-section-p": false,
+                                "archivedp": false,
+                                "commentedp": false,
+                                "post-affiliated": 2065,
+                                "title": [
+                                    ""
+                                ]
+                            },
+                            "contents": [
+                                {
+                                    "$$data_type": "org-node",
+                                    "type": "section",
+                                    "ref": "org7282dbe",
+                                    "properties": {
+                                        "post-blank": 1,
+                                        "post-affiliated": 2071
+                                    },
+                                    "contents": [
+                                        {
+                                            "$$data_type": "org-node",
+                                            "type": "paragraph",
+                                            "ref": "orgb6f653f",
+                                            "properties": {
+                                                "post-blank": 0,
+                                                "post-affiliated": 2071
+                                            },
+                                            "contents": [
+                                                {
+                                                    "$$data_type": "org-node",
+                                                    "type": "link",
+                                                    "ref": "org3cb5a04",
+                                                    "properties": {
+                                                        "type": "https",
+                                                        "path": "//www.youtube.com/watch?v=mBcLRGuAFUk",
+                                                        "format": "bracket",
+                                                        "raw-link": "https://www.youtube.com/watch?v=mBcLRGuAFUk",
+                                                        "application": null,
+                                                        "search-option": null,
+                                                        "post-blank": 1,
+                                                        "is-internal": false,
+                                                        "target-ref": null,
+                                                        "is-inline-image": false
+                                                    },
+                                                    "contents": [
+                                                        "Prof.\u00a0Gilbert Strang's\nvideo"
+                                                    ]
+                                                },
+                                                "is another great resource to understand SVD.\n"
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "$$data_type": "org-node",
+                            "type": "headline",
+                            "ref": "org3a10172",
+                            "drawer": {},
+                            "properties": {
+                                "tags-all": [],
+                                "raw-value": "",
+                                "pre-blank": 0,
+                                "level": 4,
+                                "priority": null,
+                                "tags": [],
+                                "todo-keyword": null,
+                                "todo-type": null,
+                                "post-blank": 0,
+                                "footnote-section-p": false,
+                                "archivedp": false,
+                                "commentedp": false,
+                                "post-affiliated": 2195,
+                                "title": [
+                                    ""
+                                ]
+                            },
+                            "contents": [
+                                {
+                                    "$$data_type": "org-node",
+                                    "type": "section",
+                                    "ref": "org7fd6f9e",
+                                    "properties": {
+                                        "post-blank": 1,
+                                        "post-affiliated": 2201
+                                    },
+                                    "contents": [
+                                        {
+                                            "$$data_type": "org-node",
+                                            "type": "paragraph",
+                                            "ref": "org7cf6178",
+                                            "properties": {
+                                                "post-blank": 0,
+                                                "post-affiliated": 2201
+                                            },
+                                            "contents": [
+                                                "Also, for a quick hint on the relationship between SVD and PCA, check\n",
+                                                {
+                                                    "$$data_type": "org-node",
+                                                    "type": "link",
+                                                    "ref": "org660f2da",
+                                                    "properties": {
+                                                        "type": "https",
+                                                        "path": "//math.stackexchange.com/a/3871",
+                                                        "format": "bracket",
+                                                        "raw-link": "https://math.stackexchange.com/a/3871",
+                                                        "application": null,
+                                                        "search-option": null,
+                                                        "post-blank": 0,
+                                                        "is-internal": false,
+                                                        "target-ref": null,
+                                                        "is-inline-image": false
+                                                    },
+                                                    "contents": [
+                                                        "this Math StackExchange\nanswer"
+                                                    ]
+                                                },
+                                                "\n"
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "$$data_type": "org-node",
+            "type": "headline",
+            "ref": "orgb14dc65",
+            "drawer": {},
+            "properties": {
+                "tags-all": [],
+                "raw-value": "Dynamic Mode Decomposition",
+                "pre-blank": 1,
+                "level": 2,
+                "priority": null,
+                "tags": [],
+                "todo-keyword": null,
+                "todo-type": null,
+                "post-blank": 1,
+                "footnote-section-p": false,
+                "archivedp": false,
+                "commentedp": false,
+                "post-affiliated": 2346,
+                "title": [
+                    "Dynamic Mode Decomposition"
+                ]
+            },
+            "contents": [
+                {
+                    "$$data_type": "org-node",
+                    "type": "section",
+                    "ref": "org4378a4f",
+                    "properties": {
+                        "post-blank": 1,
+                        "post-affiliated": 2377
+                    },
+                    "contents": [
+                        {
+                            "$$data_type": "org-node",
+                            "type": "paragraph",
+                            "ref": "orgdf66899",
+                            "properties": {
+                                "post-blank": 1,
+                                "post-affiliated": 2377
+                            },
+                            "contents": [
+                                "DMD's goal:\n"
+                            ]
+                        },
+                        {
+                            "$$data_type": "org-node",
+                            "type": "paragraph",
+                            "ref": "org798b409",
+                            "properties": {
+                                "post-blank": 0,
+                                "post-affiliated": 2390
+                            },
+                            "contents": [
+                                "Given observations of a dynamical system, obtain the matrix A that\nbest describes it.\n"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "$$data_type": "org-node",
+                    "type": "headline",
+                    "ref": "orgb864117",
+                    "drawer": {},
+                    "properties": {
+                        "tags-all": [],
+                        "raw-value": "",
+                        "pre-blank": 0,
+                        "level": 3,
+                        "priority": null,
+                        "tags": [],
+                        "todo-keyword": null,
+                        "todo-type": null,
+                        "post-blank": 1,
+                        "footnote-section-p": false,
+                        "archivedp": false,
+                        "commentedp": false,
+                        "post-affiliated": 2477,
+                        "title": [
+                            ""
+                        ]
+                    },
+                    "contents": [
+                        {
+                            "$$data_type": "org-node",
+                            "type": "section",
+                            "ref": "orgf1e177e",
+                            "properties": {
+                                "post-blank": 1,
+                                "post-affiliated": 2482
+                            },
+                            "contents": [
+                                {
+                                    "$$data_type": "org-node",
+                                    "type": "paragraph",
+                                    "ref": "org7f42cda",
+                                    "properties": {
+                                        "post-blank": 0,
+                                        "post-affiliated": 2482
+                                    },
+                                    "contents": [
+                                        "Let ",
+                                        {
+                                            "$$data_type": "org-node",
+                                            "type": "latex-fragment",
+                                            "ref": "org441d2ac",
+                                            "properties": {
+                                                "value": "$X$",
+                                                "post-blank": 1
+                                            },
+                                            "contents": []
+                                        },
+                                        "be a (n x m) matrix, of m observations with n dimensions, from\ntime t=1 to time t=m-1. Let ",
+                                        {
+                                            "$$data_type": "org-node",
+                                            "type": "latex-fragment",
+                                            "ref": "orgff26dfb",
+                                            "properties": {
+                                                "value": "$X'$",
+                                                "post-blank": 1
+                                            },
+                                            "contents": []
+                                        },
+                                        "be a (n x m) matrix, of m observations\nwith n dimensions, from time t=2 to time t=m.\n"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "$$data_type": "org-node",
+                    "type": "headline",
+                    "ref": "orgacfe962",
+                    "drawer": {},
+                    "properties": {
+                        "tags-all": [],
+                        "raw-value": "",
+                        "pre-blank": 0,
+                        "level": 3,
+                        "priority": null,
+                        "tags": [],
+                        "todo-keyword": null,
+                        "todo-type": null,
+                        "post-blank": 0,
+                        "footnote-section-p": false,
+                        "archivedp": false,
+                        "commentedp": false,
+                        "post-affiliated": 2672,
+                        "title": [
+                            ""
+                        ]
+                    },
+                    "contents": [
+                        {
+                            "$$data_type": "org-node",
+                            "type": "section",
+                            "ref": "org2dfedc0",
+                            "properties": {
+                                "post-blank": 1,
+                                "post-affiliated": 2677
+                            },
+                            "contents": [
+                                {
+                                    "$$data_type": "org-node",
+                                    "type": "paragraph",
+                                    "ref": "org154f1da",
+                                    "properties": {
+                                        "post-blank": 0,
+                                        "post-affiliated": 2677
+                                    },
+                                    "contents": [
+                                        "We're trying to find A such that ",
+                                        {
+                                            "$$data_type": "org-node",
+                                            "type": "latex-fragment",
+                                            "ref": "org6a4a7d4",
+                                            "properties": {
+                                                "value": "$X' = AX$",
+                                                "post-blank": 0
+                                            },
+                                            "contents": []
+                                        },
+                                        "\n"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "$$data_type": "org-node",
+                            "type": "headline",
+                            "ref": "org5bc1a2f",
+                            "drawer": {},
+                            "properties": {
+                                "tags-all": [],
+                                "raw-value": "",
+                                "pre-blank": 0,
+                                "level": 4,
+                                "priority": null,
+                                "tags": [],
+                                "todo-keyword": null,
+                                "todo-type": null,
+                                "post-blank": 0,
+                                "footnote-section-p": false,
+                                "archivedp": false,
+                                "commentedp": false,
+                                "post-affiliated": 2721,
+                                "title": [
+                                    ""
+                                ]
+                            },
+                            "contents": [
+                                {
+                                    "$$data_type": "org-node",
+                                    "type": "section",
+                                    "ref": "org0f14244",
+                                    "properties": {
+                                        "post-blank": 1,
+                                        "post-affiliated": 2727
+                                    },
+                                    "contents": [
+                                        {
+                                            "$$data_type": "org-node",
+                                            "type": "paragraph",
+                                            "ref": "orgd386871",
+                                            "properties": {
+                                                "post-blank": 1,
+                                                "post-affiliated": 2727
+                                            },
+                                            "contents": [
+                                                "Problem: X is possibly very high-dimensional.\nSolution (assumption): X and A have low-rank structure.\n"
+                                            ]
+                                        },
+                                        {
+                                            "$$data_type": "org-node",
+                                            "type": "paragraph",
+                                            "ref": "org5e082b3",
+                                            "properties": {
+                                                "post-blank": 1,
+                                                "post-affiliated": 2830
+                                            },
+                                            "contents": [
+                                                {
+                                                    "$$data_type": "org-node",
+                                                    "type": "bold",
+                                                    "ref": "org2779c65",
+                                                    "properties": {
+                                                        "post-blank": 0
+                                                    },
+                                                    "contents": [
+                                                        {
+                                                            "$$data_type": "org-node",
+                                                            "type": "bold",
+                                                            "ref": "org6a39527",
+                                                            "properties": {
+                                                                "post-blank": 0
+                                                            },
+                                                            "contents": [
+                                                                "*"
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                "\nTaking this, we do  ",
+                                                {
+                                                    "$$data_type": "org-node",
+                                                    "type": "latex-fragment",
+                                                    "ref": "org14babce",
+                                                    "properties": {
+                                                        "value": "$U\\Sigma V^T = SVD(X)$",
+                                                        "post-blank": 0
+                                                    },
+                                                    "contents": []
+                                                },
+                                                "\n"
+                                            ]
+                                        },
+                                        {
+                                            "$$data_type": "org-node",
+                                            "type": "paragraph",
+                                            "ref": "org74ee7fa",
+                                            "properties": {
+                                                "post-blank": 0,
+                                                "post-affiliated": 2880
+                                            },
+                                            "contents": [
+                                                {
+                                                    "$$data_type": "org-node",
+                                                    "type": "bold",
+                                                    "ref": "org9068b68",
+                                                    "properties": {
+                                                        "post-blank": 0
+                                                    },
+                                                    "contents": [
+                                                        {
+                                                            "$$data_type": "org-node",
+                                                            "type": "bold",
+                                                            "ref": "org6bcc883",
+                                                            "properties": {
+                                                                "post-blank": 0
+                                                            },
+                                                            "contents": [
+                                                                "*"
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                "\nWith the low-rank assumption, we can approximate:\n",
+                                                {
+                                                    "$$data_type": "org-node",
+                                                    "type": "latex-fragment",
+                                                    "ref": "org93eeb19",
+                                                    "properties": {
+                                                        "value": "$X = U_r \\Sigma_r {V_r}^T$",
+                                                        "post-blank": 0
+                                                    },
+                                                    "contents": []
+                                                },
+                                                ", where the subscript ",
+                                                {
+                                                    "$$data_type": "org-node",
+                                                    "type": "latex-fragment",
+                                                    "ref": "orgff49851",
+                                                    "properties": {
+                                                        "value": "$r$",
+                                                        "post-blank": 1
+                                                    },
+                                                    "contents": []
+                                                },
+                                                "means we're using\nonly the ",
+                                                {
+                                                    "$$data_type": "org-node",
+                                                    "type": "latex-fragment",
+                                                    "ref": "orgdf61545",
+                                                    "properties": {
+                                                        "value": "$r$",
+                                                        "post-blank": 1
+                                                    },
+                                                    "contents": []
+                                                },
+                                                "most important components. (The assumption's corollary is\nthat these are enough to represent the whole ",
+                                                {
+                                                    "$$data_type": "org-node",
+                                                    "type": "latex-fragment",
+                                                    "ref": "org54419aa",
+                                                    "properties": {
+                                                        "value": "$X$",
+                                                        "post-blank": 0
+                                                    },
+                                                    "contents": []
+                                                },
+                                                "). To choose this ",
+                                                {
+                                                    "$$data_type": "org-node",
+                                                    "type": "latex-fragment",
+                                                    "ref": "org27e9488",
+                                                    "properties": {
+                                                        "value": "$r$",
+                                                        "post-blank": 0
+                                                    },
+                                                    "contents": []
+                                                },
+                                                ",\nwe look at the singular values in ",
+                                                {
+                                                    "$$data_type": "org-node",
+                                                    "type": "latex-fragment",
+                                                    "ref": "org192c201",
+                                                    "properties": {
+                                                        "value": "$\\Sigma$",
+                                                        "post-blank": 1
+                                                    },
+                                                    "contents": []
+                                                },
+                                                "and decide based on their\nmagnitudes - for instance, if the first 3 singular values are orders\nof magnitude bigger than the remaining ones, we would do ",
+                                                {
+                                                    "$$data_type": "org-node",
+                                                    "type": "latex-fragment",
+                                                    "ref": "org5fba198",
+                                                    "properties": {
+                                                        "value": "$r=3$",
+                                                        "post-blank": 0
+                                                    },
+                                                    "contents": []
+                                                },
+                                                ".\n"
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "$$data_type": "org-node",
+                                    "type": "headline",
+                                    "ref": "org4382349",
+                                    "drawer": {},
+                                    "properties": {
+                                        "tags-all": [],
+                                        "raw-value": "",
+                                        "pre-blank": 0,
+                                        "level": 5,
+                                        "priority": null,
+                                        "tags": [],
+                                        "todo-keyword": null,
+                                        "todo-type": null,
+                                        "post-blank": 1,
+                                        "footnote-section-p": false,
+                                        "archivedp": false,
+                                        "commentedp": false,
+                                        "post-affiliated": 3351,
+                                        "title": [
+                                            ""
+                                        ]
+                                    },
+                                    "contents": [
+                                        {
+                                            "$$data_type": "org-node",
+                                            "type": "section",
+                                            "ref": "org9634ded",
+                                            "properties": {
+                                                "post-blank": 1,
+                                                "post-affiliated": 3358
+                                            },
+                                            "contents": [
+                                                {
+                                                    "$$data_type": "org-node",
+                                                    "type": "paragraph",
+                                                    "ref": "org113e006",
+                                                    "properties": {
+                                                        "post-blank": 0,
+                                                        "post-affiliated": 3358
+                                                    },
+                                                    "contents": [
+                                                        {
+                                                            "$$data_type": "org-node",
+                                                            "type": "latex-fragment",
+                                                            "ref": "org7a592a4",
+                                                            "properties": {
+                                                                "value": "$A = X' X^+$",
+                                                                "post-blank": 1
+                                                            },
+                                                            "contents": []
+                                                        },
+                                                        "which implies ",
+                                                        {
+                                                            "$$data_type": "org-node",
+                                                            "type": "latex-fragment",
+                                                            "ref": "org8741f7a",
+                                                            "properties": {
+                                                                "value": "$A = X' V_r {\\Sigma_r}^{-1} {U_r}^T$",
+                                                                "post-blank": 1
+                                                            },
+                                                            "contents": []
+                                                        },
+                                                        "(where\n",
+                                                        {
+                                                            "$$data_type": "org-node",
+                                                            "type": "latex-fragment",
+                                                            "ref": "org27ce797",
+                                                            "properties": {
+                                                                "value": "$X^+$",
+                                                                "post-blank": 1
+                                                            },
+                                                            "contents": []
+                                                        },
+                                                        "is the pseudo-inverse of ",
+                                                        {
+                                                            "$$data_type": "org-node",
+                                                            "type": "latex-fragment",
+                                                            "ref": "orgd7c3a87",
+                                                            "properties": {
+                                                                "value": "$X$",
+                                                                "post-blank": 0
+                                                            },
+                                                            "contents": []
+                                                        },
+                                                        ")\n"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "$$data_type": "org-node",
+                                    "type": "headline",
+                                    "ref": "orgc7c2bb2",
+                                    "drawer": {},
+                                    "properties": {
+                                        "tags-all": [],
+                                        "raw-value": "",
+                                        "pre-blank": 0,
+                                        "level": 5,
+                                        "priority": null,
+                                        "tags": [],
+                                        "todo-keyword": null,
+                                        "todo-type": null,
+                                        "post-blank": 1,
+                                        "footnote-section-p": false,
+                                        "archivedp": false,
+                                        "commentedp": false,
+                                        "post-affiliated": 3466,
+                                        "title": [
+                                            ""
+                                        ]
+                                    },
+                                    "contents": [
+                                        {
+                                            "$$data_type": "org-node",
+                                            "type": "section",
+                                            "ref": "orge027794",
+                                            "properties": {
+                                                "post-blank": 1,
+                                                "post-affiliated": 3473
+                                            },
+                                            "contents": [
+                                                {
+                                                    "$$data_type": "org-node",
+                                                    "type": "paragraph",
+                                                    "ref": "org5d6e149",
+                                                    "properties": {
+                                                        "post-blank": 0,
+                                                        "post-affiliated": 3473
+                                                    },
+                                                    "contents": [
+                                                        "Now, rather than working with a big matrix A, we're interested in\nworking with smaller matrices. For that we use a similarity transform.\n(Recall that similar matrices have the same eigenvalues):\n"
+                                                    ]
+                                                },
+                                                {
+                                                    "$$data_type": "org-node",
+                                                    "type": "plain-list",
+                                                    "ref": "orgf685591",
+                                                    "properties": {
+                                                        "type": "unordered",
+                                                        "structure": [
+                                                            [
+                                                                3668,
+                                                                0,
+                                                                "- ",
+                                                                null,
+                                                                null,
+                                                                null,
+                                                                3684
+                                                            ],
+                                                            [
+                                                                3684,
+                                                                0,
+                                                                "- ",
+                                                                null,
+                                                                null,
+                                                                null,
+                                                                3742
+                                                            ]
+                                                        ],
+                                                        "post-blank": 0,
+                                                        "post-affiliated": 3668
+                                                    },
+                                                    "contents": [
+                                                        {
+                                                            "$$data_type": "org-node",
+                                                            "type": "item",
+                                                            "ref": "org56d447f",
+                                                            "properties": {
+                                                                "bullet": "- ",
+                                                                "checkbox": null,
+                                                                "counter": null,
+                                                                "pre-blank": 0,
+                                                                "post-blank": 0,
+                                                                "post-affiliated": 3668,
+                                                                "tag": []
+                                                            },
+                                                            "contents": [
+                                                                {
+                                                                    "$$data_type": "org-node",
+                                                                    "type": "paragraph",
+                                                                    "ref": "orgc3dadb1",
+                                                                    "properties": {
+                                                                        "post-blank": 0,
+                                                                        "post-affiliated": 3670
+                                                                    },
+                                                                    "contents": [
+                                                                        {
+                                                                            "$$data_type": "org-node",
+                                                                            "type": "latex-fragment",
+                                                                            "ref": "orgee02883",
+                                                                            "properties": {
+                                                                                "value": "$\u00c3 = U^+ A U$",
+                                                                                "post-blank": 0
+                                                                            },
+                                                                            "contents": []
+                                                                        },
+                                                                        "\n"
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "$$data_type": "org-node",
+                                                            "type": "item",
+                                                            "ref": "org5153017",
+                                                            "properties": {
+                                                                "bullet": "- ",
+                                                                "checkbox": null,
+                                                                "counter": null,
+                                                                "pre-blank": 0,
+                                                                "post-blank": 0,
+                                                                "post-affiliated": 3684,
+                                                                "tag": []
+                                                            },
+                                                            "contents": [
+                                                                {
+                                                                    "$$data_type": "org-node",
+                                                                    "type": "paragraph",
+                                                                    "ref": "orgb67d00e",
+                                                                    "properties": {
+                                                                        "post-blank": 0,
+                                                                        "post-affiliated": 3686
+                                                                    },
+                                                                    "contents": [
+                                                                        {
+                                                                            "$$data_type": "org-node",
+                                                                            "type": "latex-fragment",
+                                                                            "ref": "org66adbc6",
+                                                                            "properties": {
+                                                                                "value": "$\u00c3 = U^+ X' V \\Sigma^{-1} U^T U = U^+ X' V \\Sigma^{-1}$",
+                                                                                "post-blank": 0
+                                                                            },
+                                                                            "contents": []
+                                                                        },
+                                                                        "\n"
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "$$data_type": "org-node",
+                                    "type": "headline",
+                                    "ref": "org7ad342f",
+                                    "drawer": {},
+                                    "properties": {
+                                        "tags-all": [],
+                                        "raw-value": "We then find the eigenvalues and eigenvectors of $\u00c3$:",
+                                        "pre-blank": 0,
+                                        "level": 5,
+                                        "priority": null,
+                                        "tags": [],
+                                        "todo-keyword": null,
+                                        "todo-type": null,
+                                        "post-blank": 1,
+                                        "footnote-section-p": false,
+                                        "archivedp": false,
+                                        "commentedp": false,
+                                        "post-affiliated": 3743,
+                                        "title": [
+                                            "We then find the eigenvalues and eigenvectors of ",
+                                            {
+                                                "$$data_type": "org-node",
+                                                "type": "latex-fragment",
+                                                "ref": "orga907fbd",
+                                                "properties": {
+                                                    "value": "$\u00c3$",
+                                                    "post-blank": 0
+                                                },
+                                                "contents": []
+                                            },
+                                            ":"
+                                        ]
+                                    },
+                                    "contents": [
+                                        {
+                                            "$$data_type": "org-node",
+                                            "type": "section",
+                                            "ref": "org39eca0b",
+                                            "properties": {
+                                                "post-blank": 1,
+                                                "post-affiliated": 3803
+                                            },
+                                            "contents": [
+                                                {
+                                                    "$$data_type": "org-node",
+                                                    "type": "paragraph",
+                                                    "ref": "orgc9906b0",
+                                                    "properties": {
+                                                        "post-blank": 0,
+                                                        "post-affiliated": 3803
+                                                    },
+                                                    "contents": [
+                                                        {
+                                                            "$$data_type": "org-node",
+                                                            "type": "latex-fragment",
+                                                            "ref": "org2067a2d",
+                                                            "properties": {
+                                                                "value": "$\u00c3W = W\\Lambda$",
+                                                                "post-blank": 0
+                                                            },
+                                                            "contents": []
+                                                        },
+                                                        ", where ",
+                                                        {
+                                                            "$$data_type": "org-node",
+                                                            "type": "latex-fragment",
+                                                            "ref": "orgf976cb6",
+                                                            "properties": {
+                                                                "value": "$W$",
+                                                                "post-blank": 1
+                                                            },
+                                                            "contents": []
+                                                        },
+                                                        "has the eigenvectors of ",
+                                                        {
+                                                            "$$data_type": "org-node",
+                                                            "type": "latex-fragment",
+                                                            "ref": "orgd5dd607",
+                                                            "properties": {
+                                                                "value": "$\u00c3$",
+                                                                "post-blank": 1
+                                                            },
+                                                            "contents": []
+                                                        },
+                                                        "on its\ncolumns, and ",
+                                                        {
+                                                            "$$data_type": "org-node",
+                                                            "type": "latex-fragment",
+                                                            "ref": "org11a1166",
+                                                            "properties": {
+                                                                "value": "$\\Lambda$",
+                                                                "post-blank": 1
+                                                            },
+                                                            "contents": []
+                                                        },
+                                                        "is diagonal with the eigenvalues of ",
+                                                        {
+                                                            "$$data_type": "org-node",
+                                                            "type": "latex-fragment",
+                                                            "ref": "orgbb1a7cb",
+                                                            "properties": {
+                                                                "value": "$\u00c3$",
+                                                                "post-blank": 1
+                                                            },
+                                                            "contents": []
+                                                        },
+                                                        "as\nits diagonal\n"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "$$data_type": "org-node",
+                                    "type": "headline",
+                                    "ref": "org812ffea",
+                                    "drawer": {},
+                                    "properties": {
+                                        "tags-all": [],
+                                        "raw-value": "",
+                                        "pre-blank": 0,
+                                        "level": 5,
+                                        "priority": null,
+                                        "tags": [],
+                                        "todo-keyword": null,
+                                        "todo-type": null,
+                                        "post-blank": 0,
+                                        "footnote-section-p": false,
+                                        "archivedp": false,
+                                        "commentedp": false,
+                                        "post-affiliated": 3945,
+                                        "title": [
+                                            ""
+                                        ]
+                                    },
+                                    "contents": [
+                                        {
+                                            "$$data_type": "org-node",
+                                            "type": "section",
+                                            "ref": "orgc83251e",
+                                            "properties": {
+                                                "post-blank": 1,
+                                                "post-affiliated": 3952
+                                            },
+                                            "contents": [
+                                                {
+                                                    "$$data_type": "org-node",
+                                                    "type": "paragraph",
+                                                    "ref": "org1a8b432",
+                                                    "properties": {
+                                                        "post-blank": 0,
+                                                        "post-affiliated": 3952
+                                                    },
+                                                    "contents": [
+                                                        "Finally, we want to bring the eigenvectors and eigenvalues of ",
+                                                        {
+                                                            "$$data_type": "org-node",
+                                                            "type": "latex-fragment",
+                                                            "ref": "org8db3376",
+                                                            "properties": {
+                                                                "value": "$\u00c3$",
+                                                                "post-blank": 1
+                                                            },
+                                                            "contents": []
+                                                        },
+                                                        "back\ninto the original coordinate system:\n"
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "$$data_type": "org-node",
+                                            "type": "headline",
+                                            "ref": "orgd170e4c",
+                                            "drawer": {},
+                                            "properties": {
+                                                "tags-all": [],
+                                                "raw-value": "$\\Phi = X'V\\Sigma^{-1} W$",
+                                                "pre-blank": 0,
+                                                "level": 6,
+                                                "priority": null,
+                                                "tags": [],
+                                                "todo-keyword": null,
+                                                "todo-type": null,
+                                                "post-blank": 1,
+                                                "footnote-section-p": false,
+                                                "archivedp": false,
+                                                "commentedp": false,
+                                                "post-affiliated": 4061,
+                                                "title": [
+                                                    {
+                                                        "$$data_type": "org-node",
+                                                        "type": "latex-fragment",
+                                                        "ref": "org2c513ab",
+                                                        "properties": {
+                                                            "value": "$\\Phi = X'V\\Sigma^{-1} W$",
+                                                            "post-blank": 0
+                                                        },
+                                                        "contents": []
+                                                    }
+                                                ]
+                                            },
+                                            "contents": []
+                                        },
+                                        {
+                                            "$$data_type": "org-node",
+                                            "type": "headline",
+                                            "ref": "orgd7c9de3",
+                                            "drawer": {},
+                                            "properties": {
+                                                "tags-all": [],
+                                                "raw-value": "This allows us to rewrite our dynamical system:",
+                                                "pre-blank": 1,
+                                                "level": 6,
+                                                "priority": null,
+                                                "tags": [],
+                                                "todo-keyword": null,
+                                                "todo-type": null,
+                                                "post-blank": 0,
+                                                "footnote-section-p": false,
+                                                "archivedp": false,
+                                                "commentedp": false,
+                                                "post-affiliated": 4095,
+                                                "title": [
+                                                    "This allows us to rewrite our dynamical system:"
+                                                ]
+                                            },
+                                            "contents": [
+                                                {
+                                                    "$$data_type": "org-node",
+                                                    "type": "headline",
+                                                    "ref": "orgdad24ad",
+                                                    "drawer": {},
+                                                    "properties": {
+                                                        "tags-all": [],
+                                                        "raw-value": "$\\vec{x_t} = \\sum_{k=1}^r \\vec{\\phi_k} e^{\\omega_k t} b_k$",
+                                                        "pre-blank": 0,
+                                                        "level": 7,
+                                                        "priority": null,
+                                                        "tags": [],
+                                                        "todo-keyword": null,
+                                                        "todo-type": null,
+                                                        "post-blank": 0,
+                                                        "footnote-section-p": false,
+                                                        "archivedp": false,
+                                                        "commentedp": false,
+                                                        "post-affiliated": 4151,
+                                                        "title": [
+                                                            {
+                                                                "$$data_type": "org-node",
+                                                                "type": "latex-fragment",
+                                                                "ref": "orga963469",
+                                                                "properties": {
+                                                                    "value": "$\\vec{x_t} = \\sum_{k=1}^r \\vec{\\phi_k} e^{\\omega_k t} b_k$",
+                                                                    "post-blank": 0
+                                                                },
+                                                                "contents": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    "contents": []
+                                                },
+                                                {
+                                                    "$$data_type": "org-node",
+                                                    "type": "headline",
+                                                    "ref": "org316e26b",
+                                                    "drawer": {},
+                                                    "properties": {
+                                                        "tags-all": [],
+                                                        "raw-value": "",
+                                                        "pre-blank": 0,
+                                                        "level": 7,
+                                                        "priority": null,
+                                                        "tags": [],
+                                                        "todo-keyword": null,
+                                                        "todo-type": null,
+                                                        "post-blank": 0,
+                                                        "footnote-section-p": false,
+                                                        "archivedp": false,
+                                                        "commentedp": false,
+                                                        "post-affiliated": 4218,
+                                                        "title": [
+                                                            ""
+                                                        ]
+                                                    },
+                                                    "contents": [
+                                                        {
+                                                            "$$data_type": "org-node",
+                                                            "type": "section",
+                                                            "ref": "org1c30f0e",
+                                                            "properties": {
+                                                                "post-blank": 0,
+                                                                "post-affiliated": 4227
+                                                            },
+                                                            "contents": [
+                                                                {
+                                                                    "$$data_type": "org-node",
+                                                                    "type": "paragraph",
+                                                                    "ref": "org39774ad",
+                                                                    "properties": {
+                                                                        "post-blank": 0,
+                                                                        "post-affiliated": 4227
+                                                                    },
+                                                                    "contents": [
+                                                                        "This formulation allows us to think of the dynamical system in terms\nof the DMD modes (the ",
+                                                                        {
+                                                                            "$$data_type": "org-node",
+                                                                            "type": "latex-fragment",
+                                                                            "ref": "org1452fab",
+                                                                            "properties": {
+                                                                                "value": "$\\phi_k$",
+                                                                                "post-blank": 0
+                                                                            },
+                                                                            "contents": []
+                                                                        },
+                                                                        ") which I like to regard as\n\"eigenslices\", and their respective oscillatory profiles (the\n",
+                                                                        {
+                                                                            "$$data_type": "org-node",
+                                                                            "type": "latex-fragment",
+                                                                            "ref": "org15ae273",
+                                                                            "properties": {
+                                                                                "value": "$e^{\\omega_k t}$",
+                                                                                "post-blank": 1
+                                                                            },
+                                                                            "contents": []
+                                                                        },
+                                                                        "terms), which explain the time dynamics of each DMD\nmode.\n"
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "$$data_type": "org-node",
+                                                    "type": "headline",
+                                                    "ref": "orgc7c29c4",
+                                                    "drawer": {},
+                                                    "properties": {
+                                                        "tags-all": [],
+                                                        "raw-value": "",
+                                                        "pre-blank": 0,
+                                                        "level": 7,
+                                                        "priority": null,
+                                                        "tags": [],
+                                                        "todo-keyword": null,
+                                                        "todo-type": null,
+                                                        "post-blank": 0,
+                                                        "footnote-section-p": false,
+                                                        "archivedp": false,
+                                                        "commentedp": false,
+                                                        "post-affiliated": 4491,
+                                                        "title": [
+                                                            ""
+                                                        ]
+                                                    },
+                                                    "contents": [
+                                                        {
+                                                            "$$data_type": "org-node",
+                                                            "type": "section",
+                                                            "ref": "org8a85f4c",
+                                                            "properties": {
+                                                                "post-blank": 1,
+                                                                "post-affiliated": 4500
+                                                            },
+                                                            "contents": [
+                                                                {
+                                                                    "$$data_type": "org-node",
+                                                                    "type": "paragraph",
+                                                                    "ref": "org9c33531",
+                                                                    "properties": {
+                                                                        "post-blank": 0,
+                                                                        "post-affiliated": 4500
+                                                                    },
+                                                                    "contents": [
+                                                                        "Important remark: in a true linear dynamical system, the ",
+                                                                        {
+                                                                            "$$data_type": "org-node",
+                                                                            "type": "latex-fragment",
+                                                                            "ref": "org50b8e3f",
+                                                                            "properties": {
+                                                                                "value": "$\\omega_k$",
+                                                                                "post-blank": 0
+                                                                            },
+                                                                            "contents": []
+                                                                        },
+                                                                        "\nwould have no real part, just imaginary, i.e.\u00a0they would be pure\noscillators. However, since in general we're approximating a\nnon-linear system with a linear one, the ",
+                                                                        {
+                                                                            "$$data_type": "org-node",
+                                                                            "type": "latex-fragment",
+                                                                            "ref": "org317ea37",
+                                                                            "properties": {
+                                                                                "value": "$\\omega_k$",
+                                                                                "post-blank": 1
+                                                                            },
+                                                                            "contents": []
+                                                                        },
+                                                                        "we obtain will\nalmost always have a real part, although a really small one,\ndepending on the data. This means that we can't use DMD to describe\nthe system in the long-term, since the real part of the ",
+                                                                        {
+                                                                            "$$data_type": "org-node",
+                                                                            "type": "latex-fragment",
+                                                                            "ref": "orga1b7927",
+                                                                            "properties": {
+                                                                                "value": "$\\omega_k$",
+                                                                                "post-blank": 0
+                                                                            },
+                                                                            "contents": []
+                                                                        },
+                                                                        "\nwill cause the approximated system to either dampen out (if the real\npart is negative) or blow up (if the real part is positive).\n"
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

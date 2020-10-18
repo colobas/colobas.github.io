@@ -1,0 +1,60 @@
+{
+    "belkin-generalization": {
+        "title": "Paper summary: Reconciling modern machine-learning with the bias-variance trade-off",
+        "url": "/json/belkin-generalization.json",
+        "tags": [],
+        "date": "2019-07-06"
+    },
+    "svd-and-pca": {
+        "title": "SVD and PCA",
+        "url": "/json/svd-and-pca.json",
+        "tags": [
+            "algebra",
+            "math",
+            "decomposition"
+        ],
+        "date": null
+    },
+    "multiresolution-dmd": {
+        "title": "Multiresolution DMD",
+        "url": "/json/multiresolution-dmd.json",
+        "tags": [
+            "dmd",
+            "decomposition",
+            "dynamical-systems"
+        ],
+        "date": null
+    },
+    "koopman-theory": {
+        "title": "Notes on Koopman theory",
+        "url": "/json/koopman-theory.json",
+        "tags": [
+            "dynamical-systems",
+            "ml"
+        ],
+        "date": "2020-10-18"
+    },
+    "notes-on-dynamic-mode-decomposition": {
+        "title": "Notes on Dynamic Mode Decomposition",
+        "url": "/json/notes-on-dynamic-mode-decomposition.json",
+        "tags": [],
+        "date": null
+    },
+    "dirichlet-process-mixture-models": {
+        "title": "Dirichlet Process Mixture Models",
+        "url": "/json/dirichlet-process-mixture-models.json",
+        "tags": [
+            "machine-learning",
+            "statistics"
+        ],
+        "date": "2017-09-17"
+    },
+    "frankfurt-school": {
+        "title": "Braindump on the Frankfurt School & other random stuff",
+        "url": "/json/frankfurt-school.json",
+        "tags": [
+            "philosophy"
+        ],
+        "date": "2019-03-10 18:16:41 UTC"
+    }
+}
