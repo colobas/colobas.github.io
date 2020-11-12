@@ -4,3 +4,5 @@
 .DS_Store
 *.*~
 public
+emacs.site.conf/*
+!emacs.site.conf/init.el
