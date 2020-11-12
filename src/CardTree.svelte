@@ -146,7 +146,8 @@
     #row { display: flex; }
     
     .col {
-      flex: 1;
+      flex: 0 0 50%;
+      min-width: 0;
     }
     
 </style>

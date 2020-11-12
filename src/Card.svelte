@@ -70,6 +70,11 @@
   text-size: 20px;
   border-width: 1px;
 }
+
+:global(img) {
+  max-width: 90%;
+}
+
 .highlighted {
   border-width: 5px;
 }
