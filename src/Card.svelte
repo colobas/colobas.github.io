@@ -10,13 +10,17 @@
       if (typeof part === 'string' || part instanceof String) {
         res = res + part.replace("\n", "<br>");
       } else if (part.type === "link") {
-        var caption = "";
-        if (part.contents.length > 0) {
-          caption = part.contents[0];
-        } else {
-          caption = part.properties['raw-link'];
+        if (part.properties.type === "http" || part.properties.type === "https"){
+          var caption = "";
+          if (part.contents.length > 0) {
+            caption = part.contents[0];
+          } else {
+            caption = part.properties['raw-link'];
+          }
+          res = res + '<a href="' + part.properties['raw-link'] + '">' + caption + '</a> ';
+        } else if (part.properties.type === "file") {
+          res = res + '<img src="' + part.properties['raw-link'] + '">';
         }
-        res = res + '<a href="' + part.properties['raw-link'] + '">' + caption + '</a> ';
       } else if (part.type === "latex-fragment") {
         var latex = part.properties.value.replace("$", "\\(");
         latex = latex.replace("$", "\\)");
