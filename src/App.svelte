@@ -1,27 +1,16 @@
 <script>
-  import router from 'page'
+  import Router from 'svelte-spa-router'
 
   import Home from './routes/Home.svelte'
   import Post from './routes/Post.svelte'
+
+  const routes = {
+    '/': Home,
+    '/post/:type/:id': Post,
+  }
   
-  let page
-  let params
-  
-
-  router('/', () => (page = Home))
-  router(
-    '/post/:type/:id',
-
-    (ctx, next) => {
-      params = ctx.params
-      next()
-    },
-
-    () => (page = Post)
-  )
-
-  router.start()
 </script>
 
-
-<svelte:component this="{page}" params="{params}" />
+<body>
+  <Router {routes}/>
+</body>

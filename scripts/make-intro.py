@@ -32,8 +32,8 @@ for tag in tags:
     intro += f"\n** #{tag}"
     for _id, entry in index.items():
         if tag in entry["tags"]:
-            #intro += f'\n*** <a href="/post/tree/{_id}">{entry["title"]}</a>'
-            intro += f'\n*** [[/post/tree/{_id}][{entry["title"]}]]'
+            #intro += f'\n*** <a href="/#/post/tree/{_id}">{entry["title"]}</a>'
+            intro += f'\n*** [[/#/post/tree/{_id}][{entry["title"]}]]'
             intro += '\n Tags: ' + " ".join([f'#{_tag}' for _tag in entry["tags"]])
             intro += f'\n Date: {entry["date"]}'
 
@@ -49,7 +49,7 @@ year_mos = sorted(per_year_mo.keys())
 for year_mo in year_mos:
     intro += f"\n** {year_mo}"
     for _id, entry in per_year_mo[year_mo].items():
-        intro += f'\n*** [[/post/tree/{_id}][{entry["title"]}]]'
+        intro += f'\n*** [[/#/post/tree/{_id}][{entry["title"]}]]'
         intro += '\n Tags: ' + " ".join([f'#{_tag}' for _tag in entry["tags"]])
         intro += f'\n Date: {entry["date"]}'
 
