@@ -27,6 +27,7 @@
 
 <style>
     .typewriter{
+      font-family: "IBM Px437";
       display: inline-block;
       overflow-wrap: break-word;
     }

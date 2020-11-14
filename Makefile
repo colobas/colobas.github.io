@@ -19,7 +19,7 @@ public/json-index.json : $(jsons) scripts/make-json-index.py
 	python scripts/make-json-index.py
 	python -mjson.tool ./public/json-index.json json-index.pretty
 	mv json-index.pretty ./public/json-index.json
-	cp -r public/org-files/images/* public/images
+	#cp -r public/org-files/images/* public/images
 
 public/intro.json : public/json-index.json scripts/make-intro.py
 	python scripts/make-intro.py public/json-index.json > tmp.org

@@ -47,12 +47,6 @@ _____________________________________________________<br><br>
         {/if}
       {/if}
     </MediaQuery>
-    <MediaQuery query="(max-width: 640px)" let:matches>
-      {#if matches}
-        This website sucks on mobile, sorry... If you were on a desktop
-      you'd be seeing a whole bunch of cool stuff here!!! :)
-      {/if}
-    </MediaQuery>
   </span>
 </TwoCol>
 

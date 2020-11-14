@@ -22,9 +22,14 @@
           res = res + '<img src="' + part.properties['raw-link'] + '">';
         }
       } else if (part.type === "latex-fragment") {
-        var latex = part.properties.value.replace("$", "\\(");
-        latex = latex.replace("$", "\\)");
-        res = res + latex + " ";
+        var latex = part.properties.value;
+        if (latex.search(new RegExp("\\$\\$(.*)\\$\\$", "gms")) != -1) {
+          latex = part.properties.value.replace(new RegExp("\\s*\\$\\$\\s*(.*)\\s*\\$\\$", "gms"), "$1").trim();
+          latex = "$$"+latex+"$$";
+        } 
+
+        console.log(latex);
+        res = res + latex + "\n";
       }
     }
     return res;

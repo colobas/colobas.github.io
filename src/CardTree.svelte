@@ -10,7 +10,10 @@
     let script = document.createElement('script');
     let script_code = document.createTextNode(`
       MathJax = {
-        tex: {inlineMath: [['$', '$'], ['\\\\(', '\\\\)']]},
+        tex: {
+          inlineMath: [['$', '$'], ['\\\\(', '\\\\)']],
+          displayMath: [ ['$$','$$'], ['\\\\[','\\\\]'] ]
+        },
         processEscapes: true
       };
     `);
