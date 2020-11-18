@@ -1,69 +1,87 @@
 <script>
-import { onMount } from 'svelte'
+  import { onMount } from 'svelte';
+  import Base from "../Base.svelte";
+  import Graph from "../Graph.svelte";
+  import HierarchicalEdgeBundle from "../HierarchicalEdgeBundle.svelte";
 
-import TwoCol from '../utils/TwoCol.svelte';
-import BlinkingCursor from '../utils/BlinkingCursor.svelte';
-import TypeTitle from '../utils/TypeTitle.svelte';
-import CardTree from '../CardTree.svelte';
-
-import MediaQuery from '../utils/MediaQuery.svelte';
-
-let data = false;
-
-onMount(async () => {
-    const json_response = await fetch("/intro.json");
-    data = await json_response.json();
-});
-
-
+  let graph = null;
+  onMount(async () => {
+    const response = await fetch("/graph.json");
+    graph = await response.json();
+  });
 
 </script>
 
-<TwoCol>
-  <span slot="left_content">
-    <TypeTitle content="Hello, friend."></TypeTitle>
-    <p id="bio">
-    I'm Gui Pires.<br><br>
-    * ML Engineer<br>
-    * Lisbon -> Seattle<br>
-    * Interested in tech, philosphy, politics, economics, books, food, and most
+<Base>
+  <div class="text-block intro">
+    I'm Gui, a Machine Learning Engineer from Lisbon, currently living in
+    Seattle. I'm interested in tech, philosphy, politics, economics, books, food, and most
     importantly, saving the World.
-    </p>
-    <p id="links">
-_____________________________________________________<br><br>
-    <a href="https://github.com/colobas">
-      <img class="icon" src="/iconmonstr-github-4.svg" alt="GitHub icon"></a> //
-    <a href="https://twitter.com/colobas_">
-      <img class="icon" src="/iconmonstr-twitter-4.svg" alt="Twitter icon"></a> //
-     <a href="/cv.pdf">Curriculum Vitae</a><br>
-    </p>
-
-  </span>
-  <span slot="right_content">
-    <MediaQuery query="(min-width: 640px)" let:matches>
-      {#if matches}
-        {#if data}
-          <CardTree data={data} />
-        {/if}
-      {/if}
-    </MediaQuery>
-  </span>
-</TwoCol>
-
+    You can find me CV <a href="/cv.pdf">here</a>.
+  </div>
+  <div class="map">
+    {#if graph}
+      <Graph graph={graph}/>
+    {/if}
+    <span class="helper"></span>
+  </div>
+  <div class="text-block map-label">
+    This is a map of my brain. Click on a node to see the notes I've taken on its
+    corresponding topic. These notes aren't tidy, and some may contain strange
+    artifacts.
+  </div>
+</Base>
 <style>
-  .icon { 
-    -webkit-filter: invert(1);
-            filter: invert(1);
+  .text-block {
+    width: 50%;
+    padding-top: 1em;
+    margin: auto;
+  }
+  .intro {
+    text-align: justify;
+  }
+  .map-label {
+    text-align: center;
+  }
+  .map {
+    border: 3px solid black;
+    width: 30%;
+    height: 50%;
+    margin: auto;
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .helper {
+    display: inline-block;
+    height: 100%;
     vertical-align: middle;
   }
 
-  #bio {
-    font-size: 20px;
+  @media only screen and (max-width: 800px) {
+    /* For mobile phones: */
+    .text-block {
+      width: 90%;
+    }
+
+    .map {
+      width: 90%;
+      height: 80%;
+    }
   }
 
-  #links {
-    margin-top: 0;
+  @media only screen and (min-width: 800px) and (max-width: 1000px) {
+    /* For mobile phones: */
+    .text-block {
+      width: 70%;
+    }
+
+    .map {
+      width: 70%;
+      height: 60%;
+    }
   }
+
 
 </style>
-  

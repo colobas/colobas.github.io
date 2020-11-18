@@ -1,91 +1,45 @@
 <script>
-  export let card;
+  import marked from 'marked';
+
+  export let key;
+  export let body;
   export let color;
   export let _class;
 
-  function concatenate_paragraph(paragraph) {
-    var res = "";
-    for (var i=0, len=paragraph.contents.length; i<len; i++) {
-      var part = paragraph.contents[i];
-      if (typeof part === 'string' || part instanceof String) {
-        res = res + part.replace("\n", "<br>");
-      } else if (part.type === "link") {
-        if (part.properties.type === "http" || part.properties.type === "https"){
-          var caption = "";
-          if (part.contents.length > 0) {
-            caption = part.contents[0];
-          } else {
-            caption = part.properties['raw-link'];
-          }
-          res = res + '<a href="' + part.properties['raw-link'] + '">' + caption + '</a> ';
-        } else if (part.properties.type === "file") {
-          res = res + '<img src="' + part.properties['raw-link'] + '">';
-        }
-      } else if (part.type === "latex-fragment") {
-        var latex = part.properties.value;
-        if (latex.search(new RegExp("\\$\\$(.*)\\$\\$", "gms")) != -1) {
-          latex = part.properties.value.replace(new RegExp("\\s*\\$\\$\\s*(.*)\\s*\\$\\$", "gms"), "$1").trim();
-          latex = "$$"+latex+"$$";
-        } 
-
-        console.log(latex);
-        res = res + latex + "\n";
-      }
-    }
-    return res;
-  };
-
-  function concatenate_list(list) {
-    var res = "";
-    for (var i=0, len=list.contents.length; i<len; i++) {
-      var part = list.contents[i];
-      if (part.contents[0].type === 'paragraph') {
-        part = concatenate_paragraph(part.contents[0]);
-        res = res + "* " + part.replace("<br>", "") + "<br>";
-      }
-    }
-    return res;
-  }
-
 </script>
 
-{#if card.type === "headline"}
 <div class="{_class}" style="background-color: {color}">
-    {#if (typeof card.properties.title[0] === 'string' || card.properties.title[0] instanceof String)}
-      <h2>{card.properties['raw-value']}</h2>
-    {:else if card.properties.title[0].type === 'link'}
-      <h2><a href="{card.properties.title[0].properties.path}">{card.properties.title[0].contents[0]}</a></h2>
-    {/if}
-    {#if card.contents.length > 0}
-      {#if card.contents[0].type === "section"}
-        {#each card.contents[0].contents as paragraph}
-          {#if paragraph.type === "paragraph"}
-            <p> {@html concatenate_paragraph(paragraph)} </p>
-          {:else if paragraph.type === "plain-list"}
-            <p> {@html concatenate_list(paragraph)} </p>
-          {/if}
-        {/each}
-      {/if}
-    {/if}
-</div>
+{#if key != "raw"}
+  {#if key != ",,,,blank,,,,"}
+    <h2>{key}</h2>
+  {/if}
+  {#if body.raw}
+    {@html marked(body.raw)}
+  {/if}
+{:else if key == "raw"}
+  {@html marked(body)}
 {/if}
+</div>
 
 <style>
 .card {
   display: block;
-  border: solid;
+  border: solid black;
   margin: 1em;
   padding: 0.2em 1em 1em 1em;
   text-size: 20px;
   border-width: 1px;
+  color: white;
 }
 
 :global(img) {
   max-width: 90%;
+  margin: auto;
 }
 
 .highlighted {
   border-width: 5px;
+  border: solid red;
 }
 h2 {
   margin-top: 0.5em;

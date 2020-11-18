@@ -6,11 +6,9 @@
 
   const routes = {
     '/': Home,
-    '/post/:type/:id': Post,
+    '/post/:id': Post,
   }
   
 </script>
 
-<body>
-  <Router {routes}/>
-</body>
+<Router {routes}/>

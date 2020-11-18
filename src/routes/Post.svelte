@@ -1,78 +1,91 @@
 <script>
-  import { onMount } from 'svelte'
+  import { onMount } from 'svelte';
+  import marked from 'marked';
+  import frontMatter from 'front-matter';
 
-  import TwoCol from '../utils/TwoCol.svelte';
-  import BlinkingCursor from '../utils/BlinkingCursor.svelte';
-  import TypeTitle from '../utils/TypeTitle.svelte';
-  
-  import CardTree from '../CardTree.svelte';
-  import TextPost from '../TextPost.svelte';
+  import Base from '../Base.svelte';
   import MediaQuery from '../utils/MediaQuery.svelte';
+  import CardTree from '../CardTree.svelte';
 
   export let params;
 
-  const json_root = "/json/";
-  const html_root = "/html/";
-  let data = false;
-  let html_data = false;
+  const md_root = "/markdown/";
+  let data = {body:"", attributes:{title:""}};
+  let front_matter = "";
+  let mj = null;
 
   onMount(async () => {
-      const json_response = await fetch(json_root + params.id + ".json");
-      data = await json_response.json();
+    const md_response = await fetch(md_root + params.id + ".md");
+    data = await md_response.text();
+    data = frontMatter(data);
 
-      const html_response = await fetch(html_root + params.id + ".html");
-      html_data = await html_response.text();
+    let script = document.createElement('script');
+    let script_code = document.createTextNode(`
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\\\(', '\\\\)']],
+          displayMath: [ ['$$','$$'], ['\\\\[','\\\\]'] ]
+        },
+        startup: {
+          ready: function () {
+            var math = MathJax._.core.MmlTree.MmlNodes.math.MmlMath;
+            math.defaults.scriptminsize = '0px';
+            MathJax.startup.defaultReady();
+          }
+        },
+        chtml: {scale: 1},
+        processEscapes: true
+      };
+    `);
+    script.appendChild(script_code);
+    document.head.append(script);
+
+    let mj_script = document.createElement('script');
+    mj_script.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js";
+    document.head.append(mj_script);
+    
+    mj_script.onload = () => {
+      mj = MathJax;
+    }
   });
 
 </script>
 
-<TwoCol>
-  <span slot="left_content">
-    {#if data}
-      {#if data.properties.title[0]}
-      <TypeTitle content={data.properties.title[0]}></TypeTitle>
-      {/if}
-      <p>
-      {#if data.properties.date.length > 0}
-        Date: {data.properties.date[0]}<br>
-      {/if}
-        {#if data.properties.filetags.length > 0}
-        Tags: 
-        {#each data.properties.filetags as tag}
-        #{tag+" "}
-        {/each}
-      {/if}
-      </p>
-      {#if data.properties.description.length > 0}
-      <p>
-        {data.properties.description[0]}
-      </p>
-      {/if}
+<Base>
+<div class="wrapper">
+  <div class="content">
+    <h1 class="title">{data.attributes.title}</h1>
+    {#if data.attributes.type == 'normal'}
+        {@html marked(data.body)}
+    {:else if data.attributes.type == 'tree'}
+       <CardTree data={data.body} mj={mj} />
     {/if}
-  </span>
-  <span slot="right_content">
-    <MediaQuery query="(min-width: 640px)" let:matches>
-      {#if matches}
-        {#if params.type === "text"}
-          <TextPost data={html_data} />
-          <h1>this is a text post</h1>
-        {:else if params.type === "tree"}
-          {#if data}
-          <CardTree data={data} />
-          {/if}
-        {:else}
-          Something went wrong...
-        {/if}
-      {/if}
-    </MediaQuery>
-    <MediaQuery query="(max-width: 640px)" let:matches>
-      {#if matches}
-        <TextPost data={html_data} />
-      {/if}
-    </MediaQuery>
-  </span>
-</TwoCol>
+  </div>
+</div>
+</Base>
 
 <style>
+  .wrapper {
+    max-width: 90%;
+    margin: auto;
+  }
+  .content {
+    max-width: 800px;
+    padding-top: 1em;
+    margin: auto;
+    text-align: justify;
+  }
+
+  :global(.MathJax) {
+    font-size: 1.1em !important;
+  }
+
+  :global(h1) {
+    font-size: 1.3em;
+  }
+
+  :global(h2) {
+    font-size: 1.1em;
+    font-weight: 500;
+  }
 </style>
-  

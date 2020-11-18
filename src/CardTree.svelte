@@ -1,56 +1,49 @@
 <script>
   import { onMount, afterUpdate, beforeUpdate } from "svelte";
   import Card from "./Card.svelte";
+  import md2json from 'md-2-json';
 
   export let data;
-
-  let mj = false;
-
-  onMount(() => {
-    let script = document.createElement('script');
-    let script_code = document.createTextNode(`
-      MathJax = {
-        tex: {
-          inlineMath: [['$', '$'], ['\\\\(', '\\\\)']],
-          displayMath: [ ['$$','$$'], ['\\\\[','\\\\]'] ]
-        },
-        processEscapes: true
-      };
-    `);
-    script.appendChild(script_code);
-    document.head.append(script);
-
-    let mj_script = document.createElement('script');
-    mj_script.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js";
-    document.head.append(mj_script);
-    
-    mj_script.onload = () => {
-      mj = MathJax;
-    }
-  });
-
+  export let mj;
 
   let colors = ["#3772ff","#1f1b12","#855251","#5cb695","#ccaa66",
                 "#d2b0d4","#7f8a97","#81988c","#392841","#8d8180"];
+
+  function get_children(node){
+    var tmp = [];
+    if (typeof(node) === "object") {
+      tmp = Object.keys(node)
+    } else {
+      return [];
+    }
+
+    if (tmp.length == 1 && node.raw) {
+      return [];
+    }
+
+    return tmp;
+  }
   
+  let parsed_data = md2json.parse(data);
+  console.log(parsed_data);
   let root_list_ix = 0;
-  let cur_list = data.contents.slice(1);
+  let cur_obj = parsed_data;
   let highlighted_ix = 0;
   let prev_lvl_ixs = [];
-  let prev_lists = [];
+  let prev_objs = [];
   
-  console.log(data);
 
+  $: cur_list = get_children(cur_obj);
   $: highlighted = cur_list[highlighted_ix];
   $: level1 = cur_list.slice(highlighted_ix + 1);
-  $: level2 = cur_list[highlighted_ix].contents;
-  
+  $: level2 = get_children(cur_obj[highlighted]);
+
   function handleKeypress(event) {
     switch(event.key){
       case "ArrowDown":
         if (highlighted_ix < cur_list.length - 1) {
           highlighted_ix++;
-          if (prev_lists.length == 0) {
+          if (prev_objs.length == 0) {
             root_list_ix++;
           }
         }
@@ -58,36 +51,28 @@
       case "ArrowUp":
         if (highlighted_ix > 0) {
           highlighted_ix = highlighted_ix - 1;
-          if (prev_lists.length == 0) {
+          if (prev_objs.length == 0) {
             root_list_ix = root_list_ix - 1;
           }
         }
         break;
       case "ArrowRight":
-        if (highlighted.contents && highlighted.contents.length > 0) {
+        if (get_children(parsed_data[highlighted]).length > 0) {
           var new_highlighted_ix = 0;
-          var new_list = highlighted.contents;
-
-          while(new_list[new_highlighted_ix].type != "headline") {
-            new_highlighted_ix = new_highlighted_ix + 1;
-            if (new_highlighted_ix === new_list.length) {
-              new_highlighted_ix = -1;
-              break;
-            }
-          }
-          if (new_highlighted_ix != -1) {
-            prev_lvl_ixs = [...prev_lvl_ixs, highlighted_ix];
-            prev_lists = [...prev_lists, cur_list];
-            highlighted_ix = new_highlighted_ix;
-            cur_list = new_list;
-          }
+          var first_child = get_children(cur_obj[highlighted])[0];
+          var new_obj = cur_obj[highlighted][first_child];
+          
+          prev_lvl_ixs = [...prev_lvl_ixs, highlighted_ix];
+          prev_objs = [...prev_objs, cur_obj];
+          highlighted_ix = new_highlighted_ix;
+          cur_obj = new_obj;
 
         }
         break;
       case "ArrowLeft":
-        if (prev_lists.length > 0) {
-          cur_list = prev_lists.pop();
-          prev_lists = prev_lists;
+        if (prev_objs.length > 0) {
+          cur_obj = prev_objs.pop();
+          prev_objs = prev_objs;
           highlighted_ix = prev_lvl_ixs.pop();
           prev_lvl_ixs = prev_lvl_ixs;
         }
@@ -104,19 +89,11 @@
     return tmp;
   }
   
-  beforeUpdate(() => {
-    if (mj) {
-      //mj.startup.document.state(0); 
-      //mj.typesetClear();
-      //mj.texReset();
-    }
-  })
-
   afterUpdate(() => {
     if (mj) { mj.typeset(); }
   });
   
-  $: top_level = (prev_lists.length == 0);
+  $: top_level = (prev_objs.length == 0);
   $: lvl1_colors = make_lvl1_colors(root_list_ix, top_level); 
 
 </script>
@@ -125,16 +102,14 @@
 
 <div id="row">
   <div id="col1" class="col">
-    {#key highlighted.ref}
-    <Card card={highlighted} _class="card highlighted" color="{highlighted_color}" />
-    {/key}
-    {#each level1 as card, i (card.ref)}
-      <Card card={card} _class="card" color="{lvl1_colors[i]}"/>
+    <Card key={highlighted} body={cur_obj[highlighted]} _class="card highlighted" color="{highlighted_color}"/>
+    {#each level1 as card, i}
+      <Card key={card} body={cur_obj[card]} _class="card" color="{lvl1_colors[i]}"/>
     {/each}
   </div>
   <div id="col2" class="col">
-    {#each level2 as card (card.ref)}
-      <Card card={card} _class="card" color="{highlighted_color}"/>
+    {#each level2 as card}
+      <Card key={card} body={cur_obj[highlighted][card]} _class="card" color="{highlighted_color}"/>
     {/each}
   </div>
 </div>
@@ -146,7 +121,10 @@
          box-sizing: border-box; 
     }
 
-    #row { display: flex; }
+    #row {
+      display: flex;
+      margin: auto;
+    }
     
     .col {
       flex: 0 0 50%;
