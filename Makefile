@@ -7,7 +7,7 @@ NOTES_PATH=/home/colobas/org/knowledge-base/notes
 all: $(mds) public/graph.json
 
 public/markdown/%.md : public/org-files/%.md scripts/postprocess_md.py
-	python scripts/postprocess_md.py $< $@
+	python scripts/postprocess_md.py $< $@ public/graph.json
 
 public/graph.json : scripts/make-graph.py $(mds)
 	python scripts/make-graph.py $(ROAM_DB) $(NOTES_PATH) > public/graph.json.tmp

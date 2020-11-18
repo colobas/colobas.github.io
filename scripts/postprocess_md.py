@@ -1,9 +1,21 @@
 import re
 import sys
 import os
+import json
 
 BASENAME = os.path.splitext(sys.argv[1])[0]
+SLUG = os.path.basename(BASENAME)
 DEST = sys.argv[2]
+GRAPH = sys.argv[3]
+
+with open(GRAPH) as f:
+    graph = json.load(f)
+
+nodes = {_["id"]:_ for _ in graph["nodes"]}
+backlinks = []
+for edge in graph["edges"]:
+    if edge["target"] == SLUG:
+        backlinks.append(nodes[edge["source"]])
 
 def search_or_empty(search, text):
     find_ = re.search(search, text, flags=re.IGNORECASE)
@@ -48,4 +60,9 @@ with open(DEST, "w") as f:
         if line.startswith(":"):
             continue
         f.write(line.strip()+"\n")
+
+    if len(backlinks) > 0:
+        f.write("\n\n# Links to this file\n\n")
+        for link in backlinks:
+            f.write(f"- [{link['title']}]({link['url']})\n")
 
