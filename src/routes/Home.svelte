@@ -37,6 +37,7 @@
     width: 50%;
     padding-top: 1em;
     margin: auto;
+    font-family: 'Nunito';
   }
   .intro {
     text-align: justify;
