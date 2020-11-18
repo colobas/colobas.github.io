@@ -26,9 +26,10 @@
     <span class="helper"></span>
   </div>
   <div class="text-block map-label">
-    This is a map of my brain. Click on a node to see the notes I've taken on its
-    corresponding topic. These notes aren't tidy, and some may contain strange
-    artifacts.
+    This is a map of my brain. Hover over the graph to see the node labels. Click on a node
+    to see the notes I've taken on its corresponding topic. These notes aren't tidy, and some
+    may contain strange artifacts. Also, if your on mobile, you won't be able to see the node
+    labels while hovering.
   </div>
 </Base>
 <style>
@@ -41,7 +42,7 @@
     text-align: justify;
   }
   .map-label {
-    text-align: center;
+    text-align: justify;
   }
   .map {
     border: 3px solid black;
