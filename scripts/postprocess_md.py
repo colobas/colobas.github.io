@@ -41,7 +41,7 @@ with open(BASENAME+".md", "r") as f:
 with open(DEST, "w") as f:
     content = (
         f"---\n"
-        f"title: {title}\n"
+        f"title: '{title}'\n"
         f"type: {post_type}\n"
         f"---\n\n"
     )
