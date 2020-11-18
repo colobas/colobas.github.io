@@ -17,7 +17,7 @@
     I'm Gui, a Machine Learning Engineer from Lisbon, currently living in
     Seattle. I'm interested in tech, philosphy, politics, economics, books, food, and most
     importantly, saving the World.
-    You can find me CV <a href="/cv.pdf">here</a>.
+    You can find my CV <a href="/cv.pdf">here</a>.
   </div>
   <div class="map">
     {#if graph}
