@@ -6,3 +6,8 @@
 public
 emacs.site.conf/*
 !emacs.site.conf/init.el
+
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
