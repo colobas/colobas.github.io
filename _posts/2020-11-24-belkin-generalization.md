@@ -53,7 +53,7 @@ Minimization stops being a proxy for the true performance. According to
 the paper, the answer lies in the appropriate definition of the
 inductive bias associated with each problem. They suggest that a
 function-space norm (i.e., a norm defined over a space of functions -
-e.g., the $l<sub>2</sub>$-norm of the parameter vector of a parametric family) can
+e.g., the \\(l\_2\\) norm of the parameter vector of a parametric family) can
 be an appropriate proxy for the inductive bias. The punchline is that a
 vector with more elements can have a smaller norm than a vector with
 fewer elements, so if that norm is an actual measure of the simplicity
@@ -66,9 +66,9 @@ The paper presents empiricial evidence for these claims using a
 parametric model. They fit the model in the classical regime, and in the
 &ldquo;modern&rdquo; regime, varying the number of parameters \\(n\\). For each \\(n\\),
 given solutions which yield the same training error, they choose the one
-with the smallest $l<sub>2</sub>$-norm. Doing so they obtain the predicted &ldquo;double
+with the smallest \\(l\_2\\) norm. Doing so they obtain the predicted &ldquo;double
 descent curve&rdquo;. Moreover, they plot the value of the solution&rsquo;s
-$l<sub>2</sub>$-norm for each \\(n\\), and it decreases as predicted after the
+\\(l\_2\\) norm for each \\(n\\), and it decreases as predicted after the
 interpolation threshold: ![img](/images/rff-belkin.png)
 
 I found these ideas extremely interesting, and invite everyone to read
