@@ -4,7 +4,7 @@ orig_orgs =  $(wildcard $(NOTES_PATH)/*.org)
 orig_mds =  $(wildcard $(NOTES_PATH)/*.md)
 target_md_dir = _posts
 
-.PHONY: all svelte check_clean clean
+.PHONY: all svelte check_clean clean images
 
 # sadly, this has to be run before the `all` rule, so that the dependency list is available then
 define make_target_list =
@@ -27,7 +27,10 @@ endef
 # compute the dependency list for the `all` target
 $(foreach org,$(orig_orgs),$(eval $(call make_target_list,$(org))))
 
-all: $(target_mds) svelte
+all: $(target_mds) svelte images
+
+images:
+	cp $(NOTES_PATH)/img/* images
 
 svelte:
 	cd svelte-components && npm run build
