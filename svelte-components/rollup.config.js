@@ -34,18 +34,21 @@ export default {
 		sourcemap: true,
 		format: 'iife',
 		name: 'app',
-		file: 'public/build/bundle.js'
+		assetFileNames: 'svelte-bundle.css',
+		dir: '../dist/',
+		entryFileNames: 'svelte-bundle.js',
 	},
 	plugins: [
 		svelte({
 			// enable run-time checks when not in production
 			compilerOptions: {
 				dev: !production
-			}
+			},
+			emitCss: true,
 		}),
 		// we'll extract any component CSS out into
 		// a separate file - better for performance
-		css({ output: 'bundle.css' }),
+		css({ output: 'svelte-bundle.css' }),
 
 		// If you have external dependencies installed from
 		// npm, you'll most likely need these plugins. In

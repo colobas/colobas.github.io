@@ -45,6 +45,7 @@ with open(DEST, "w") as f:
         f"title: '{title}'\n"
         #f"type: {post_type}\n"
         f"layout: post\n"
+        #f"permalink: '/post/{title}'\n"
     )
 
     if len(tags) > 0:

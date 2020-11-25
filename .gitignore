@@ -1,13 +1,11 @@
-/node_modules/
-/public/build/
+svelte-components/node_modules/
+svelte-components/public/build/
 
 .DS_Store
 *.*~
-public
-emacs.site.conf/*
-!emacs.site.conf/init.el
 
 _site/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
+vendor/

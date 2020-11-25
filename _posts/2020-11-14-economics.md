@@ -1,0 +1,5 @@
+---
+title: 'economics'
+layout: post
+---
+

@@ -1,0 +1,87 @@
+# Site settings
+title: Hello friend
+description: >- # site description
+  Gui Pires' personal website.
+lang: en-US
+timezone: America/Los_Angeles
+mode: light # default theme "dark" | "light"
+
+# Profile settings
+author:
+  name: Gui Pires
+  bio:
+    I'm Gui, a Machine Learning Engineer from Lisbon, currently living in Seattle. I'm interested in tech, philosophy,
+    politics, economics, books, food, and most importantly, saving the World.
+  github: colobas
+  twitter: colobas_
+  email: mail@gpir.es
+  avatar: /assets/img/avatar.jpg
+
+# URL settings
+url: "https://gpir.es" #
+baseurl:
+permalink: /:title/
+google_analytics:
+fb_appid:
+
+# Collection setting
+collections:
+  posts:
+    output: true
+
+# Markdown settings
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  syntax_highlighter: rouge
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: post
+      comments: false
+
+# Jekyll Compose default front matter
+jekyll_compose:
+  post_default_front_matter:
+    modified:
+    tags: []
+    description:
+  draft_default_front_matter:
+    modified:
+    tags: []
+    description:
+
+# Homepage limit posts
+number_of_posts: 5
+
+# Build settings
+# theme: klise
+sass:
+  style: compressed
+
+include:
+  - _redirects
+  - dist
+
+exclude:
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - CHANGELOG.md
+  - README.md
+  - node_modules
+  - CODE_OF_CONDUCT.md
+  - CONTRIBUTING.md
+  - klise-*.gem
+  - klise.gemspec
+  - svelte-components
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-postfiles

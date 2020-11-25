@@ -27,7 +27,7 @@ def make_slug(fpath):
     return os.path.splitext(os.path.basename(fpath))[0]
 
 def make_url(fpath):
-    return f"/#/post/{make_slug(fpath)}"
+    return f"/{make_slug(fpath)}"
 
 def make_node(fpath, nodes):
     slug = make_slug(fpath)

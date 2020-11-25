@@ -12,13 +12,10 @@
   export let graph;
 
   let svg;
-  let width = 500;
-  let height = 600;
 
-  function resize() {
-    ({ width, height } = svg.getBoundingClientRect());
-  }
-  
+  let width = 500;
+  let height = 500;
+
   let simulation
   function dragstarted(event) {
     if (!event.active) simulation.alphaTarget(0.3).restart();
@@ -42,8 +39,7 @@
   }
 
   function network() {
-    resize();
-
+    console.log(width, height);
     simulation = d3.forceSimulation(nodes)
       .force("link", d3.forceLink(links).id(d => d.id).strength(0.1))
       .force("charge", d3.forceManyBody().strength(-40))
@@ -68,10 +64,6 @@
 
   $: links = graph.edges.map(d => d);
   $: nodes = graph.nodes.map(d => d);
-
-  $: d3yScale = scaleLinear()
-                  .domain([0, height])
-                  .range([height, 0]);
 
   let pt;
   onMount(
@@ -100,9 +92,9 @@
 
 </script>
 
-<svelte:window on:resize='{resize}'/>
-
-<svg bind:this={svg} on:mousemove={handleMousemove}>
+<svg
+  viewBox="0 0 500 500"
+  bind:this={svg} on:mousemove={handleMousemove}>
   {#each links as link}
     <g stroke='#999' stroke-opacity='0.6'>
       <line x1='{link.source.x}' y1='{link.source.y}'

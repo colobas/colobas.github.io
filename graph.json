@@ -1,0 +1,853 @@
+{
+    "nodes": [
+        {
+            "id": "20201108151951-counterfactual_reasoning",
+            "title": "counterfactual-reasoning",
+            "url": "/20201108151951-counterfactual_reasoning"
+        },
+        {
+            "id": "20201109111122-us_coups_south_america",
+            "title": "us-coups-south-america",
+            "url": "/20201109111122-us_coups_south_america"
+        },
+        {
+            "id": "20201109111000-pepe_mujica",
+            "title": "Pepe Mujica",
+            "url": "/20201109111000-pepe_mujica"
+        },
+        {
+            "id": "20201025010915-ecology",
+            "title": "ecology",
+            "url": "/20201025010915-ecology"
+        },
+        {
+            "id": "20201025011339-confederalism",
+            "title": "confederalism",
+            "url": "/20201025011339-confederalism"
+        },
+        {
+            "id": "20201030013912-angola",
+            "title": "angola",
+            "url": "/20201030013912-angola"
+        },
+        {
+            "id": "20201108150348-direct_democracy",
+            "title": "direct-democracy",
+            "url": "/20201108150348-direct_democracy"
+        },
+        {
+            "id": "20201105015521-learning_interaction_laws_in_particle_and_agent_based_systems",
+            "title": "Learning Interaction laws in particle- and agent-based systems",
+            "url": "/20201105015521-learning_interaction_laws_in_particle_and_agent_based_systems"
+        },
+        {
+            "id": "belkin-generalization",
+            "title": "Paper summary: Reconciling modern machine-learning with the bias-variance trade-off",
+            "url": "/belkin-generalization"
+        },
+        {
+            "id": "christian_hilbe",
+            "title": "Christian Hilbe",
+            "url": "/christian_hilbe"
+        },
+        {
+            "id": "20201106173332-causality",
+            "title": "causality",
+            "url": "/20201106173332-causality"
+        },
+        {
+            "id": "20201025010444-anarchism",
+            "title": "anarchism",
+            "url": "/20201025010444-anarchism"
+        },
+        {
+            "id": "20201025011459-social_ecology",
+            "title": "Social Ecology",
+            "url": "/20201025011459-social_ecology"
+        },
+        {
+            "id": "20201110113346-nlp",
+            "title": "nlp",
+            "url": "/20201110113346-nlp"
+        },
+        {
+            "id": "notes-on-dynamic-mode-decomposition",
+            "title": "Notes on Dynamic Mode Decomposition",
+            "url": "/notes-on-dynamic-mode-decomposition"
+        },
+        {
+            "id": "20201025011046-book",
+            "title": "book",
+            "url": "/20201025011046-book"
+        },
+        {
+            "id": "is_the_k_number_the_new_r_number_what_you_need_to_know",
+            "title": "Is the K number the new R number? What you need to know",
+            "url": "/is_the_k_number_the_new_r_number_what_you_need_to_know"
+        },
+        {
+            "id": "20201025010827-the_ecology_of_freedom",
+            "title": "The Ecology of Freedom",
+            "url": "/20201025010827-the_ecology_of_freedom"
+        },
+        {
+            "id": "20201030003355-covid_19",
+            "title": "covid-19",
+            "url": "/20201030003355-covid_19"
+        },
+        {
+            "id": "20201114230107-algebra",
+            "title": "algebra",
+            "url": "/20201114230107-algebra"
+        },
+        {
+            "id": "20201025010706-rojava",
+            "title": "rojava",
+            "url": "/20201025010706-rojava"
+        },
+        {
+            "id": "koopman-theory",
+            "title": "Notes on Koopman theory",
+            "url": "/koopman-theory"
+        },
+        {
+            "id": "20201110112509-interesting_people",
+            "title": "interesting-people",
+            "url": "/20201110112509-interesting_people"
+        },
+        {
+            "id": "superspreading_and_the_effect_of_individual_variation_on_disease_emergence_nature",
+            "title": "Superspreading and the effect of individual variation on disease emergence | Nature",
+            "url": "/superspreading_and_the_effect_of_individual_variation_on_disease_emergence_nature"
+        },
+        {
+            "id": "20201030003429-public_health",
+            "title": "public-health",
+            "url": "/20201030003429-public_health"
+        },
+        {
+            "id": "20201105015702-phd",
+            "title": "phd",
+            "url": "/20201105015702-phd"
+        },
+        {
+            "id": "20201104234007-deep_learning",
+            "title": "deep-learning",
+            "url": "/20201104234007-deep_learning"
+        },
+        {
+            "id": "20201030042927-overdispersion_in_transmission",
+            "title": "Overdispersion in transmission",
+            "url": "/20201030042927-overdispersion_in_transmission"
+        },
+        {
+            "id": "control",
+            "title": "Control",
+            "url": "/control"
+        },
+        {
+            "id": "from_colonization_to_kleptocracy_a_history_of_angola_icij",
+            "title": "From Colonization to Kleptocracy: A history of Angola - ICIJ",
+            "url": "/from_colonization_to_kleptocracy_a_history_of_angola_icij"
+        },
+        {
+            "id": "20201025010414-murray_bookchin",
+            "title": "Murray Bookchin",
+            "url": "/20201025010414-murray_bookchin"
+        },
+        {
+            "id": "20201108151912-multi_agent_systems",
+            "title": "multi-agent-systems",
+            "url": "/20201108151912-multi_agent_systems"
+        },
+        {
+            "id": "francisco_c_santos_instituto_superior_tecnico_ist_universidade_de_lisboa_portugal",
+            "title": "Francisco C. Santos",
+            "url": "/francisco_c_santos_instituto_superior_tecnico_ist_universidade_de_lisboa_portugal"
+        },
+        {
+            "id": "20201110113356-escrutin_io",
+            "title": "escrutin.io",
+            "url": "/20201110113356-escrutin_io"
+        },
+        {
+            "id": "20201104234038-dynamical_systems",
+            "title": "dynamical-systems",
+            "url": "/20201104234038-dynamical_systems"
+        },
+        {
+            "id": "20201108152018-cellular_automata",
+            "title": "cellular-automata",
+            "url": "/20201108152018-cellular_automata"
+        },
+        {
+            "id": "20201109111110-revolution",
+            "title": "revolution",
+            "url": "/20201109111110-revolution"
+        },
+        {
+            "id": "20201106173152-intro_to_causality_randomized_control_trials_observational_studies",
+            "title": "Intro to causality: Randomized Control Trials & Observational Studies",
+            "url": "/20201106173152-intro_to_causality_randomized_control_trials_observational_studies"
+        },
+        {
+            "id": "2006.11287",
+            "title": "Notes on: Cranmer, M., Sanchez-Gonzalez, A., Battaglia, P., Xu, R., Cranmer, K., Spergel, D., & Ho, S. (2020): Discovering symbolic models from deep learning with inductive biases",
+            "url": "/2006.11287"
+        },
+        {
+            "id": "20201104234024-symbolic_learning",
+            "title": "symbolic-learning",
+            "url": "/20201104234024-symbolic_learning"
+        },
+        {
+            "id": "in_soviet_union_optimization_problem_solves_you",
+            "title": "In Soviet Union, Optimization Problem Solves You",
+            "url": "/in_soviet_union_optimization_problem_solves_you"
+        },
+        {
+            "id": "stephen_wolfram_fundamental_theory_of_physics_life_and_the_universe_lex_fridman_podcast_124_youtube",
+            "title": "Stephen Wolfram: Fundamental Theory of Physics, Life, and the Universe | Lex Fridman Podcast #124 - YouTube",
+            "url": "/stephen_wolfram_fundamental_theory_of_physics_life_and_the_universe_lex_fridman_podcast_124_youtube"
+        },
+        {
+            "id": "2_potential_outcomes_week_2_youtube",
+            "title": "2 - Potential Outcomes (Week 2) - YouTube",
+            "url": "/2_potential_outcomes_week_2_youtube"
+        },
+        {
+            "id": "20201109111104-south_america",
+            "title": "south-america",
+            "url": "/20201109111104-south_america"
+        },
+        {
+            "id": "20201025010623-society",
+            "title": "society",
+            "url": "/20201025010623-society"
+        },
+        {
+            "id": "20201030003418-epidemiology",
+            "title": "epidemiology",
+            "url": "/20201030003418-epidemiology"
+        },
+        {
+            "id": "20201030013928-luanda_leaks",
+            "title": "luanda-leaks",
+            "url": "/20201030013928-luanda_leaks"
+        },
+        {
+            "id": "20201105015715-machine_learning",
+            "title": "machine-learning",
+            "url": "/20201105015715-machine_learning"
+        },
+        {
+            "id": "20201105015758-cooperation_dynamics",
+            "title": "cooperation-dynamics",
+            "url": "/20201105015758-cooperation_dynamics"
+        },
+        {
+            "id": "20201030013945-corruption",
+            "title": "corruption",
+            "url": "/20201030013945-corruption"
+        },
+        {
+            "id": "20201104234244-inductive_bias",
+            "title": "inductive-bias",
+            "url": "/20201104234244-inductive_bias"
+        },
+        {
+            "id": "20201113112459-cosma_shalizi",
+            "title": "Cosma Shalizi",
+            "url": "/20201113112459-cosma_shalizi"
+        },
+        {
+            "id": "20201108150329-democracy",
+            "title": "democracy",
+            "url": "/20201108150329-democracy"
+        },
+        {
+            "id": "20201108150309-distributed_policy_making",
+            "title": "distributed-policy-making",
+            "url": "/20201108150309-distributed_policy_making"
+        },
+        {
+            "id": "language_models_are_open_knowledge_graphs_paper_explained_youtube",
+            "title": "Language Models are Open Knowledge Graphs (Paper Explained) - YouTube",
+            "url": "/language_models_are_open_knowledge_graphs_paper_explained_youtube"
+        },
+        {
+            "id": "20201105015744-collective_dynamics",
+            "title": "collective-dynamics",
+            "url": "/20201105015744-collective_dynamics"
+        },
+        {
+            "id": "the_engines_of_sars_cov_2_spread_science",
+            "title": "The engines of SARS-CoV-2 spread | Science",
+            "url": "/the_engines_of_sars_cov_2_spread_science"
+        },
+        {
+            "id": "svd-and-pca",
+            "title": "SVD and PCA",
+            "url": "/svd-and-pca"
+        },
+        {
+            "id": "decomposition",
+            "title": "Decomposition",
+            "url": "/decomposition"
+        },
+        {
+            "id": "20201108150355-activism",
+            "title": "activism",
+            "url": "/20201108150355-activism"
+        }
+    ],
+    "edges": [
+        {
+            "source": "francisco_c_santos_instituto_superior_tecnico_ist_universidade_de_lisboa_portugal",
+            "target": "20201025010915-ecology"
+        },
+        {
+            "source": "francisco_c_santos_instituto_superior_tecnico_ist_universidade_de_lisboa_portugal",
+            "target": "20201105015715-machine_learning"
+        },
+        {
+            "source": "francisco_c_santos_instituto_superior_tecnico_ist_universidade_de_lisboa_portugal",
+            "target": "20201105015702-phd"
+        },
+        {
+            "source": "francisco_c_santos_instituto_superior_tecnico_ist_universidade_de_lisboa_portugal",
+            "target": "20201105015744-collective_dynamics"
+        },
+        {
+            "source": "francisco_c_santos_instituto_superior_tecnico_ist_universidade_de_lisboa_portugal",
+            "target": "20201105015758-cooperation_dynamics"
+        },
+        {
+            "source": "francisco_c_santos_instituto_superior_tecnico_ist_universidade_de_lisboa_portugal",
+            "target": "20201110112509-interesting_people"
+        },
+        {
+            "source": "20201108151951-counterfactual_reasoning",
+            "target": "20201106173332-causality"
+        },
+        {
+            "source": "in_soviet_union_optimization_problem_solves_you",
+            "target": "20201113112459-cosma_shalizi"
+        },
+        {
+            "source": "superspreading_and_the_effect_of_individual_variation_on_disease_emergence_nature",
+            "target": "20201030003429-public_health"
+        },
+        {
+            "source": "superspreading_and_the_effect_of_individual_variation_on_disease_emergence_nature",
+            "target": "20201030003418-epidemiology"
+        },
+        {
+            "source": "superspreading_and_the_effect_of_individual_variation_on_disease_emergence_nature",
+            "target": "20201030042927-overdispersion_in_transmission"
+        },
+        {
+            "source": "20201105015521-learning_interaction_laws_in_particle_and_agent_based_systems",
+            "target": "20201104234038-dynamical_systems"
+        },
+        {
+            "source": "20201105015521-learning_interaction_laws_in_particle_and_agent_based_systems",
+            "target": "20201105015758-cooperation_dynamics"
+        },
+        {
+            "source": "20201105015521-learning_interaction_laws_in_particle_and_agent_based_systems",
+            "target": "20201105015744-collective_dynamics"
+        },
+        {
+            "source": "20201105015521-learning_interaction_laws_in_particle_and_agent_based_systems",
+            "target": "20201105015715-machine_learning"
+        },
+        {
+            "source": "20201105015521-learning_interaction_laws_in_particle_and_agent_based_systems",
+            "target": "20201105015702-phd"
+        },
+        {
+            "source": "from_colonization_to_kleptocracy_a_history_of_angola_icij",
+            "target": "20201030013945-corruption"
+        },
+        {
+            "source": "from_colonization_to_kleptocracy_a_history_of_angola_icij",
+            "target": "20201030013928-luanda_leaks"
+        },
+        {
+            "source": "from_colonization_to_kleptocracy_a_history_of_angola_icij",
+            "target": "20201030013912-angola"
+        },
+        {
+            "source": "christian_hilbe",
+            "target": "20201105015702-phd"
+        },
+        {
+            "source": "christian_hilbe",
+            "target": "20201105015744-collective_dynamics"
+        },
+        {
+            "source": "christian_hilbe",
+            "target": "20201105015758-cooperation_dynamics"
+        },
+        {
+            "source": "christian_hilbe",
+            "target": "20201110112509-interesting_people"
+        },
+        {
+            "source": "20201025010414-murray_bookchin",
+            "target": "20201025010827-the_ecology_of_freedom"
+        },
+        {
+            "source": "20201025010414-murray_bookchin",
+            "target": "20201025011459-social_ecology"
+        },
+        {
+            "source": "20201025010414-murray_bookchin",
+            "target": "20201025011339-confederalism"
+        },
+        {
+            "source": "20201025010414-murray_bookchin",
+            "target": "20201025010706-rojava"
+        },
+        {
+            "source": "20201025010414-murray_bookchin",
+            "target": "20201025010623-society"
+        },
+        {
+            "source": "20201025010414-murray_bookchin",
+            "target": "20201025010444-anarchism"
+        },
+        {
+            "source": "20201030013928-luanda_leaks",
+            "target": "20201030013945-corruption"
+        },
+        {
+            "source": "20201030013928-luanda_leaks",
+            "target": "20201030013912-angola"
+        },
+        {
+            "source": "is_the_k_number_the_new_r_number_what_you_need_to_know",
+            "target": "20201030003429-public_health"
+        },
+        {
+            "source": "is_the_k_number_the_new_r_number_what_you_need_to_know",
+            "target": "20201030003418-epidemiology"
+        },
+        {
+            "source": "is_the_k_number_the_new_r_number_what_you_need_to_know",
+            "target": "20201030042927-overdispersion_in_transmission"
+        },
+        {
+            "source": "20201025010827-the_ecology_of_freedom",
+            "target": "20201025010414-murray_bookchin"
+        },
+        {
+            "source": "20201025010827-the_ecology_of_freedom",
+            "target": "20201025011046-book"
+        },
+        {
+            "source": "20201025010827-the_ecology_of_freedom",
+            "target": "20201025010915-ecology"
+        },
+        {
+            "source": "20201025010827-the_ecology_of_freedom",
+            "target": "20201025010623-society"
+        },
+        {
+            "source": "20201025010827-the_ecology_of_freedom",
+            "target": "20201025010444-anarchism"
+        },
+        {
+            "source": "2_potential_outcomes_week_2_youtube",
+            "target": "20201106173332-causality"
+        },
+        {
+            "source": "stephen_wolfram_fundamental_theory_of_physics_life_and_the_universe_lex_fridman_podcast_124_youtube",
+            "target": "20201104234038-dynamical_systems"
+        },
+        {
+            "source": "stephen_wolfram_fundamental_theory_of_physics_life_and_the_universe_lex_fridman_podcast_124_youtube",
+            "target": "20201105015715-machine_learning"
+        },
+        {
+            "source": "stephen_wolfram_fundamental_theory_of_physics_life_and_the_universe_lex_fridman_podcast_124_youtube",
+            "target": "20201105015702-phd"
+        },
+        {
+            "source": "20201109111000-pepe_mujica",
+            "target": "20201109111122-us_coups_south_america"
+        },
+        {
+            "source": "20201109111000-pepe_mujica",
+            "target": "20201109111110-revolution"
+        },
+        {
+            "source": "20201109111000-pepe_mujica",
+            "target": "20201109111104-south_america"
+        },
+        {
+            "source": "20201109111000-pepe_mujica",
+            "target": "20201108150329-democracy"
+        },
+        {
+            "source": "20201113112459-cosma_shalizi",
+            "target": "20201110112509-interesting_people"
+        },
+        {
+            "source": "20201108150309-distributed_policy_making",
+            "target": "20201108152018-cellular_automata"
+        },
+        {
+            "source": "20201108150309-distributed_policy_making",
+            "target": "20201108151951-counterfactual_reasoning"
+        },
+        {
+            "source": "20201108150309-distributed_policy_making",
+            "target": "20201106173332-causality"
+        },
+        {
+            "source": "20201108150309-distributed_policy_making",
+            "target": "20201108151912-multi_agent_systems"
+        },
+        {
+            "source": "20201108150309-distributed_policy_making",
+            "target": "20201105015758-cooperation_dynamics"
+        },
+        {
+            "source": "20201108150309-distributed_policy_making",
+            "target": "20201105015758-cooperation_dynamics"
+        },
+        {
+            "source": "20201108150309-distributed_policy_making",
+            "target": "20201108150355-activism"
+        },
+        {
+            "source": "20201108150309-distributed_policy_making",
+            "target": "20201108150348-direct_democracy"
+        },
+        {
+            "source": "20201108150309-distributed_policy_making",
+            "target": "20201105015744-collective_dynamics"
+        },
+        {
+            "source": "20201108150309-distributed_policy_making",
+            "target": "20201108150329-democracy"
+        },
+        {
+            "source": "language_models_are_open_knowledge_graphs_paper_explained_youtube",
+            "target": "20201104234007-deep_learning"
+        },
+        {
+            "source": "language_models_are_open_knowledge_graphs_paper_explained_youtube",
+            "target": "20201105015715-machine_learning"
+        },
+        {
+            "source": "language_models_are_open_knowledge_graphs_paper_explained_youtube",
+            "target": "20201110113356-escrutin_io"
+        },
+        {
+            "source": "language_models_are_open_knowledge_graphs_paper_explained_youtube",
+            "target": "20201110113346-nlp"
+        },
+        {
+            "source": "20201030042927-overdispersion_in_transmission",
+            "target": "superspreading_and_the_effect_of_individual_variation_on_disease_emergence_nature"
+        },
+        {
+            "source": "20201030042927-overdispersion_in_transmission",
+            "target": "is_the_k_number_the_new_r_number_what_you_need_to_know"
+        },
+        {
+            "source": "20201030042927-overdispersion_in_transmission",
+            "target": "20201030003429-public_health"
+        },
+        {
+            "source": "20201030042927-overdispersion_in_transmission",
+            "target": "20201030003418-epidemiology"
+        },
+        {
+            "source": "2006.11287",
+            "target": "20201104234244-inductive_bias"
+        },
+        {
+            "source": "2006.11287",
+            "target": "20201104234038-dynamical_systems"
+        },
+        {
+            "source": "2006.11287",
+            "target": "20201104234024-symbolic_learning"
+        },
+        {
+            "source": "2006.11287",
+            "target": "20201104234007-deep_learning"
+        },
+        {
+            "source": "the_engines_of_sars_cov_2_spread_science",
+            "target": "20201030042927-overdispersion_in_transmission"
+        },
+        {
+            "source": "the_engines_of_sars_cov_2_spread_science",
+            "target": "20201030003429-public_health"
+        },
+        {
+            "source": "the_engines_of_sars_cov_2_spread_science",
+            "target": "20201030003418-epidemiology"
+        },
+        {
+            "source": "the_engines_of_sars_cov_2_spread_science",
+            "target": "20201030003355-covid_19"
+        },
+        {
+            "source": "notes-on-dynamic-mode-decomposition",
+            "target": "control"
+        },
+        {
+            "source": "notes-on-dynamic-mode-decomposition",
+            "target": "20201104234038-dynamical_systems"
+        },
+        {
+            "source": "notes-on-dynamic-mode-decomposition",
+            "target": "20201114230107-algebra"
+        },
+        {
+            "source": "svd-and-pca",
+            "target": "decomposition"
+        },
+        {
+            "source": "svd-and-pca",
+            "target": "20201114230107-algebra"
+        },
+        {
+            "source": "koopman-theory",
+            "target": "20201105015715-machine_learning"
+        },
+        {
+            "source": "koopman-theory",
+            "target": "20201104234038-dynamical_systems"
+        },
+        {
+            "source": "20201106173152-intro_to_causality_randomized_control_trials_observational_studies",
+            "target": "20201106173332-causality"
+        },
+        {
+            "source": "belkin-generalization",
+            "target": "20201105015715-machine_learning"
+        },
+        {
+            "source": "belkin-generalization",
+            "target": "20201104234007-deep_learning"
+        }
+    ],
+    "edge_dict": {
+        "francisco_c_santos_instituto_superior_tecnico_ist_universidade_de_lisboa_portugal": {
+            "name": "francisco_c_santos_instituto_superior_tecnico_ist_universidade_de_lisboa_portugal",
+            "children": [
+                "20201025010915-ecology",
+                "20201105015715-machine_learning",
+                "20201105015702-phd",
+                "20201105015744-collective_dynamics",
+                "20201105015758-cooperation_dynamics",
+                "20201110112509-interesting_people"
+            ]
+        },
+        "20201108151951-counterfactual_reasoning": {
+            "name": "20201108151951-counterfactual_reasoning",
+            "children": [
+                "20201106173332-causality"
+            ]
+        },
+        "in_soviet_union_optimization_problem_solves_you": {
+            "name": "in_soviet_union_optimization_problem_solves_you",
+            "children": [
+                "20201113112459-cosma_shalizi"
+            ]
+        },
+        "superspreading_and_the_effect_of_individual_variation_on_disease_emergence_nature": {
+            "name": "superspreading_and_the_effect_of_individual_variation_on_disease_emergence_nature",
+            "children": [
+                "20201030003429-public_health",
+                "20201030003418-epidemiology",
+                "20201030042927-overdispersion_in_transmission"
+            ]
+        },
+        "20201105015521-learning_interaction_laws_in_particle_and_agent_based_systems": {
+            "name": "20201105015521-learning_interaction_laws_in_particle_and_agent_based_systems",
+            "children": [
+                "20201104234038-dynamical_systems",
+                "20201105015758-cooperation_dynamics",
+                "20201105015744-collective_dynamics",
+                "20201105015715-machine_learning",
+                "20201105015702-phd"
+            ]
+        },
+        "from_colonization_to_kleptocracy_a_history_of_angola_icij": {
+            "name": "from_colonization_to_kleptocracy_a_history_of_angola_icij",
+            "children": [
+                "20201030013945-corruption",
+                "20201030013928-luanda_leaks",
+                "20201030013912-angola"
+            ]
+        },
+        "christian_hilbe": {
+            "name": "christian_hilbe",
+            "children": [
+                "20201105015702-phd",
+                "20201105015744-collective_dynamics",
+                "20201105015758-cooperation_dynamics",
+                "20201110112509-interesting_people"
+            ]
+        },
+        "20201025010414-murray_bookchin": {
+            "name": "20201025010414-murray_bookchin",
+            "children": [
+                "20201025010827-the_ecology_of_freedom",
+                "20201025011459-social_ecology",
+                "20201025011339-confederalism",
+                "20201025010706-rojava",
+                "20201025010623-society",
+                "20201025010444-anarchism"
+            ]
+        },
+        "20201030013928-luanda_leaks": {
+            "name": "20201030013928-luanda_leaks",
+            "children": [
+                "20201030013945-corruption",
+                "20201030013912-angola"
+            ]
+        },
+        "is_the_k_number_the_new_r_number_what_you_need_to_know": {
+            "name": "is_the_k_number_the_new_r_number_what_you_need_to_know",
+            "children": [
+                "20201030003429-public_health",
+                "20201030003418-epidemiology",
+                "20201030042927-overdispersion_in_transmission"
+            ]
+        },
+        "20201025010827-the_ecology_of_freedom": {
+            "name": "20201025010827-the_ecology_of_freedom",
+            "children": [
+                "20201025010414-murray_bookchin",
+                "20201025011046-book",
+                "20201025010915-ecology",
+                "20201025010623-society",
+                "20201025010444-anarchism"
+            ]
+        },
+        "2_potential_outcomes_week_2_youtube": {
+            "name": "2_potential_outcomes_week_2_youtube",
+            "children": [
+                "20201106173332-causality"
+            ]
+        },
+        "stephen_wolfram_fundamental_theory_of_physics_life_and_the_universe_lex_fridman_podcast_124_youtube": {
+            "name": "stephen_wolfram_fundamental_theory_of_physics_life_and_the_universe_lex_fridman_podcast_124_youtube",
+            "children": [
+                "20201104234038-dynamical_systems",
+                "20201105015715-machine_learning",
+                "20201105015702-phd"
+            ]
+        },
+        "20201109111000-pepe_mujica": {
+            "name": "20201109111000-pepe_mujica",
+            "children": [
+                "20201109111122-us_coups_south_america",
+                "20201109111110-revolution",
+                "20201109111104-south_america",
+                "20201108150329-democracy"
+            ]
+        },
+        "20201113112459-cosma_shalizi": {
+            "name": "20201113112459-cosma_shalizi",
+            "children": [
+                "20201110112509-interesting_people"
+            ]
+        },
+        "20201108150309-distributed_policy_making": {
+            "name": "20201108150309-distributed_policy_making",
+            "children": [
+                "20201108152018-cellular_automata",
+                "20201108151951-counterfactual_reasoning",
+                "20201106173332-causality",
+                "20201108151912-multi_agent_systems",
+                "20201105015758-cooperation_dynamics",
+                "20201105015758-cooperation_dynamics",
+                "20201108150355-activism",
+                "20201108150348-direct_democracy",
+                "20201105015744-collective_dynamics",
+                "20201108150329-democracy"
+            ]
+        },
+        "language_models_are_open_knowledge_graphs_paper_explained_youtube": {
+            "name": "language_models_are_open_knowledge_graphs_paper_explained_youtube",
+            "children": [
+                "20201104234007-deep_learning",
+                "20201105015715-machine_learning",
+                "20201110113356-escrutin_io",
+                "20201110113346-nlp"
+            ]
+        },
+        "20201030042927-overdispersion_in_transmission": {
+            "name": "20201030042927-overdispersion_in_transmission",
+            "children": [
+                "superspreading_and_the_effect_of_individual_variation_on_disease_emergence_nature",
+                "is_the_k_number_the_new_r_number_what_you_need_to_know",
+                "20201030003429-public_health",
+                "20201030003418-epidemiology"
+            ]
+        },
+        "2006.11287": {
+            "name": "2006.11287",
+            "children": [
+                "20201104234244-inductive_bias",
+                "20201104234038-dynamical_systems",
+                "20201104234024-symbolic_learning",
+                "20201104234007-deep_learning"
+            ]
+        },
+        "the_engines_of_sars_cov_2_spread_science": {
+            "name": "the_engines_of_sars_cov_2_spread_science",
+            "children": [
+                "20201030042927-overdispersion_in_transmission",
+                "20201030003429-public_health",
+                "20201030003418-epidemiology",
+                "20201030003355-covid_19"
+            ]
+        },
+        "notes-on-dynamic-mode-decomposition": {
+            "name": "notes-on-dynamic-mode-decomposition",
+            "children": [
+                "control",
+                "20201104234038-dynamical_systems",
+                "20201114230107-algebra"
+            ]
+        },
+        "svd-and-pca": {
+            "name": "svd-and-pca",
+            "children": [
+                "decomposition",
+                "20201114230107-algebra"
+            ]
+        },
+        "koopman-theory": {
+            "name": "koopman-theory",
+            "children": [
+                "20201105015715-machine_learning",
+                "20201104234038-dynamical_systems"
+            ]
+        },
+        "20201106173152-intro_to_causality_randomized_control_trials_observational_studies": {
+            "name": "20201106173152-intro_to_causality_randomized_control_trials_observational_studies",
+            "children": [
+                "20201106173332-causality"
+            ]
+        },
+        "belkin-generalization": {
+            "name": "belkin-generalization",
+            "children": [
+                "20201105015715-machine_learning",
+                "20201104234007-deep_learning"
+            ]
+        }
+    }
+}
