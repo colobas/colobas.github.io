@@ -57,7 +57,7 @@ transmissions. E.g.: I infect one person in my workplace; that person infects
 another person in the same workplace, and so on.
 
 
-# [Overdispersion in transmission](20201030042927-overdispersion_in_transmission.md)
+# [Overdispersion in transmission](/20201030042927-overdispersion_in_transmission)
 
 -   It has been found that for some COVID-19 super-spreading events, 80% of new
 infections were caused by 10% of infected people.

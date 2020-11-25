@@ -21,10 +21,9 @@ def search_or_empty(search, text):
     find_ = re.search(search, text, flags=re.IGNORECASE)
     return (find_.groups()[0] if find_ is not None else "")
 
-def convert_url(url):
-    dest = url.split("file:")[1]
-    dest = os.path.splitext(dest)[0]
-    return f"/#/post/{dest}"
+def fix_urls(inp):
+    regexp = r"\[([^\]]*)\]\(([^/][^\)]*)\.md\)"
+    return re.sub(regexp, r"[\1](/\2)", inp)
 
 with open(BASENAME+".org", "r") as f:
     orgfile = f.read()
@@ -66,6 +65,8 @@ with open(DEST, "w") as f:
                 continue
         else:
             bypass_tags = False
+
+        line = fix_urls(line)
         f.write(line.strip()+"\n")
 
     if len(backlinks) > 0:

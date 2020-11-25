@@ -26,8 +26,8 @@ of symptoms, and many other factors, all affect the number of new infections tha
 an infected individual generates
 
 See also:
--   [Is the K number the new R number? What you need to know](is_the_k_number_the_new_r_number_what_you_need_to_know.md)
--   [Superspreading and the effect of individual variation on disease emergence | Nature](superspreading_and_the_effect_of_individual_variation_on_disease_emergence_nature.md)
+-   [Is the K number the new R number? What you need to know](/is_the_k_number_the_new_r_number_what_you_need_to_know)
+-   [Superspreading and the effect of individual variation on disease emergence | Nature](/superspreading_and_the_effect_of_individual_variation_on_disease_emergence_nature)
 
 
 # Links to this file

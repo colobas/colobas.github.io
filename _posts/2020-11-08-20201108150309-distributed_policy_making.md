@@ -33,8 +33,8 @@ impact. What is the optimal balance between small action vs big impact?
 
 # Potential theoretical tools
 
--   [cooperation-dynamics](20201105015758-cooperation_dynamics.md)
--   [multi-agent-systems](20201108151912-multi_agent_systems.md)
--   [causality](20201106173332-causality.md)
--   [counterfactual-reasoning](20201108151951-counterfactual_reasoning.md)
--   [cellular-automata](20201108152018-cellular_automata.md)
+-   [cooperation-dynamics](/20201105015758-cooperation_dynamics)
+-   [multi-agent-systems](/20201108151912-multi_agent_systems)
+-   [causality](/20201106173332-causality)
+-   [counterfactual-reasoning](/20201108151951-counterfactual_reasoning)
+-   [cellular-automata](/20201108152018-cellular_automata)
