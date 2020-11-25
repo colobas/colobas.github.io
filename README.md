@@ -3,6 +3,4 @@ as a starting point, to have Svelte components in my Jekyll website.
 
 # TODO
 
-- Fix mathjax in some situations
-- Fix image links
 - Fix links inside post body
