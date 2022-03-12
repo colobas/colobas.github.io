@@ -1,30 +1,43 @@
-#!/usr/bin/env python3
-
 import sys
 import os
 import sqlite3
 import re
 import json
+from pathlib import Path
 
 DB_PATH = sys.argv[1]
 BASE_PATH = sys.argv[2]
 
 def get_file_title(fpath):
+    if not fpath.endswith(".md"):
+        fpath += ".md"
+
     with open(fpath) as f:
-        s = re.findall(r"#\+title:\s(.*)", f.read(), flags=re.IGNORECASE)
+        lines = f.readlines()
 
-    if len(s) > 0:
-        return s[0]
-    return ""
+    title = "".join(lines[1].split("title:")).strip()
 
-def is_note_file(fpath):
-    return (
-        os.path.dirname(fpath) == BASE_PATH and
-        os.path.splitext(fpath)[1] == ".org"
-    )
+    if title[0] == '"':
+        title = title[1:-1]
+
+    return title
+
+def is_published(fpath):
+    if not fpath.endswith(".md"):
+        fpath += ".md"
+    with open(fpath) as f:
+        for line in f.readlines():
+            if "published: " in line:
+                if "false" in line:
+                    return False
+                else:
+                    return True
+    return True
 
 def make_slug(fpath):
-    return os.path.splitext(os.path.basename(fpath))[0]
+    slug = os.path.splitext(os.path.basename(fpath))[0]
+    #slug = re.split(r"^[0-9]*-")[0]
+    return slug
 
 def make_url(fpath):
     return f"/{make_slug(fpath)}"
@@ -53,7 +66,10 @@ for (source, dest) in c.execute("SELECT source, dest FROM links WHERE type == '\
     source = os.path.expanduser(source.replace('"', ""))
     dest = os.path.expanduser(dest.replace('"', ""))
 
-    if not (is_note_file(source) and is_note_file(dest)):
+    if not (Path(source).is_file() and Path(dest).is_file()):
+        continue
+
+    if not (is_published(source) and is_published(dest)):
         continue
 
     src_slug = make_node(source, nodes)

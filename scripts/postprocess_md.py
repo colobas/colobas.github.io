@@ -2,75 +2,78 @@ import re
 import sys
 import os
 import json
+from pathlib import Path
+from fire import Fire
 
-BASENAME = os.path.splitext(sys.argv[1])[0]
-SLUG = os.path.basename(BASENAME)
-DEST = sys.argv[2]
-GRAPH = sys.argv[3]
+def extract_and_remove_tags(markdown):
+    if not "# Tags" in markdown:
+        return markdown, []
 
-with open(GRAPH) as f:
-    graph = json.load(f)
+    pattern = r"\# Tags\n*(.*?)(?:\n\n|\Z)"
+    tag_text = re.search(pattern, markdown, flags=re.DOTALL).groups()[0]
 
-nodes = {_["id"]:_ for _ in graph["nodes"]}
-backlinks = []
-for edge in graph["edges"]:
-    if edge["target"] == SLUG:
-        backlinks.append(nodes[edge["source"]])
+    pattern = r"\# Tags\n*(?:.*?)(?:\n\n|\Z)"
+    markdown_no_tags = "".join(re.split(pattern, markdown, flags=re.DOTALL, maxsplit=1))
 
-def search_or_empty(search, text):
-    find_ = re.search(search, text, flags=re.IGNORECASE)
-    return (find_.groups()[0] if find_ is not None else "")
+    tags = re.findall(r"\[([^\]]*)\]", tag_text)
 
-def fix_urls(inp):
-    regexp = r"\[([^\]]*)\]\(([^/][^\)]*)\.md\)"
-    return re.sub(regexp, r"[\1](/\2)", inp)
-
-with open(BASENAME+".org", "r") as f:
-    orgfile = f.read()
-    title = search_or_empty(r"#\+title:\s(.*)", orgfile)
-    #post_type = search_or_empty(r"#\+type:\s(.*)", orgfile)
-    #if post_type == "":
-    #    post_type = "normal"
-    tags_line = search_or_empty(r"- tags ::\s(.*)", orgfile)
-    tags = re.findall(r"\[\[([^\]]*)\]\[([^\]]*)\]\]", tags_line)
+    return markdown_no_tags, tags
 
 
-with open(BASENAME+".md", "r") as f:
-    markdown_lines = f.readlines()
+def add_tag_line(markdown, tags):
+    if len(tags) == 0:
+        return markdown
 
-with open(DEST, "w") as f:
-    content = (
-        f"---\n"
-        f"title: '{title}'\n"
-        #f"type: {post_type}\n"
-        f"layout: post\n"
-        #f"permalink: '/post/{title}'\n"
-    )
+    lines = markdown.split("\n")
+    tag_line = "tags: " + " ".join(tag.replace("#","") for tag in tags)
+    lines.insert(2, tag_line)
+    return "\n".join(lines)
 
-    if len(tags) > 0:
-        content += "tags: "
-        for tag in tags:
-            content += f"{tag[1].replace(' ', '-')} "
-        content = content.strip() + "\n"
-    content += f"---\n\n"
 
-    f.write(content)
-    bypass_tags = False
-    for line in markdown_lines:
-        if line == "tags\n":
-            bypass_tags = True
-            continue
-        if line.startswith(":"):
-            if bypass_tags:
-                continue
-        else:
-            bypass_tags = False
+def get_backlinks(graph, slug):
+    nodes = {_["id"]:_ for _ in graph["nodes"]}
+    backlinks = []
+    for edge in graph["edges"]:
+        if edge["target"] == slug:
+            backlinks.append(nodes[edge["source"]])
+    return backlinks
 
-        line = fix_urls(line)
-        f.write(line.strip()+"\n")
 
+def add_backlinks(markdown, backlinks):
     if len(backlinks) > 0:
-        f.write("\n\n# Links to this file\n\n")
+        markdown += "\n\n# Links to this file\n\n"
         for link in backlinks:
-            f.write(f"- [{link['title']}]({link['url']})\n")
+            markdown += f"- [{link['title']}]({link['url']})\n"
+    return markdown
 
+
+def _main(original, graph, slug):
+    original_no_tags, tags = extract_and_remove_tags(original)
+    added_tags = add_tag_line(original_no_tags, tags)
+
+    backlinks = get_backlinks(graph, slug)
+    added_backlinks = add_backlinks(added_tags, backlinks)
+
+    return added_backlinks
+
+def main(original_path, target_path, graph_path):
+    original_path = Path(original_path)
+    target_path = Path(target_path)
+    graph_path = Path(graph_path)
+
+    slug = original_path.stem
+
+    with open(original_path, "r") as f:
+        original = f.read()
+
+    with open(graph_path) as f:
+        graph = json.load(f)
+
+    result = _main(original, graph, slug)
+
+    with open(target_path, "w") as f:
+        f.write(result)
+
+
+if __name__ == "__main__":
+    Fire(main)

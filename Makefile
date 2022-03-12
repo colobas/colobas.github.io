@@ -7,19 +7,20 @@ target_md_dir = _posts
 
 # create the list of target markdowns. the filenames have to be prepended
 # with the appropriate date.
-# this has to be run before the `all` rule so that the dependency list is available then
+# this has to be run before the `all` rule so that the dependency list
+# is available then
 define make_target_list =
 $(eval date := $(shell stat -c "%w" $(1) | awk '{print $$1}'))
-$(eval target := $(target_md_dir)/$(date)-$(notdir $(orig_md)))
+$(eval target := $(target_md_dir)/$(date)-$(notdir $(1)))
 $(eval target_mds += $(target))
 endef
 
 # make the rule for each file
 define make_target_rule =
 $(eval date := $(shell stat -c "%w" $(1) | awk '{print $$1}'))
-$(eval target := $(target_md_dir)/$(date)-$(notdir $(orig_md)))
-$(target) : $(orig_md) scripts/postprocess_md.py graph.json
-	python scripts/postprocess_md.py $(orig_md) $(target) graph.json
+$(eval target := $(target_md_dir)/$(date)-$(notdir $(1)))
+$(target) : $(1) scripts/postprocess_md.py graph.json
+	python scripts/postprocess_md.py $(1) $(target) graph.json
 
 endef
 
