@@ -10,10 +10,11 @@ mode: light # default theme "dark" | "light"
 author:
   name: Gui Pires
   bio:
-    I'm Gui, a Machine Learning Engineer from Lisbon, currently living in Seattle. I'm interested in tech, philosophy,
-    politics, economics, books, food, and most importantly, saving the World. To get in touch, mail(at)gpir.es
+    I'm Gui, a ML Engineer / PhD student at the Allen Institute for Cell Science. I'm interested in biology,
+    tech, philosophy, politics, economics, books, food, and most importantly, saving the World.
+    To get in touch, mail(at)gpir.es
+
   github: colobas
-  twitter: colobas_
   email: mail@gpir.es
   avatar: /assets/img/avatar.jpg
 
