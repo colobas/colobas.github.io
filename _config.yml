@@ -80,6 +80,8 @@ exclude:
   - klise-*.gem
   - klise.gemspec
   - svelte-components
+  - Makefile
+  - scripts
 
 # Plugins
 plugins:
