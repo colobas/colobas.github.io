@@ -1,5 +1,4 @@
-ROAM_DB = /home/colobas/.emacs.d/.local/etc/org-roam.db
-NOTES_PATH = /home/colobas/org/knowledge-base/notes
+NOTES_PATH = /home/colobas/org/articles
 orig_mds =  $(wildcard $(NOTES_PATH)/*.md)
 target_md_dir = _posts
 
@@ -38,14 +37,14 @@ svelte:
 # expand the rules for each file
 $(foreach md,$(orig_mds),$(eval $(call make_target_rule,$(md))))
 
-graph.json : scripts/make-graph.py $(orig_mds)
-	python scripts/make-graph.py $(ROAM_DB) $(NOTES_PATH) > graph.json.tmp
-	python -mjson.tool graph.json.tmp > graph.json
-	rm graph.json.tmp
+#graph.json : scripts/make-graph.py $(orig_mds)
+#	python scripts/make-graph.py $(ROAM_DB) $(NOTES_PATH) > graph.json.tmp
+#	python -mjson.tool graph.json.tmp > graph.json
+#	rm graph.json.tmp
 
 check_clean:
 	@echo -n "This will erase every file in \`_posts\`. Are you sure? [y/N] " && read ans && [ $${ans:-N} = y ]
 
 clean: check_clean
-	rm _posts/*
+	rm -rf _posts/*
 
