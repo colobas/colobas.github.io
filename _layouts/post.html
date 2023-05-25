@@ -31,44 +31,38 @@ layout: compress
 
   {% include navbar.html %}
 
-  <div class="wrapper post">
-    <main class="page-content" aria-label="Content">
+  {% include_relative tufte-pandoc-jekyll/_includes/before.html %}
+  <article>
+      <h1 class="title">{{ page.title | escape }}</h1>
 
-      {% include_relative tufte-pandoc-jekyll/_includes/before.html %}
-      <article>
-          <h1 class="title">{{ page.title | escape }}</h1>
+      <p class="byline">{{ site.author.name }}
+      {% if page.date %}
+          &ndash; {{ page.date | date: "%b %d, %Y" }}
+      {% endif %}
+      </p>
 
-          <p class="byline">{{ site.author.name }}
-          {% if page.date %}
-              &ndash; {{ page.date | date: "%b %d, %Y" }}
-          {% endif %}
-          </p>
+      {% if page.tags and page.tags != empty %}
+      <p class="byline">
+        {% assign tags = page.tags %}
+          {% for tag in tags %}
+          <a class="tag"
+            href="/{{tag | downcase | slugify}}">{{tag | upcase }}</a>{% unless forloop.last %},{% endunless %}
+          {% endfor %}
+      </p>
+      {% endif %}
 
-          {% if page.tags and page.tags != empty %}
-          <p class="byline">
-            {% assign tags = page.tags %}
-              {% for tag in tags %}
-              <a class="tag"
-                href="/{{tag | downcase | slugify}}">{{tag | upcase }}</a>{% unless forloop.last %},{% endunless %}
-              {% endfor %}
-          </p>
-          {% endif %}
+      {% include anchor_headings.html html=content anchorClass="anchor-head" beforeHeading=true h_min=1 h_max=4 %}
 
-          {% include anchor_headings.html html=content anchorClass="anchor-head" beforeHeading=true h_min=1 h_max=4 %}
+  </article>
 
-      </article>
+  {% include_relative tufte-pandoc-jekyll/_includes/after.html %}
+  {% include_relative tufte-pandoc-jekyll/_includes/math.html %}
 
-      {% include_relative tufte-pandoc-jekyll/_includes/after.html %}
-      {% include_relative tufte-pandoc-jekyll/_includes/math.html %}
+{% if page.next or page.previous %}
+  {% include navigation.html %}
+{% endif %}
 
-    </main>
-
-    {% if page.next or page.previous %}
-      {% include navigation.html %}
-    {% endif %}
-
-    {% include footer.html %}
-  </div>
+{% include footer.html %}
 </body>
 
 </html>
