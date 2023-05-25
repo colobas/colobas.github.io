@@ -31,10 +31,12 @@ collections:
     output: true
 
 # Markdown settings
-markdown: kramdown
-highlighter: rouge
-kramdown:
-  syntax_highlighter: rouge
+markdown: Pandoc
+pandoc:
+  extensions:
+    - section-divs
+    - from: 'markdown+tex_math_single_backslash'
+    - filter: 'pandoc-sidenote'
 
 # Default front matter
 defaults:
@@ -88,3 +90,4 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-postfiles
+  - jekyll-pandoc
