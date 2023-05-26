@@ -33,9 +33,10 @@ collections:
 # Markdown settings
 markdown: Pandoc
 pandoc:
+  format: html5
   extensions:
     - section-divs
-    - from: 'markdown+raw_tex'
+    - from: 'markdown'
     - filter: 'pandoc-sidenote'
 
 # Default front matter
