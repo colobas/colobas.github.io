@@ -61,8 +61,8 @@ jekyll_compose:
 number_of_posts: 5
 
 # Build settings
-# theme: klise
-theme: tufte-pandoc-jekyll
+theme: klise
+# theme: tufte-pandoc-jekyll
 sass:
   style: compressed
 
