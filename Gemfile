@@ -24,6 +24,7 @@ group :jekyll_plugins do
   gem 'jekyll-postfiles', '~> 3.1'
   gem 'tufte-pandoc-jekyll', :git => 'https://github.com/colobas/tufte-pandoc-jekyll.git'
   gem 'jekyll-pandoc'
+  gem 'jekyll-remote-theme'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

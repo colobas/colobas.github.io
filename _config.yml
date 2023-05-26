@@ -61,7 +61,7 @@ jekyll_compose:
 number_of_posts: 5
 
 # Build settings
-# theme: tufte-pandoc-jekyll
+remote_theme: colobas/tufte-pandoc-jekyll
 sass:
   style: compressed
 
@@ -91,3 +91,4 @@ plugins:
   - jekyll-sitemap
   - jekyll-postfiles
   - jekyll-pandoc
+  - jekyll-remote-theme
