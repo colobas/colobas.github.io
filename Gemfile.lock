@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/colobas/tufte-pandoc-jekyll.git
+  revision: bde9bbf5b215a524da4dbdf5d44e159c95d82a5f
+  specs:
+    tufte-pandoc-jekyll (0.13.0)
+      jekyll-pandoc (~> 2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -67,8 +74,6 @@ GEM
       ffi (~> 1.9)
     terminal-table (1.8.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
-    tufte-pandoc-jekyll (0.13.0)
-      jekyll-pandoc (~> 2.0)
     unicode-display_width (1.7.0)
     webrick (1.7.0)
 
@@ -82,7 +87,7 @@ DEPENDENCIES
   jekyll-pandoc
   jekyll-postfiles (~> 3.1)
   jekyll-sitemap (~> 1.4)
-  tufte-pandoc-jekyll
+  tufte-pandoc-jekyll!
   webrick (~> 1.7)
 
 BUNDLED WITH

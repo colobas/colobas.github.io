@@ -22,7 +22,7 @@ group :jekyll_plugins do
   gem 'jekyll-sitemap', '~> 1.4'
   gem 'jekyll-compose', '~> 0.12.0'
   gem 'jekyll-postfiles', '~> 3.1'
-  gem 'tufte-pandoc-jekyll', :git => 'git://github.com/colobas/tufte-pandoc-jekyll.git'
+  gem 'tufte-pandoc-jekyll', :git => 'https://github.com/colobas/tufte-pandoc-jekyll.git'
   gem 'jekyll-pandoc'
 end
 
