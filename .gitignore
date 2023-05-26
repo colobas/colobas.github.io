@@ -7,3 +7,5 @@ svelte-components/public/build/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
+_site
+vendor
