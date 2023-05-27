@@ -1,12 +1,5 @@
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="application-name" content="{{ site.title }}" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="#fff" />
-  <meta name="apple-mobile-web-app-title" content="{{ site.title }}" />
   <title>
     {% if page.title %}{{ page.title | escape }} - {{ site.title }}{% else %}{{
     site.title | escape }}{% endif %}
@@ -43,29 +36,9 @@
     }}"
   />
   {% endif %}
-  <meta
-    name="description"
-    content="{{
-      page.description
-        | default: site.description
-        | strip_html
-        | normalize_whitespace
-        | truncate: 200
-        | escape
-    }}"
-  />
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="32x32"
-    href="/assets/favicons/favicon-32x32.png"
-  />
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="16x16"
-    href="/assets/favicons/favicon-16x16.png"
-  />
-
   <link rel="stylesheet" href="/assets/css/style.css" />
+
+  {% if page.id %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/font-et-book/0.1/et-book.min.css">
+  {% endif %}
 </head>

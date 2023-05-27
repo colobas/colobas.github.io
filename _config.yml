@@ -35,6 +35,7 @@ markdown: Pandoc
 pandoc:
   format: html5
   extensions:
+    - mathjax
     - section-divs
     - from: 'markdown'
     - filter: 'pandoc-sidenote'

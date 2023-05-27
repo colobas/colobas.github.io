@@ -6,7 +6,6 @@ layout: compress
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
 {% include header.html %}
-{% include_relative tufte-pandoc-jekyll/_includes/head.html %}
 
 <body data-theme="{{ site.mode }}" class="notransition">
 
@@ -30,8 +29,8 @@ layout: compress
   </script>
 
   {% include navbar.html %}
+  {% include tufte-before.html %}
 
-  {% include_relative tufte-pandoc-jekyll/_includes/before.html %}
   <article>
       <h1 class="title">{{ page.title | escape }}</h1>
 
@@ -55,8 +54,8 @@ layout: compress
 
   </article>
 
-  {% include_relative tufte-pandoc-jekyll/_includes/after.html %}
-  {% include_relative tufte-pandoc-jekyll/_includes/math.html %}
+  {% include tufte-after.html %}
+  {% include tufte-math.html %}
 
 {% include footer.html %}
 </body>
