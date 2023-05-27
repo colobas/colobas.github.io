@@ -63,7 +63,6 @@ jekyll_compose:
 number_of_posts: 5
 
 # Build settings
-remote_theme: colobas/tufte-pandoc-jekyll
 sass:
   style: compressed
 
