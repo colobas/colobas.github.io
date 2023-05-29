@@ -11,8 +11,11 @@ echo $target_file
 # export org file as latex file (to make it easy to stay compatible with pdf exports from org)
 doom-export-posts "$org_file"
 
-# convert latex file into markdown, removing double dollar signs and creating space between consecutive curly braces
-pandoc -s -f latex -t markdown+raw_tex "$tex_file" | sed 's/\$\$//g' | sed 's/{{/{ {/g' | sed 's/}}/} }/g' > "$target_file"
+# convert latex file into markdown
+pandoc -s -f latex -t markdown+raw_tex "$tex_file" |
+    sed 's/{{/{ {/g' |
+    sed 's/}}/} }/g' |
+    sed -E 's/^(#[^{}]*)\{[^}]*\}/\1/' > "$target_file"   # remove header anchor if it exists
 
 # remove temporary latex file
 rm "$tex_file"
