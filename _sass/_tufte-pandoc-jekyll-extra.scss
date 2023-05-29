@@ -8,6 +8,12 @@ p.signoff {
 /**
  * Makes it so that top-level <p> don't need to be wrapped in <section>
  */
+
+article > span {
+    display: block;
+}
+
+article > span,
 article > p,
 article > li,
 article > footer,
