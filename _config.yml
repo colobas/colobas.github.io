@@ -36,7 +36,6 @@ pandoc:
   format: html5
   extensions:
     - mathjax
-    - section-divs
     - from: 'markdown'
     - filter: 'pandoc-sidenote'
 
@@ -80,11 +79,10 @@ exclude:
   - node_modules
   - CODE_OF_CONDUCT.md
   - CONTRIBUTING.md
-  - klise-*.gem
-  - klise.gemspec
   - svelte-components
   - Makefile
   - scripts
+  - vendor
 
 # Plugins
 plugins:
