@@ -9,6 +9,9 @@ The general layout is based on [klise](https://github.com/piharpi/jekyll-klise) 
 the style for the posts is based on [my fork of tufte-pandoc-jekyll](https://github.com/colobas/tufte-pandoc-jekyll)
 
 
-# TODO
+# General flow
 
-- fix exporting from org articles
+- I write posts in org-mode
+- I have local emacs configs to export org files as latex. My default style is tufte-handout, so it's consistent with the post style here
+- My Makefile looks for org files in a specific location and uses org-latex-export to export them to .tex (so that I can make use of some latex specific configs)
+- I use pandoc together with some scripts to do the latex -> markdown conversion (using script org2jekyll.sh)
