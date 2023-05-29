@@ -139,7 +139,12 @@ blockquote footer {
     text-align: right;
 }
 
+article section > span.math.display {
+    display: block;
+}
+
 article section > p,
+article section > span.math.display,
 article section > footer,
 article section > table {
     width: 55%;

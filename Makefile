@@ -1,5 +1,6 @@
-NOTES_PATH = /home/colobas/org/articles
-orig_mds =  $(wildcard $(NOTES_PATH)/*.md)
+POSTS_PATH = /home/colobas/org/articles
+orig_orgs =  $(wildcard $(POSTS_PATH)/*.org)
+
 target_md_dir = _posts
 
 .PHONY: all svelte check_clean clean images
@@ -9,38 +10,33 @@ target_md_dir = _posts
 # this has to be run before the `all` rule so that the dependency list
 # is available then
 define make_target_list =
-$(eval date := $(shell stat -c "%w" $(1) | awk '{print $$1}'))
-$(eval target := $(target_md_dir)/$(date)-$(notdir $(1)))
+$(eval date := $(shell stat -c '%w' $(1) | awk '{print $$1}'))
+$(eval target := $(target_md_dir)/$(date)-$(subst .org,.md,$(notdir $(1))))
 $(eval target_mds += $(target))
 endef
 
 # make the rule for each file
 define make_target_rule =
-$(eval date := $(shell stat -c "%w" $(1) | awk '{print $$1}'))
-$(eval target := $(target_md_dir)/$(date)-$(notdir $(1)))
-$(target) : $(1) scripts/postprocess_md.py graph.json
-	python scripts/postprocess_md.py $(1) $(target) graph.json
-
+$(eval date := $(shell stat -c '%w' $(1) | awk '{print $$1}'))
+$(eval target := $(target_md_dir)/$(date)-$(subst .org,.md,$(notdir $(1))))
+$(target) : $(1)
+	./scripts/org2jekyll.sh $(1) $(target)
 endef
 
 # compute the dependency list for the `all` target
-$(foreach md,$(orig_mds),$(eval $(call make_target_list,$(md))))
+$(foreach org,$(orig_orgs),$(eval $(call make_target_list,$(org))))
 
 all: $(target_mds) svelte images
 
 images:
-	cp $(NOTES_PATH)/img/* images
+	cp -r $(POSTS_PATH)/images/. images
 
 svelte:
-	cd svelte-components && npm run build
+	cd svelte-components && npm install && npm run build
 
 # expand the rules for each file
-$(foreach md,$(orig_mds),$(eval $(call make_target_rule,$(md))))
+$(foreach org,$(orig_orgs),$(info making rule for $(org))$(eval $(call make_target_rule,$(org))))
 
-#graph.json : scripts/make-graph.py $(orig_mds)
-#	python scripts/make-graph.py $(ROAM_DB) $(NOTES_PATH) > graph.json.tmp
-#	python -mjson.tool graph.json.tmp > graph.json
-#	rm graph.json.tmp
 
 check_clean:
 	@echo -n "This will erase every file in \`_posts\`. Are you sure? [y/N] " && read ans && [ $${ans:-N} = y ]
