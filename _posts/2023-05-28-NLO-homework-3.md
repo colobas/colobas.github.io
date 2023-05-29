@@ -11,20 +11,20 @@ title:
 - Non-linear Optimization - Homework 3
 ---
 
-# 48 - Robot vacuum {#sec:org24e1611 .unnumbered}
+# 48 - Robot vacuum 
 
 An ellipsoid can alternatively be parameterized by
 $E = \{c + \Sigma^{1/2} u : {\lVert u \rVert}_2 \leq 1 \}$. We can
 intersect it with the polyhedron constraints:
 
-\begin{aligned}
+$$\begin{aligned}
 \sup_{ {\lVert u \rVert}_2 \leq 1} {a_i}^T (c + \Sigma^{1/2} u) &\leq b_i \\
 {a_i}^T c + \sup_{ {\lVert u \rVert}_2 \leq 1} {a_i}^T \Sigma^{1/2} u &\leq b_i \\
 {a_i}^T c + \sup_{ {\lVert u \rVert}_2 \leq 1} \big((\Sigma^{1/2})^T a_i^T\big)^T u &\leq b_i \\
 {a_i}^T c + \sup_{ {\lVert u \rVert}_2 \leq 1} \big(\Sigma^{1/2} a_i^T\big)^T u &\leq b_i \label{step4} && \text{Because $\Sigma^{1/2}$ is symmetric}\\
 {a_i}^T c + \left\lVert\Sigma^{1/2} a_i \right\rVert_{2} &\leq b_i \label{step5} \\
 {a_i}^T c + \left\lVert\Sigma^{1/2} a_i \right\rVert_{2} - b_i &\leq 0
-\end{aligned}
+\end{aligned}$$
 
 The step from ([\[step4\]](#step4){reference-type="ref"
 reference="step4"}) to ([\[step5\]](#step5){reference-type="ref"
@@ -34,31 +34,31 @@ $(\Sigma^{1/2} a_i)^T$. Since $u$ is a unit vector, we can rewrite it as
 $\frac{\Sigma^{1/2} a_i}{\left\lVert\Sigma^{1/2} a_i \right\rVert_{2} }$
 and do
 
-\begin{aligned}
+$$\begin{aligned}
 (\Sigma^{1/2} a_i)^T \frac{\Sigma^{1/2} a_i}{\left\lVert\Sigma^{1/2} a_i \right\rVert_{2} } \
 &= \frac{ {\left\lVert\Sigma^{1/2} a_i \right\rVert_{2} }^2}{\left\lVert\Sigma^{1/2} a_i \right\rVert_{2} } \\
 &= \left\lVert\Sigma^{1/2} a_i \right\rVert_{2}
-\end{aligned}
+\end{aligned}$$
 
 So we obtain a linear constraint for each column of $A$, and can thus
 write the LP:
 
-\begin{aligned}
+$$\begin{aligned}
 & \min_{c} & & - e^T c \\
 & \textrm{s.t.} & & {a_i}^T c + \left\lVert\Sigma^{1/2} a_i \right\rVert_{2} - b_i \leq 0, i \in \{1,\ldots,m\}
-\end{aligned}
+\end{aligned}$$
 
 To use my solution, we need to compute $\Sigma^{1/2}$. Luckily it is
 2x2, so there is a straightforward formula
 (<https://en.wikipedia.org/wiki/Square_root_of_a_2_by_2_matrix>).
 
 For the given matrix $\Sigma$, its square-root (computed by the linked
-method) is \begin{aligned}
+method) is $$\begin{aligned}
 \begin{bmatrix}
  1.0603   & -0.342025 \\
 -0.342025 &  2.9397
 \end{bmatrix}
-\end{aligned}
+\end{aligned}$$
 
 See below the implementation, using CVXPY:
 
@@ -99,7 +99,7 @@ See below the implementation, using CVXPY:
     The optimal value is -6.8680318592201335
     A solution c is [6.86803186 0.43681798]
 
-# 54 - Data rates {#sec:orgd91b9c7 .unnumbered}
+# 54 - Data rates 
 
 The objective function is linear, and most of the constraints are
 affine. The only problematic constraint is the budget constraint. I want
@@ -107,12 +107,12 @@ to decouple the cost constraints from one another, because they have a
 tricky non-linearity. So introducing auxiliary variables $z_i$, we can
 rewrite the budget constraint as
 
-\begin{aligned}
+$$\begin{aligned}
 \begin{cases}
 \alpha_i x_i + \frac{\beta_i}{2}\max\{0, x_i - \frac{C_i}{2}\}^2 \leq z_i, i=1,...,5 \\
 \sum_{i=1}^5 z_i \leq B
 \end{cases}
-\end{aligned}
+\end{aligned}$$
 
 Rearranging the first inequality:
 
@@ -132,29 +132,29 @@ y_i\^2 (z_i - \_i x_i) []{#ineq2 label="ineq2"}
 Let us focus on inequality ([\[ineq2\]](#ineq2){reference-type="ref"
 reference="ineq2"})
 
-\begin{aligned}
+$$\begin{aligned}
 y_i^2 &\leq \underbrace{(z_i - \alpha_i x_i)\frac{2}{\beta_i} }_{\geq 0\text{, since~$\alpha_i x_i \geq 0$ and $\alpha_i x_i \leq z_i$} }
-\end{aligned}
+\end{aligned}$$
 
 So we can use the "key fact" from the lectures and write:
 
-\begin{aligned}
+$$\begin{aligned}
 \left\lVert\begin{bmatrix} 2y_i \\ (z_i - \alpha_i x_i)\frac{2}{\beta_i} - 1\end{bmatrix}\right\rVert_2 &\leq  (z_i - \alpha_i x_i)\frac{2}{\beta_i} + 1
-\end{aligned}
+\end{aligned}$$
 
 Which is a valid constraint for a SOCP. Now, addressing
 ([\[ineq1\]](#ineq1){reference-type="ref" reference="ineq1"}), we can
 simply rewrite it as:
 
-\begin{aligned}
+$$\begin{aligned}
 0 \leq y_i \\
 x_i - \frac{C_i}{2} \leq y_i
-\end{aligned}
+\end{aligned}$$
 
 So we arrive at the final form for our optimization problem, which we
 have shown can be cast as a SOCP:
 
-\begin{aligned}
+$$\begin{aligned}
 & \max_{r, x_1, ..., x_5, z_1, ..., z_5, y_1, ..., y_5} & & r \\
 & \text{subject to} & & \\
 & & & r = x_1 + x_2 \\
@@ -167,11 +167,11 @@ have shown can be cast as a SOCP:
 & & & \left\lVert\begin{bmatrix} 2y_i \\ (z_i - \alpha_i x_i)\frac{2}{\beta_i} - 1\end{bmatrix}\right\rVert_2 &\leq  (z_i - \alpha_i x_i)\frac{2}{\beta_i} + 1, i = 1, ..., 5 \\
 & & & 0 \leq y_i \\
 & & & x_i - \frac{C_i}{2} \leq y_i, i = 1, ..., 5 \\
-\end{aligned}
+\end{aligned}$$
 
 Rewritten in the canonical form:
 
-\begin{aligned}
+$$\begin{aligned}
 & \min_{r, x_1, ..., x_5, z_1, ..., z_5, y_1, ..., y_5} & & -r \\
 & \text{subject to} & & \\
 & & & r - x_1 - x_2 = 0 \\
@@ -184,7 +184,7 @@ Rewritten in the canonical form:
 & & & \left\lVert\begin{bmatrix} 2y_i \\ (z_i - \alpha_i x_i)\frac{2}{\beta_i} - 1\end{bmatrix}\right\rVert_2 &\leq  (z_i - \alpha_i x_i)\frac{2}{\beta_i} + 1, i = 1, ..., 5 \\
 & & & -y_i \leq 0 \\
 & & & x_i - \frac{C_i}{2} - y_i \leq 0, i = 1, ..., 5 \\
-\end{aligned}
+\end{aligned}$$
 
 See below the implementation and solution in CVXPY
 
@@ -247,12 +247,12 @@ See below the implementation and solution in CVXPY
     The optimal link x is [8.99999988e-01 4.33333334e+00 5.11970231e-11 8.99999988e-01
      4.33333334e+00]
 
-# 61 - Optimal linear estimators for uncertain covariance {#sec:org6f6d216 .unnumbered}
+# 61 - Optimal linear estimators for uncertain covariance 
 
 We can rewrite the cost function (omitting the supremum specification
 for brevity) as:
 
-\begin{aligned}
+$$\begin{aligned}
 \sup\Big\{
 \begin{bmatrix}
 s^T & -1 & r
@@ -343,7 +343,7 @@ s \\
 r
 \end{bmatrix} +
 \max\Big\{s^T \Sigma_k s \Big\}
-\end{aligned}
+\end{aligned}$$
 
 In ([\[supr1\]](#supr1){reference-type="ref" reference="supr1"}) I move
 the supremum in, because $\begin{bmatrix}
@@ -358,7 +358,7 @@ all of the "mass" of $\pi$ in the term with the largest value.
 
 Now, introducing two epigraph variables, we can rewrite the problem:
 
-\begin{aligned}
+$$\begin{aligned}
 & \min_{s, r, t_1, t_2} & & t_1 + t_2 \\
 & \text{subject to} & & \\
 & & & \begin{bmatrix}
@@ -374,13 +374,13 @@ s \\
 r
 \end{bmatrix} \leq t_1 \\
 & & & \max\Big\{s^T \Sigma_k s \Big\} \leq t_2
-\end{aligned}
+\end{aligned}$$
 
 Using the fact that
 $\max\{a_1, ..., a_K\} \leq \epsilon \leftrightarrow a_i \leq \epsilon,\ i = 1,...,K$,
 we can substitute the second inequality by $K$ inequalities:
 
-\begin{aligned}
+$$\begin{aligned}
 & \min_{s, r, t_1, t_2} & & t_1 + t_2 \\
 & \text{subject to} & & \\
 & & & \begin{bmatrix}
@@ -396,6 +396,6 @@ s \\
 r
 \end{bmatrix} \leq t_1 \\
 & & & s^T \Sigma_k s \leq t_2,\ k = 1,..,K
-\end{aligned}
+\end{aligned}$$
 
 which is a QCQP.
