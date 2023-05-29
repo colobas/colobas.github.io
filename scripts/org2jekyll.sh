@@ -15,7 +15,16 @@ doom-export-posts "$org_file"
 pandoc -s -f latex -t markdown+raw_tex "$tex_file" |
     sed 's/{{/{ {/g' |
     sed 's/}}/} }/g' |
-    sed -E 's/^(#[^{}]*)\{[^}]*\}/\1/' > "$target_file"   # remove header anchor if it exists
+    sed -E 's/^(#[^{}]*)\{[^}]*\}/\1/' |    # remove header anchor if it exists
+    awk '{
+        if ($0 ~ /^---$/ && !found_front_matter) {
+            found_front_matter = 1
+            print $0
+            print "math: true"
+        } else {
+            print $0
+        }
+    }' > "$target_file"
 
 # remove temporary latex file
 rm "$tex_file"

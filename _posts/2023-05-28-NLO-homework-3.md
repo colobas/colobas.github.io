@@ -1,4 +1,5 @@
 ---
+math: true
 author:
 - |
   Guilherme Pires\
