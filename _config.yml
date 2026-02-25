@@ -36,8 +36,10 @@ pandoc:
   format: html5
   extensions:
     - mathjax
+    - section-divs
+    - shift-heading-level-by: 1
     - from: 'markdown'
-    - filter: 'pandoc-sidenote'
+    - lua-filter: 'pandoc-sidenote.lua'
 
 # Default front matter
 defaults:

@@ -24,7 +24,6 @@ group :jekyll_plugins do
   gem 'jekyll-postfiles'
   gem 'jekyll-pandoc'
   gem 'jekyll-remote-theme'
-  gem 'github-pages'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -1,34 +1,35 @@
-// Code
+// Solarized Light syntax theme — applies to both Rouge (.highlight) and
+// pandoc (.sourceCode) code blocks.
+//
+// Palette:
+//   base03 #002b36  base02 #073642  base01 #586e75  base00 #657b83
+//   base0  #839496  base1  #93a1a1  base2  #eee8d5  base3  #fdf6e3
+//   yellow #b58900  orange #cb4b16  red    #dc322f  magenta #d33682
+//   violet #6c71c4  blue   #268bd2  cyan   #2aa198  green   #859900
+
+// Inline code
 code {
   font-family: $mono-family;
-  text-rendering: optimizeLegibility;
-  font-feature-settings: "calt" 1;
-  font-variant-ligatures: normal;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  word-wrap: normal;
   font-size: inherit;
 
   &.highlighter-rouge {
-    padding: 1px 3px;
-    position: relative;
-    top: -1px;
-    background-color: #f6f6f6;
+    padding: 1px 4px;
+    background-color: #eee8d5;
     border-radius: 2px;
-    border: 1px solid rgba(128,128,128,0.1);
+    border: 1px solid rgba(0,0,0,0.06);
+    color: #586e75;
   }
 }
 
-// Codeblock Theme
+// Block code wrapper
 pre.highlight, pre {
   margin: 0 -27px;
   @include media-query($on-mobile) {
     margin: 0 calc(51% - 51vw);
     padding-left: 20px;
   }
-  border: 1px solid rgba(128,128,128,0.1);
-  background-color: #1a1b21;
+  background-color: #fdf6e3;
+  border: 1px solid #eee8d5;
   border-radius: 2px;
   padding: 10px;
   display: block;
@@ -42,91 +43,55 @@ pre.highlight, pre {
     line-height: 1.5;
     display: block;
     border: 0;
+    background: transparent;
+    color: #657b83;
   }
 }
 
-.highlight table td {
-  padding: 5px;
-}
+// ── Rouge token classes ────────────────────────────────────────────────────────
 
-.highlight table pre {
-  margin: 0;
-}
+.highlight             { background-color: #fdf6e3; color: #657b83; }
+.highlight .w          { color: #657b83; }          // Whitespace
+.highlight .err        { color: #dc322f; }          // Error
 
-.highlight,
-.highlight .w {
-  color: #fbf1c7;
-  // background-color: #1a1b21;
-}
-
-.highlight .err {
-  color: #fb4934;
-  // background-color: #1a1b21;
-  font-weight: bold;
-}
-
+// Comments
 .highlight .c,
 .highlight .cd,
 .highlight .cm,
 .highlight .c1,
-.highlight .cs {
-  color: #928374;
-  font-style: italic;
-}
+.highlight .cs        { color: #93a1a1; font-style: italic; }
+.highlight .cp        { color: #cb4b16; }           // Comment.Preproc
 
-.highlight .cp {
-  color: #8ec07c;
-}
-
-.highlight .nt {
-  color: #fb4934;
-}
-
-.highlight .o,
-.highlight .ow {
-  color: #fbf1c7;
-}
-
-.highlight .p,
-.highlight .pi {
-  color: #fbf1c7;
-}
-
-.highlight .gi {
-  color: #b8bb26;
-  background-color: #282828;
-}
-
-.highlight .gd {
-  color: #fb4934;
-  background-color: #282828;
-}
-
-.highlight .gh {
-  color: #b8bb26;
-  font-weight: bold;
-}
-
+// Keywords
 .highlight .k,
-.highlight .kn,
 .highlight .kp,
 .highlight .kr,
-.highlight .kv {
-  color: #fb4934;
-}
+.highlight .kv        { color: #859900; }           // Keyword
+.highlight .kn        { color: #859900; }           // Keyword.Namespace (import, as)
+.highlight .kc        { color: #2aa198; }           // Keyword.Constant (True/False/None)
+.highlight .kd        { color: #cb4b16; }           // Keyword.Declaration (def, class)
+.highlight .kt        { color: #b58900; }           // Keyword.Type
 
-.highlight .kc {
-  color: #d3869b;
-}
+// Operators & Punctuation
+.highlight .o,
+.highlight .ow        { color: #859900; }           // Operator
+.highlight .p,
+.highlight .pi        { color: #657b83; }           // Punctuation
 
-.highlight .kt {
-  color: #fabd2f;
-}
+// Names
+.highlight .n         { color: #657b83; }           // Name
+.highlight .na        { color: #657b83; }           // Name.Attribute
+.highlight .nb        { color: #268bd2; }           // Name.Builtin (print, len…)
+.highlight .nc        { color: #268bd2; }           // Name.Class
+.highlight .nd        { color: #cb4b16; }           // Name.Decorator
+.highlight .ne        { color: #dc322f; }           // Name.Exception
+.highlight .nf        { color: #268bd2; }           // Name.Function
+.highlight .ni        { color: #657b83; }           // Name.Entity
+.highlight .nn        { color: #268bd2; }           // Name.Namespace (plt, np)
+.highlight .no        { color: #2aa198; }           // Name.Constant
+.highlight .nt        { color: #268bd2; }           // Name.Tag
 
-.highlight .kd {
-  color: #fe8019;
-}
-
+// Literals: strings
 .highlight .s,
 .highlight .sb,
 .highlight .sc,
@@ -134,41 +99,13 @@ pre.highlight, pre {
 .highlight .s2,
 .highlight .sh,
 .highlight .sx,
-.highlight .s1 {
-  color: #b8bb26;
-  font-style: italic;
-}
+.highlight .s1,
+.highlight .sr,
+.highlight .si,
+.highlight .se,
+.highlight .ss        { color: #2aa198; }           // String (various)
 
-.highlight .si {
-  color: #b8bb26;
-  font-style: italic;
-}
-
-.highlight .sr {
-  color: #b8bb26;
-  font-style: italic;
-}
-
-.highlight .se {
-  color: #fe8019;
-}
-
-.highlight .nn {
-  color: #8ec07c;
-}
-
-.highlight .nc {
-  color: #8ec07c;
-}
-
-.highlight .no {
-  color: #d3869b;
-}
-
-.highlight .na {
-  color: #b8bb26;
-}
-
+// Literals: numbers
 .highlight .m,
 .highlight .mf,
 .highlight .mh,
@@ -176,10 +113,13 @@ pre.highlight, pre {
 .highlight .il,
 .highlight .mo,
 .highlight .mb,
-.highlight .mx {
-  color: #d3869b;
-}
+.highlight .mx        { color: #2aa198; }           // Number (various)
 
-.highlight .ss {
-  color: #83a598;
-}
+// Diff
+.highlight .gi        { color: #859900; }
+.highlight .gd        { color: #dc322f; }
+.highlight .gh        { color: #268bd2; font-weight: bold; }
+
+// Misc
+.highlight table td   { padding: 5px; }
+.highlight table pre  { margin: 0; }
