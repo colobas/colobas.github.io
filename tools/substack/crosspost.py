@@ -194,44 +194,76 @@ def convert_tufte_html_to_markdown(body: str) -> str:
     return body
 
 
-def rewrite_simple_footnotes(body: str) -> str:
-    """Handle simple single-line footnotes.
+def _escape_dollars_outside_code(body: str) -> str:
+    """Escape $ so the markdown parser won't turn it into math nodes."""
 
-    Rewrites:
-      ... foo.[^1]
-      ...
-      [^1]: footnote text
-
-    into:
-      ... foo. (footnote: footnote text)
-
-    Limitations:
-    - only handles single-line definitions
-    - only handles numeric footnote keys cleanly
-    """
-    footnotes: Dict[str, str] = {}
-    kept_lines = []
-
-    # Collect definitions
+    out_lines = []
+    in_code = False
     for line in body.splitlines():
-        m = re.match(r"^\[\^([^\]]+)\]:\s*(.*)\s*$", line)
-        if m:
-            footnotes[m.group(1)] = m.group(2)
+        if line.strip().startswith("```"):
+            in_code = not in_code
+            out_lines.append(line)
+            continue
+
+        if in_code:
+            out_lines.append(line)
         else:
-            kept_lines.append(line)
+            out_lines.append(line.replace("$", r"\\$"))
 
-    body2 = "\n".join(kept_lines) + ("\n" if body.endswith("\n") else "")
+    return "\n".join(out_lines) + ("\n" if body.endswith("\n") else "")
 
-    # Replace references
-    def repl(m: re.Match) -> str:
-        key = m.group(1)
-        txt = footnotes.get(key)
-        if not txt:
-            return ""  # drop unknown footnote refs
-        return f" (footnote: {txt})"
 
-    body2 = re.sub(r"\[\^([^\]]+)\]", repl, body2)
-    return body2
+def _pipe_tables_to_fenced_code(body: str) -> str:
+    """Convert markdown pipe tables into fenced code blocks.
+
+    This prevents emitting Substack-native table nodes (which currently may break
+    the editor).
+    """
+
+    lines = body.splitlines()
+    out = []
+    i = 0
+
+    def is_sep(ln: str) -> bool:
+        s = ln.strip()
+        if "|" not in s:
+            return False
+        s = s.strip("|")
+        parts = [p.strip() for p in s.split("|")]
+        if not parts:
+            return False
+        return all(re.fullmatch(r":?-{3,}:?", p or "") for p in parts)
+
+    while i < len(lines):
+        # don’t touch inside fenced code
+        if lines[i].strip().startswith("```"):
+            out.append(lines[i])
+            i += 1
+            while i < len(lines) and not lines[i].strip().startswith("```"):
+                out.append(lines[i])
+                i += 1
+            if i < len(lines):
+                out.append(lines[i])
+                i += 1
+            continue
+
+        # Detect table header + separator
+        if i + 1 < len(lines) and "|" in lines[i] and is_sep(lines[i + 1]):
+            table_lines = [lines[i], lines[i + 1]]
+            i += 2
+            while i < len(lines) and lines[i].strip() and "|" in lines[i]:
+                table_lines.append(lines[i])
+                i += 1
+
+            out.append("```text")
+            out.extend(table_lines)
+            out.append("```")
+            continue
+
+        out.append(lines[i])
+        i += 1
+
+    return "\n".join(out) + ("\n" if body.endswith("\n") else "")
 
 
 def build_api():
@@ -262,6 +294,16 @@ def main() -> None:
         help="Do not convert tufte-specific HTML into plain Markdown",
     )
     ap.add_argument(
+        "--substack-native-math",
+        action="store_true",
+        help="Let the Substack client emit native math nodes (currently may break the editor)",
+    )
+    ap.add_argument(
+        "--substack-native-tables",
+        action="store_true",
+        help="Let the Substack client emit native table nodes (currently may break the editor)",
+    )
+    ap.add_argument(
         "--dump-markdown",
         action="store_true",
         help="Print the transformed markdown (the version sent to Substack) and exit",
@@ -286,6 +328,14 @@ def main() -> None:
 
     # Keep markdown footnote syntax intact; python-substack will convert it into
     # Substack-native footnote nodes.
+
+    # By default we *avoid* Substack-native math/table nodes because they can
+    # currently cause the Substack editor to error for this publication.
+    if not args.substack_native_math:
+        body = _escape_dollars_outside_code(body)
+    if not args.substack_native_tables:
+        body = _pipe_tables_to_fenced_code(body)
+
     body = shift_headings(body, delta=1)
 
     if args.dump_markdown or args.markdown_out:

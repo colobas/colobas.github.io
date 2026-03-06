@@ -36,7 +36,8 @@ Defaults:
 
 - strips the `# Tufte Layout Exerciser` section
 - converts some tufte-specific HTML into plain Markdown approximations
-- converts Markdown tables/math/footnotes into Substack-native nodes via the vendored `python-substack`
+- converts Markdown footnotes into Substack-native footnote nodes
+- *does not* emit Substack-native math/table nodes by default (those currently trigger a Substack editor error for this publication)
 
 If you want to keep the exerciser section (to see what survives on Substack):
 
@@ -48,6 +49,16 @@ If you want to disable the HTML→Markdown cleanup:
 
 ```bash
 uv run python tools/substack/crosspost.py --keep-tufte-section --no-tufte-html-conversion _posts/2026-02-25-a-demo-post-slides-handouts-and-the-hybrid-workflow.md
+```
+
+If you want to try Substack-native math/tables anyway (may break the editor):
+
+```bash
+uv run python tools/substack/crosspost.py \
+  --keep-tufte-section \
+  --substack-native-math \
+  --substack-native-tables \
+  _posts/2026-02-25-a-demo-post-slides-handouts-and-the-hybrid-workflow.md
 ```
 
 ## Publish
