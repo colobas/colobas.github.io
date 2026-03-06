@@ -1,16 +1,91 @@
-This is my website, built with Jekyll and Svelte.
+# gpir.es
 
-It has some logic to use Svelte components in Jekyll, which I took from 
-[this blogpost](https://web.archive.org/web/20210618184658/https://davidtang.io/2020-01-25-adding-svelte-3-to-a-jekyll-site/),
-although at the moment I'm only using it for the "$ Hello friend" message on the home page.
+Personal website built with **Jekyll** plus a small **Svelte** bundle.
 
-The general layout is based on [klise](https://github.com/piharpi/jekyll-klise) and
-the style for the posts is based on [my fork of tufte-pandoc-jekyll](https://github.com/colobas/tufte-pandoc-jekyll)
+The base layout is derived from [jekyll-klise](https://github.com/piharpi/jekyll-klise). Post typography is Tufte-inspired (tufte-css + pandoc-oriented tweaks in `assets/css/tufte-jekyll-bundle.scss`).
 
+## Writing / publishing posts (current workflow)
 
-# General flow
+Source-of-truth drafts live as **Org-mode** files in `~/org/` (commonly under `~/org/articles/`).
 
-- I write posts in org-mode
-- I have local emacs configs to export org files as latex. My default style is tufte-handout, so it's consistent with the post style here
-- My Makefile looks for org files in a specific location and uses org-latex-export to export them to .tex (so that I can make use of some latex specific configs)
-- I use pandoc together with some scripts to do the latex -> markdown conversion (using script org2jekyll.sh)
+### 1) Write an Org file
+
+Use these document keywords:
+
+```org
+#+TITLE: My Post Title
+#+DATE: 2026-03-06          ; optional, defaults to today
+#+FILETAGS: :tag1:tag2:     ; optional
+#+OPTIONS: tags:nil toc:nil ; optional
+```
+
+Write normally (headings, lists, code blocks, tables, footnotes). Math is written using `$...$` / `$$...$$`.
+
+### 2) Export Org → Jekyll `_posts/*.md`
+
+In Doom Emacs, run:
+
+- `M-x colobas/publish-post-to-blog`
+
+This command is implemented in:
+
+- `~/.doom.d/modules/org/blog.el`
+
+It:
+
+- calls **pandoc** directly (`org` → `markdown`)
+- prepends **YAML front matter** (`layout: post`, `title`, `date`, `tags`, `math: true`)
+- writes the result into:
+  - `~/dev/colobas.github.io/_posts/YYYY-MM-DD-<slug>.md`
+
+Notes about the export:
+
+- It uses a pandoc markdown target roughly equivalent to “GFM + $-math + pipe tables”.
+- It strips pandoc-emitted raw org blocks (e.g. for unrecognized org keywords).
+- It disables raw HTML emission from Org export (so you generally shouldn’t rely on inline HTML coming from Org).
+
+### 3) Commit + push
+
+This repo is deployed via GitHub Actions on pushes to `main`.
+
+## Site rendering pipeline (Jekyll + Pandoc)
+
+This repo uses `jekyll-pandoc` (`_config.yml` sets `markdown: Pandoc`). At build time, Jekyll invokes **pandoc** to convert Markdown → HTML with options like:
+
+- `mathjax`
+- `section-divs`
+- `shift-heading-level-by: 1`
+- `lua-filter: pandoc-sidenote.lua`
+
+The `pandoc-sidenote.lua` filter is currently installed in the user pandoc data dir:
+
+- `~/.local/share/pandoc/filters/pandoc-sidenote.lua`
+
+## Local development
+
+Jekyll:
+
+```bash
+bundle install
+bundle exec jekyll serve
+```
+
+Svelte bundle (only needed if you change `svelte-components/`):
+
+```bash
+make svelte
+```
+
+## Cross-posting to Substack
+
+A first-pass cross-post tool lives under:
+
+- `tools/substack/`
+
+It uses an (unofficial) Substack API client vendored as a git submodule:
+
+- `external/python-substack`
+
+See:
+
+- `tools/substack/README.md`
