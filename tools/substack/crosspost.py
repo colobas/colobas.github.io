@@ -303,16 +303,20 @@ def _pipe_tables_to_latex_array(body: str) -> str:
 
             def latex_escape(s: str) -> str:
                 # Minimal escaping for array/table contexts.
+                # We also translate a bit of markdown emphasis to LaTeX.
                 # (We keep backslashes intact so users can intentionally use LaTeX.)
+
+                # markdown emphasis -> latex
+                s = re.sub(r"\*\*([^*]+)\*\*", r"\\textbf{\1}", s)
+                s = re.sub(r"(?<!\*)\*([^*]+)\*(?!\*)", r"\\textit{\1}", s)
+
+                # escape characters that break LaTeX tables
                 return (
                     s.replace("&", r"\\&")
                     .replace("%", r"\\%")
                     .replace("#", r"\\#")
                     .replace("_", r"\\_")
-                    .replace("{", r"\\{")
-                    .replace("}", r"\\}")
-                    .replace("~", r"\\textasciitilde{}")
-                    .replace("^", r"\\textasciicircum{}")
+                    .replace("$", r"\\$")
                 )
 
             # Column spec for array must be contiguous, e.g. {lrr}
