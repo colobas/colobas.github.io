@@ -307,33 +307,48 @@ def _pipe_tables_to_latex_array(body: str) -> str:
                 # (We keep backslashes intact so users can intentionally use LaTeX.)
 
                 # markdown emphasis -> latex
-                s = re.sub(r"\*\*([^*]+)\*\*", r"\\textbf{\1}", s)
-                s = re.sub(r"(?<!\*)\*([^*]+)\*(?!\*)", r"\\textit{\1}", s)
+                s = re.sub(r"\*\*([^*]+)\*\*", r"\textbf{\1}", s)
+                s = re.sub(r"(?<!\*)\*([^*]+)\*(?!\*)", r"\textit{\1}", s)
 
                 # escape characters that break LaTeX tables
                 return (
-                    s.replace("&", r"\\&")
-                    .replace("%", r"\\%")
-                    .replace("#", r"\\#")
-                    .replace("_", r"\\_")
-                    .replace("$", r"\\$")
+                    s.replace("&", r"\&")
+                    .replace("%", r"\%")
+                    .replace("#", r"\#")
+                    .replace("_", r"\_")
+                    .replace("$", r"\$")
                 )
 
-            # Column spec for array must be contiguous, e.g. {lrr}
-            col_spec = "l" + ("r" * max(0, ncols - 1))
+            # Use an array environment (Substack supports this; it doesn't support tabular).
+            # Match the formatting observed in the example workflow:
+            #   \begin{array}{c c}
+            #
+            #   \textbf{H1} & \textbf{H2} \\
+            #
+            #   \hline
+            #
+            #   a & b \\
+            #
+            #   \end{array}
+
+            col_spec = " ".join(["c"] * ncols)
 
             latex_lines: list[str] = []
-            latex_lines.append(r"\\begin{array}{%s}" % col_spec)
+            latex_lines.append("\\begin{array}{%s}" % col_spec)
+            latex_lines.append("")
 
-            header_cells = [r"\\textbf{%s}" % latex_escape(h) for h in header]
-            latex_lines.append(" & ".join(header_cells) + r" \\")
-            latex_lines.append(r"\\hline")
+            header_cells = ["\\textbf{%s}" % latex_escape(h) for h in header]
+            latex_lines.append(" & ".join(header_cells) + " \\\\")
+            latex_lines.append("")
+            latex_lines.append("\\hline")
+            latex_lines.append("")
 
             for row in rows:
                 row = (row + [""] * ncols)[:ncols]
-                latex_lines.append(" & ".join([latex_escape(cell) for cell in row]) + r" \\")
+                latex_lines.append(" & ".join([latex_escape(cell) for cell in row]) + " \\\\")
+                latex_lines.append("")
 
-            latex_lines.append(r"\\end{array}")
+            latex_lines.append("\\end{array}")
 
             out.append("$$")
             out.extend(latex_lines)
