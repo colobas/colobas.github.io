@@ -16,7 +16,8 @@ Assumptions / current limitations:
 - Substack won't render tufte-css specific HTML (sidenote toggles, fullwidth wrappers).
   We can optionally convert some of that HTML into plain Markdown approximations.
 - We optionally strip the "Tufte Layout Exerciser" section.
-- We do a minimal footnote rewrite (single-line footnotes only).
+- Substack supports LaTeX blocks (but not inline LaTeX). We convert $...$ / $$...$$
+  into display-style LaTeX blocks.
 - We shift headings down by one level ("#" -> "##", etc.) so Substack's default
   typography is closer to the blog.
 """
@@ -194,35 +195,73 @@ def convert_tufte_html_to_markdown(body: str) -> str:
     return body
 
 
-def _escape_dollars_outside_code(body: str) -> str:
-    """Escape $ so the markdown parser won't turn it into math nodes."""
+def _inline_dollar_math_to_latex_blocks(body: str) -> str:
+    """Convert inline $...$ math into block $$...$$ segments.
 
-    out_lines = []
+    Substack's editor reliably supports LaTeX blocks but not inline LaTeX.
+
+    This is a best-effort heuristic and is intentionally lossy:
+    - it will break paragraphs to insert math blocks
+    - it ignores nesting and code spans
+    """
+
+    out: list[str] = []
     in_code = False
+
+    inline_pat = re.compile(r"(?<!\\)\$(.+?)(?<!\\)\$")
+
     for line in body.splitlines():
         if line.strip().startswith("```"):
             in_code = not in_code
-            out_lines.append(line)
+            out.append(line)
             continue
 
         if in_code:
-            out_lines.append(line)
-        else:
-            out_lines.append(line.replace("$", r"\\$"))
+            out.append(line)
+            continue
 
-    return "\n".join(out_lines) + ("\n" if body.endswith("\n") else "")
+        # Don't touch display blocks that already start with $$
+        if line.strip().startswith("$$"):
+            out.append(line)
+            continue
+
+        cur = line
+        while True:
+            m = inline_pat.search(cur)
+            if not m:
+                out.append(cur)
+                break
+
+            before = cur[: m.start()]
+            expr = m.group(1)
+            after = cur[m.end() :]
+
+            if before.strip():
+                out.append(before.rstrip())
+            out.append("$$")
+            out.append(expr.strip())
+            out.append("$$")
+            cur = after.lstrip()
+            if not cur:
+                break
+
+    return "\n".join(out) + ("\n" if body.endswith("\n") else "")
 
 
-def _pipe_tables_to_fenced_code(body: str) -> str:
-    """Convert markdown pipe tables into fenced code blocks.
+def _pipe_tables_to_latex_array(body: str) -> str:
+    """Convert markdown pipe tables into a LaTeX array env inside $$...$$.
 
-    This prevents emitting Substack-native table nodes (which currently may break
-    the editor).
+    Substack doesn't have native tables; this is a workaround.
+
+    Limitations:
+    - assumes first row is header
+    - ignores alignment markers except for crude numeric right-align
     """
 
     lines = body.splitlines()
-    out = []
+    out: list[str] = []
     i = 0
+    in_code = False
 
     def is_sep(ln: str) -> bool:
         s = ln.strip()
@@ -234,33 +273,57 @@ def _pipe_tables_to_fenced_code(body: str) -> str:
             return False
         return all(re.fullmatch(r":?-{3,}:?", p or "") for p in parts)
 
+    def split_row(ln: str) -> list[str]:
+        s = ln.strip().strip("|")
+        return [c.strip() for c in s.split("|")]
+
     while i < len(lines):
-        # don’t touch inside fenced code
-        if lines[i].strip().startswith("```"):
-            out.append(lines[i])
+        line = lines[i]
+
+        if line.strip().startswith("```"):
+            in_code = not in_code
+            out.append(line)
             i += 1
-            while i < len(lines) and not lines[i].strip().startswith("```"):
-                out.append(lines[i])
-                i += 1
-            if i < len(lines):
-                out.append(lines[i])
-                i += 1
             continue
 
-        # Detect table header + separator
+        if in_code:
+            out.append(line)
+            i += 1
+            continue
+
         if i + 1 < len(lines) and "|" in lines[i] and is_sep(lines[i + 1]):
-            table_lines = [lines[i], lines[i + 1]]
+            header = split_row(lines[i])
             i += 2
+            rows = []
             while i < len(lines) and lines[i].strip() and "|" in lines[i]:
-                table_lines.append(lines[i])
+                rows.append(split_row(lines[i]))
                 i += 1
 
-            out.append("```text")
-            out.extend(table_lines)
-            out.append("```")
+            ncols = len(header)
+            # crude alignment: right-align if header contains 'score'/'acc'/'f1' or row looks numeric
+            col_spec = []
+            for c in range(ncols):
+                if c == 0:
+                    col_spec.append("l")
+                else:
+                    col_spec.append("r")
+
+            latex_lines = []
+            latex_lines.append(r"\\begin{array}{%s}" % (" ".join(col_spec)))
+            latex_lines.append(" ".join([r"\\textbf{%s}" % h.replace("_", r"\\_") for h in header]) + r" \\")
+            latex_lines.append(r"\\hline")
+            for row in rows:
+                # pad / trim row
+                row = (row + [""] * ncols)[:ncols]
+                latex_lines.append(" ".join([cell.replace("_", r"\\_") for cell in row]) + r" \\")
+            latex_lines.append(r"\\end{array}")
+
+            out.append("$$")
+            out.extend(latex_lines)
+            out.append("$$")
             continue
 
-        out.append(lines[i])
+        out.append(line)
         i += 1
 
     return "\n".join(out) + ("\n" if body.endswith("\n") else "")
@@ -294,14 +357,14 @@ def main() -> None:
         help="Do not convert tufte-specific HTML into plain Markdown",
     )
     ap.add_argument(
-        "--substack-native-math",
+        "--no-latex-math-blocks",
         action="store_true",
-        help="Let the Substack client emit native math nodes (currently may break the editor)",
+        help="Do not convert $...$ into LaTeX blocks (math will remain as literal text)",
     )
     ap.add_argument(
-        "--substack-native-tables",
+        "--no-latex-tables",
         action="store_true",
-        help="Let the Substack client emit native table nodes (currently may break the editor)",
+        help="Do not convert pipe tables into LaTeX array blocks",
     )
     ap.add_argument(
         "--dump-markdown",
@@ -329,12 +392,11 @@ def main() -> None:
     # Keep markdown footnote syntax intact; python-substack will convert it into
     # Substack-native footnote nodes.
 
-    # By default we *avoid* Substack-native math/table nodes because they can
-    # currently cause the Substack editor to error for this publication.
-    if not args.substack_native_math:
-        body = _escape_dollars_outside_code(body)
-    if not args.substack_native_tables:
-        body = _pipe_tables_to_fenced_code(body)
+    # Substack supports LaTeX blocks; convert inline math + tables into LaTeX blocks.
+    if not args.no_latex_math_blocks:
+        body = _inline_dollar_math_to_latex_blocks(body)
+    if not args.no_latex_tables:
+        body = _pipe_tables_to_latex_array(body)
 
     body = shift_headings(body, delta=1)
 
