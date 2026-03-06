@@ -284,7 +284,8 @@ def main() -> None:
     if not args.no_tufte_html_conversion:
         body = convert_tufte_html_to_markdown(body)
 
-    body = rewrite_simple_footnotes(body)
+    # Keep markdown footnote syntax intact; python-substack will convert it into
+    # Substack-native footnote nodes.
     body = shift_headings(body, delta=1)
 
     if args.dump_markdown or args.markdown_out:
