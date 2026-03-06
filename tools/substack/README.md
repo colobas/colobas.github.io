@@ -36,6 +36,7 @@ Defaults:
 
 - strips the `# Tufte Layout Exerciser` section
 - converts some tufte-specific HTML into plain Markdown approximations
+- converts Markdown tables/math/footnotes into Substack-native nodes via the vendored `python-substack`
 
 If you want to keep the exerciser section (to see what survives on Substack):
 
