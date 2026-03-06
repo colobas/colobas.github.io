@@ -3,6 +3,7 @@ svelte-components/public/build/
 
 .DS_Store
 .env
+__pycache__/
 *.*~
 
 .sass-cache/

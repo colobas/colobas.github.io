@@ -20,7 +20,22 @@ pip install -e external/python-substack
 python tools/substack/crosspost.py _posts/2026-02-25-a-demo-post-slides-handouts-and-the-hybrid-workflow.md
 ```
 
-By default, the script strips the `# Tufte Layout Exerciser` section (raw HTML that is intended for tufte-css).
+Defaults:
+
+- strips the `# Tufte Layout Exerciser` section
+- converts some tufte-specific HTML into plain Markdown approximations
+
+If you want to keep the exerciser section (to see what survives on Substack):
+
+```bash
+python tools/substack/crosspost.py --keep-tufte-section _posts/2026-02-25-a-demo-post-slides-handouts-and-the-hybrid-workflow.md
+```
+
+If you want to disable the HTML→Markdown cleanup:
+
+```bash
+python tools/substack/crosspost.py --keep-tufte-section --no-tufte-html-conversion _posts/2026-02-25-a-demo-post-slides-handouts-and-the-hybrid-workflow.md
+```
 
 ## Publish
 
