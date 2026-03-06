@@ -300,22 +300,35 @@ def _pipe_tables_to_latex_array(body: str) -> str:
                 i += 1
 
             ncols = len(header)
-            # crude alignment: right-align if header contains 'score'/'acc'/'f1' or row looks numeric
-            col_spec = []
-            for c in range(ncols):
-                if c == 0:
-                    col_spec.append("l")
-                else:
-                    col_spec.append("r")
 
-            latex_lines = []
-            latex_lines.append(r"\\begin{array}{%s}" % (" ".join(col_spec)))
-            latex_lines.append(" ".join([r"\\textbf{%s}" % h.replace("_", r"\\_") for h in header]) + r" \\")
+            def latex_escape(s: str) -> str:
+                # Minimal escaping for array/table contexts.
+                # (We keep backslashes intact so users can intentionally use LaTeX.)
+                return (
+                    s.replace("&", r"\\&")
+                    .replace("%", r"\\%")
+                    .replace("#", r"\\#")
+                    .replace("_", r"\\_")
+                    .replace("{", r"\\{")
+                    .replace("}", r"\\}")
+                    .replace("~", r"\\textasciitilde{}")
+                    .replace("^", r"\\textasciicircum{}")
+                )
+
+            # Column spec for array must be contiguous, e.g. {lrr}
+            col_spec = "l" + ("r" * max(0, ncols - 1))
+
+            latex_lines: list[str] = []
+            latex_lines.append(r"\\begin{array}{%s}" % col_spec)
+
+            header_cells = [r"\\textbf{%s}" % latex_escape(h) for h in header]
+            latex_lines.append(" & ".join(header_cells) + r" \\")
             latex_lines.append(r"\\hline")
+
             for row in rows:
-                # pad / trim row
                 row = (row + [""] * ncols)[:ncols]
-                latex_lines.append(" ".join([cell.replace("_", r"\\_") for cell in row]) + r" \\")
+                latex_lines.append(" & ".join([latex_escape(cell) for cell in row]) + r" \\")
+
             latex_lines.append(r"\\end{array}")
 
             out.append("$$")
