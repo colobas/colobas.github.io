@@ -2,30 +2,23 @@
 
 This folder contains a small script to turn a Jekyll post (`_posts/*.md`) into a Substack draft using the `python-substack` library vendored as a git submodule.
 
-## Setup (uv)
+## Setup (uv + PEP 723)
 
-This repo uses `uv` for Python env management.
+These scripts use **PEP 723 inline dependency metadata**, so you do not need to create/manage a venv manually.
 
-1. Create the environment:
+1. Create a `.env` file at `tools/substack/.env` (copy from `tools/substack/.env.example`) and set Substack credentials.
 
-```bash
-uv venv
-```
-
-2. Install dependencies:
+2. Run scripts via `uv run` (uv will resolve/install the inline dependencies automatically):
 
 ```bash
-uv pip install -r tools/substack/requirements.txt
-uv pip install -e external/python-substack
-```
-
-3. Create a `.env` file at `tools/substack/.env` (copy from `tools/substack/.env.example`) and set Substack credentials.
-
-Run scripts with:
-
-```bash
+uv run python tools/substack/check_auth.py
 uv run python tools/substack/crosspost.py --help
 ```
+
+Notes:
+
+- `python-substack` is vendored as a git submodule under `external/python-substack`.
+- The scripts add that directory to `sys.path` at runtime, so there is no separate install step for it.
 
 ## Create a draft
 

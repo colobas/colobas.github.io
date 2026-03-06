@@ -1,4 +1,12 @@
 #!/usr/bin/env python3
+# /// script
+# requires-python = ">=3.11"
+# dependencies = [
+#   "python-dotenv>=1.0.0",
+#   "PyYAML>=6.0.0",
+#   "requests>=2.31.0",
+# ]
+# ///
 """Cross-post a Jekyll Markdown post to Substack.
 
 This reads a Jekyll post (YAML front matter + Markdown body) and creates a
@@ -18,8 +26,15 @@ from __future__ import annotations
 import argparse
 import os
 import re
+import sys
 from dataclasses import dataclass
+from pathlib import Path
 from typing import Dict
+
+# Make the vendored submodule importable without installing it.
+_REPO_ROOT = Path(__file__).resolve().parents[2]
+_SUBSTACK_SRC = _REPO_ROOT / "external" / "python-substack"
+sys.path.insert(0, str(_SUBSTACK_SRC))
 
 import yaml
 from dotenv import load_dotenv

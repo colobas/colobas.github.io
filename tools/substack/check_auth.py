@@ -1,4 +1,11 @@
 #!/usr/bin/env python3
+# /// script
+# requires-python = ">=3.11"
+# dependencies = [
+#   "python-dotenv>=1.0.0",
+#   "requests>=2.31.0",
+# ]
+# ///
 """Sanity-check Substack auth and publication selection.
 
 Loads env vars the same way as crosspost.py and prints:
@@ -12,6 +19,13 @@ Useful when cookie auth fails or PUBLICATION_URL doesn't match any publication.
 from __future__ import annotations
 
 import os
+import sys
+from pathlib import Path
+
+# Make the vendored submodule importable without installing it.
+_REPO_ROOT = Path(__file__).resolve().parents[2]
+_SUBSTACK_SRC = _REPO_ROOT / "external" / "python-substack"
+sys.path.insert(0, str(_SUBSTACK_SRC))
 
 from dotenv import load_dotenv
 

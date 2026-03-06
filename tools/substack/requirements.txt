@@ -1,4 +1,9 @@
+# This file is kept for convenience, but the scripts in this folder
+# now use PEP 723 inline dependency headers and can be run directly via:
+#
+#   uv run python tools/substack/crosspost.py ...
+#
+# If you still want to install deps into an existing env:
 python-dotenv>=1.0.0
 PyYAML>=6.0.0
-# install the submodule in editable mode:
-#   pip install -e ../../external/python-substack
+requests>=2.31.0
