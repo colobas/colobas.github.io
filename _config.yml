@@ -84,6 +84,7 @@ exclude:
   - svelte-components
   - Makefile
   - scripts
+  - external
   - vendor
 
 # Plugins

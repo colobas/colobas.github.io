@@ -2,6 +2,7 @@ svelte-components/node_modules/
 svelte-components/public/build/
 
 .DS_Store
+.env
 *.*~
 
 .sass-cache/
