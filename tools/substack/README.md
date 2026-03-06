@@ -15,6 +15,12 @@ uv run python tools/substack/check_auth.py
 uv run python tools/substack/crosspost.py --help
 ```
 
+To inspect a draft’s raw JSON (useful for implementing tables/math/footnotes properly):
+
+```bash
+uv run python tools/substack/dump_draft.py <draft_id> --body-only
+```
+
 Notes:
 
 - `python-substack` is vendored as a git submodule under `external/python-substack`.
