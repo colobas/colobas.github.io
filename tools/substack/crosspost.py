@@ -302,20 +302,20 @@ def _pipe_tables_to_latex_array(body: str) -> str:
                 # so KaTeX doesn't render it as math italics.
 
                 # markdown emphasis -> latex (text mode)
-                s = re.sub(r"\*\*([^*]+)\*\*", r"\\textbf{\1}", s)
-                s = re.sub(r"(?<!\*)\*([^*]+)\*(?!\*)", r"\\textit{\1}", s)
+                s = re.sub(r"\*\*([^*]+)\*\*", r"\textbf{\1}", s)
+                s = re.sub(r"(?<!\*)\*([^*]+)\*(?!\*)", r"\textit{\1}", s)
 
                 # escape characters that break LaTeX tables
                 s = (
-                    s.replace("&", r"\\&")
-                    .replace("%", r"\\%")
-                    .replace("#", r"\\#")
-                    .replace("_", r"\\_")
-                    .replace("$", r"\\$")
+                    s.replace("&", r"\&")
+                    .replace("%", r"\%")
+                    .replace("#", r"\#")
+                    .replace("_", r"\_")
+                    .replace("$", r"\$")
                 )
 
                 # Wrap as text
-                return r"\\text{" + s + "}"
+                return r"\text{" + s + "}"
 
             # Use an array environment (Substack supports this; it doesn't support tabular).
             # Match the formatting observed in the example workflow:
@@ -335,7 +335,7 @@ def _pipe_tables_to_latex_array(body: str) -> str:
             latex_lines.append("\\begin{array}{%s}" % col_spec)
             latex_lines.append("")
 
-            header_cells = [r"\\text{\\textbf{" + h.replace("}", "").replace("{", "") + r"}}" for h in header]
+            header_cells = [r"\text{\textbf{" + h.replace("}", "").replace("{", "") + r"}}" for h in header]
             latex_lines.append(" & ".join(header_cells) + " \\\\")
             latex_lines.append("")
             latex_lines.append("\\hline")
