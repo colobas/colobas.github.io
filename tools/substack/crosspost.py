@@ -302,8 +302,10 @@ def _pipe_tables_to_latex_array(body: str) -> str:
                 # so KaTeX doesn't render it as math italics.
 
                 # markdown emphasis -> latex (text mode)
-                s = re.sub(r"\*\*([^*]+)\*\*", r"\textbf{\1}", s)
-                s = re.sub(r"(?<!\*)\*([^*]+)\*(?!\*)", r"\textit{\1}", s)
+                # Use double backslashes in the replacement so `re.sub` produces a
+                # literal backslash (otherwise sequences like \t become tabs).
+                s = re.sub(r"\*\*([^*]+)\*\*", r"\\textbf{\1}", s)
+                s = re.sub(r"(?<!\*)\*([^*]+)\*(?!\*)", r"\\textit{\1}", s)
 
                 # escape characters that break LaTeX tables
                 s = (
