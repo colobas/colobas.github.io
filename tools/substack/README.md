@@ -29,7 +29,7 @@ Notes:
 ## Create a draft
 
 ```bash
-uv run python tools/substack/crosspost.py _posts/2026-02-25-a-demo-post-slides-handouts-and-the-hybrid-workflow.md
+uv run python tools/substack/crosspost.py _posts/YYYY-MM-DD-your-post-slug.md
 ```
 
 Defaults:
@@ -43,13 +43,13 @@ Defaults:
 If you want to keep the exerciser section (to see what survives on Substack):
 
 ```bash
-uv run python tools/substack/crosspost.py --keep-tufte-section _posts/2026-02-25-a-demo-post-slides-handouts-and-the-hybrid-workflow.md
+uv run python tools/substack/crosspost.py --keep-tufte-section _posts/YYYY-MM-DD-your-post-slug.md
 ```
 
 If you want to disable the HTML→Markdown cleanup:
 
 ```bash
-uv run python tools/substack/crosspost.py --keep-tufte-section --no-tufte-html-conversion _posts/2026-02-25-a-demo-post-slides-handouts-and-the-hybrid-workflow.md
+uv run python tools/substack/crosspost.py --keep-tufte-section --no-tufte-html-conversion _posts/YYYY-MM-DD-your-post-slug.md
 ```
 
 To disable table conversion:
@@ -58,7 +58,7 @@ To disable table conversion:
 uv run python tools/substack/crosspost.py \
   --keep-tufte-section \
   --no-latex-tables \
-  _posts/2026-02-25-a-demo-post-slides-handouts-and-the-hybrid-workflow.md
+  _posts/YYYY-MM-DD-your-post-slug.md
 ```
 
 To also convert inline math ($...$) into LaTeX blocks (lossy):
@@ -67,11 +67,11 @@ To also convert inline math ($...$) into LaTeX blocks (lossy):
 uv run python tools/substack/crosspost.py \
   --keep-tufte-section \
   --inline-math-to-blocks \
-  _posts/2026-02-25-a-demo-post-slides-handouts-and-the-hybrid-workflow.md
+  _posts/YYYY-MM-DD-your-post-slug.md
 ```
 
 ## Publish
 
 ```bash
-uv run python tools/substack/crosspost.py --publish _posts/2026-02-25-a-demo-post-slides-handouts-and-the-hybrid-workflow.md
+uv run python tools/substack/crosspost.py --publish _posts/YYYY-MM-DD-your-post-slug.md
 ```

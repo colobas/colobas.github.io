@@ -78,13 +78,19 @@ make svelte
 
 ## Cross-posting to Substack
 
-A first-pass cross-post tool lives under:
+Cross-post tooling lives under:
 
 - `tools/substack/`
 
 It uses an (unofficial) Substack API client vendored as a git submodule:
 
 - `external/python-substack`
+
+Notes:
+
+- Substack supports LaTeX as *blocks*; the crossposter emits `latex_block` nodes for `$$...$$`.
+- Substack doesn’t support native tables; pipe tables can be converted to a KaTeX-friendly `array` block.
+- Substack footnotes are supported and emitted as native `footnote` nodes.
 
 See:
 
