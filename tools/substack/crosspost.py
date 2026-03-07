@@ -198,11 +198,8 @@ def convert_tufte_html_to_markdown(body: str) -> str:
 def _inline_dollar_math_to_latex_blocks(body: str) -> str:
     """Convert inline $...$ math into block $$...$$ segments.
 
-    Substack's editor reliably supports LaTeX blocks but not inline LaTeX.
-
-    This is a best-effort heuristic and is intentionally lossy:
-    - it will break paragraphs to insert math blocks
-    - it ignores nesting and code spans
+    This is optional and *lossy* (it splits paragraphs).
+    Keeping it behind a flag avoids lots of artifacts.
     """
 
     out: list[str] = []
@@ -220,7 +217,6 @@ def _inline_dollar_math_to_latex_blocks(body: str) -> str:
             out.append(line)
             continue
 
-        # Don't touch display blocks that already start with $$
         if line.strip().startswith("$$"):
             out.append(line)
             continue
@@ -301,23 +297,25 @@ def _pipe_tables_to_latex_array(body: str) -> str:
 
             ncols = len(header)
 
-            def latex_escape(s: str) -> str:
-                # Minimal escaping for array/table contexts.
-                # We also translate a bit of markdown emphasis to LaTeX.
-                # (We keep backslashes intact so users can intentionally use LaTeX.)
+            def latex_escape_text(s: str) -> str:
+                # Convert markdown emphasis to LaTeX, then wrap the final text in \text{...}
+                # so KaTeX doesn't render it as math italics.
 
-                # markdown emphasis -> latex
-                s = re.sub(r"\*\*([^*]+)\*\*", r"\textbf{\1}", s)
-                s = re.sub(r"(?<!\*)\*([^*]+)\*(?!\*)", r"\textit{\1}", s)
+                # markdown emphasis -> latex (text mode)
+                s = re.sub(r"\*\*([^*]+)\*\*", r"\\textbf{\1}", s)
+                s = re.sub(r"(?<!\*)\*([^*]+)\*(?!\*)", r"\\textit{\1}", s)
 
                 # escape characters that break LaTeX tables
-                return (
-                    s.replace("&", r"\&")
-                    .replace("%", r"\%")
-                    .replace("#", r"\#")
-                    .replace("_", r"\_")
-                    .replace("$", r"\$")
+                s = (
+                    s.replace("&", r"\\&")
+                    .replace("%", r"\\%")
+                    .replace("#", r"\\#")
+                    .replace("_", r"\\_")
+                    .replace("$", r"\\$")
                 )
+
+                # Wrap as text
+                return r"\\text{" + s + "}"
 
             # Use an array environment (Substack supports this; it doesn't support tabular).
             # Match the formatting observed in the example workflow:
@@ -337,7 +335,7 @@ def _pipe_tables_to_latex_array(body: str) -> str:
             latex_lines.append("\\begin{array}{%s}" % col_spec)
             latex_lines.append("")
 
-            header_cells = ["\\textbf{%s}" % latex_escape(h) for h in header]
+            header_cells = [r"\\text{\\textbf{" + h.replace("}", "").replace("{", "") + r"}}" for h in header]
             latex_lines.append(" & ".join(header_cells) + " \\\\")
             latex_lines.append("")
             latex_lines.append("\\hline")
@@ -345,7 +343,7 @@ def _pipe_tables_to_latex_array(body: str) -> str:
 
             for row in rows:
                 row = (row + [""] * ncols)[:ncols]
-                latex_lines.append(" & ".join([latex_escape(cell) for cell in row]) + " \\\\")
+                latex_lines.append(" & ".join([latex_escape_text(cell) for cell in row]) + " \\\\")
                 latex_lines.append("")
 
             latex_lines.append("\\end{array}")
@@ -389,9 +387,9 @@ def main() -> None:
         help="Do not convert tufte-specific HTML into plain Markdown",
     )
     ap.add_argument(
-        "--no-latex-math-blocks",
+        "--inline-math-to-blocks",
         action="store_true",
-        help="Do not convert $...$ into LaTeX blocks (math will remain as literal text)",
+        help="Convert inline $...$ into LaTeX blocks (lossy; can create artifacts)",
     )
     ap.add_argument(
         "--no-latex-tables",
@@ -424,8 +422,9 @@ def main() -> None:
     # Keep markdown footnote syntax intact; python-substack will convert it into
     # Substack-native footnote nodes.
 
-    # Substack supports LaTeX blocks; convert inline math + tables into LaTeX blocks.
-    if not args.no_latex_math_blocks:
+    # Substack supports LaTeX blocks; use them for display math and tables.
+    # Inline math conversion is optional because it tends to create lots of tiny blocks.
+    if args.inline_math_to_blocks:
         body = _inline_dollar_math_to_latex_blocks(body)
     if not args.no_latex_tables:
         body = _pipe_tables_to_latex_array(body)
