@@ -297,27 +297,33 @@ def _pipe_tables_to_latex_array(body: str) -> str:
 
             ncols = len(header)
 
-            def latex_escape_text(s: str) -> str:
-                # Convert markdown emphasis to LaTeX, then wrap the final text in \text{...}
-                # so KaTeX doesn't render it as math italics.
-
-                # markdown emphasis -> latex (text mode)
-                # Use double backslashes in the replacement so `re.sub` produces a
-                # literal backslash (otherwise sequences like \t become tabs).
-                s = re.sub(r"\*\*([^*]+)\*\*", r"\\textbf{\1}", s)
-                s = re.sub(r"(?<!\*)\*([^*]+)\*(?!\*)", r"\\textit{\1}", s)
-
-                # escape characters that break LaTeX tables
-                s = (
-                    s.replace("&", r"\&")
-                    .replace("%", r"\%")
-                    .replace("#", r"\#")
-                    .replace("_", r"\_")
-                    .replace("$", r"\$")
+            def latex_escape_inner(s: str) -> str:
+                # escape characters that break KaTeX/LaTeX tables
+                return (
+                    s.replace("\\", r"\\\\")
+                    .replace("&", r"\\&")
+                    .replace("%", r"\\%")
+                    .replace("#", r"\\#")
+                    .replace("_", r"\\_")
+                    .replace("$", r"\\$")
+                    .replace("{", r"\\{")
+                    .replace("}", r"\\}")
                 )
 
-                # Wrap as text
-                return r"\text{" + s + "}"
+            def latex_cell(s: str) -> str:
+                # Avoid nesting \text{\textbf{...}}. Substack's KaTeX setup renders
+                # nested text macros as literal text.
+                s = s.strip()
+
+                m_bold = re.fullmatch(r"\*\*([^*]+)\*\*", s)
+                if m_bold:
+                    return r"\\textbf{" + latex_escape_inner(m_bold.group(1)) + "}"
+
+                m_ital = re.fullmatch(r"\*([^*]+)\*", s)
+                if m_ital:
+                    return r"\\textit{" + latex_escape_inner(m_ital.group(1)) + "}"
+
+                return r"\\text{" + latex_escape_inner(s) + "}"
 
             # Use an array environment (Substack supports this; it doesn't support tabular).
             # Match the formatting observed in the example workflow:
@@ -337,7 +343,7 @@ def _pipe_tables_to_latex_array(body: str) -> str:
             latex_lines.append("\\begin{array}{%s}" % col_spec)
             latex_lines.append("")
 
-            header_cells = [r"\text{\textbf{" + h.replace("}", "").replace("{", "") + r"}}" for h in header]
+            header_cells = [r"\\textbf{" + latex_escape_inner(h.replace("}", "").replace("{", "")) + r"}" for h in header]
             latex_lines.append(" & ".join(header_cells) + " \\\\")
             latex_lines.append("")
             latex_lines.append("\\hline")
@@ -345,7 +351,7 @@ def _pipe_tables_to_latex_array(body: str) -> str:
 
             for row in rows:
                 row = (row + [""] * ncols)[:ncols]
-                latex_lines.append(" & ".join([latex_escape_text(cell) for cell in row]) + " \\\\")
+                latex_lines.append(" & ".join([latex_cell(cell) for cell in row]) + " \\\\")
                 latex_lines.append("")
 
             latex_lines.append("\\end{array}")
