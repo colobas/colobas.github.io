@@ -12,7 +12,7 @@
   let displayed_content = "$ ";
   let total_len = 2 + content.length;
   $: pad_left = total_len - displayed_content.length;
-  $: padding = (pad_left == 0 ? "":"x".repeat(pad_left-1));
+  $: padding = "x".repeat(pad_left);
 
   onMount (async () => {
     for (var ix = 0; ix < content.length; ix++) {
@@ -23,10 +23,7 @@
 
 </script>
 
-<h1 style="--text-size: {text_size}" class="typewriter">
-  {displayed_content}<BlinkingCursor></BlinkingCursor>
-  <span id="padding">{padding}</span>
-</h1>
+<h1 style="--text-size: {text_size}" class="typewriter">{displayed_content}<BlinkingCursor></BlinkingCursor><span id="padding">{padding}</span></h1>
 
 <style>
     .typewriter{

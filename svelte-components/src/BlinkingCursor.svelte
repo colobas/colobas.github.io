@@ -6,7 +6,7 @@
 <style>
     @-webkit-keyframes blinker {
       50% {
-        visibility: hidden;
+        opacity: 0.0;
       }
     }
     .blinking-cursor{
