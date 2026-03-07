@@ -34,6 +34,7 @@ uv run python tools/substack/crosspost.py _posts/YYYY-MM-DD-your-post-slug.md
 
 Defaults:
 
+- prepends a canonical link note pointing to the website version
 - strips the `# Tufte Layout Exerciser` section
 - converts some tufte-specific HTML into plain Markdown approximations
 - converts Markdown footnotes into Substack-native footnote nodes

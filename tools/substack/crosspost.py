@@ -420,7 +420,18 @@ def main() -> None:
     title = post.front_matter.get("title") or "(untitled)"
     subtitle = post.front_matter.get("subtitle") or ""
 
-    body = post.body
+    # Always prepend a canonical link note.
+    # Site permalink format is /:title/ in _config.yml; slug is derived from the filename.
+    fname = os.path.basename(args.path)
+    m = re.match(r"^\d{4}-\d{2}-\d{2}-(.*)\.md$", fname)
+    slug = m.group(1) if m else os.path.splitext(fname)[0]
+    canonical_url = f"https://gpir.es/{slug}/"
+    canonical_note = (
+        "This post was written to be displayed in the Tufte handout layout and is best viewed on my website: "
+        f"{canonical_url}\n"
+    )
+
+    body = canonical_note + "\n" + post.body
     if not args.keep_tufte_section:
         body = strip_section_by_h1(body, "Tufte Layout Exerciser")
 
