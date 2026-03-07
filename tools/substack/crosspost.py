@@ -298,16 +298,16 @@ def _pipe_tables_to_latex_array(body: str) -> str:
             ncols = len(header)
 
             def latex_escape_inner(s: str) -> str:
-                # escape characters that break KaTeX/LaTeX tables
+                # escape characters that break KaTeX/LaTeX array parsing.
+                # IMPORTANT: do NOT escape backslashes here; we need them for commands.
                 return (
-                    s.replace("\\", r"\\\\")
-                    .replace("&", r"\\&")
-                    .replace("%", r"\\%")
-                    .replace("#", r"\\#")
-                    .replace("_", r"\\_")
-                    .replace("$", r"\\$")
-                    .replace("{", r"\\{")
-                    .replace("}", r"\\}")
+                    s.replace("&", r"\&")
+                    .replace("%", r"\%")
+                    .replace("#", r"\#")
+                    .replace("_", r"\_")
+                    .replace("$", r"\$")
+                    .replace("{", r"\{")
+                    .replace("}", r"\}")
                 )
 
             def latex_cell(s: str) -> str:
@@ -317,13 +317,13 @@ def _pipe_tables_to_latex_array(body: str) -> str:
 
                 m_bold = re.fullmatch(r"\*\*([^*]+)\*\*", s)
                 if m_bold:
-                    return r"\\textbf{" + latex_escape_inner(m_bold.group(1)) + "}"
+                    return r"\textbf{" + latex_escape_inner(m_bold.group(1)) + "}"
 
                 m_ital = re.fullmatch(r"\*([^*]+)\*", s)
                 if m_ital:
-                    return r"\\textit{" + latex_escape_inner(m_ital.group(1)) + "}"
+                    return r"\textit{" + latex_escape_inner(m_ital.group(1)) + "}"
 
-                return r"\\text{" + latex_escape_inner(s) + "}"
+                return r"\text{" + latex_escape_inner(s) + "}"
 
             # Use an array environment (Substack supports this; it doesn't support tabular).
             # Match the formatting observed in the example workflow:
@@ -343,7 +343,7 @@ def _pipe_tables_to_latex_array(body: str) -> str:
             latex_lines.append("\\begin{array}{%s}" % col_spec)
             latex_lines.append("")
 
-            header_cells = [r"\\textbf{" + latex_escape_inner(h.replace("}", "").replace("{", "")) + r"}" for h in header]
+            header_cells = [r"\textbf{" + latex_escape_inner(h.replace("}", "").replace("{", "")) + r"}" for h in header]
             latex_lines.append(" & ".join(header_cells) + " \\\\")
             latex_lines.append("")
             latex_lines.append("\\hline")
